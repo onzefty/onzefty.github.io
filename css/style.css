@@ -2,19 +2,16 @@
 /*---------------------------- Globals ----------------------------*/
 
 :root {
-    --color-txt-main-1: #2187E7;
+    --color-background: #242943;
+    --color-txt-main-1: #FFF;
     --color-txt-main-2: #E04475;
     --color-txt-main-3: #315676;
-    --color-txt-main-4: #F57CA2;
-    --color-buttons-1: #0b0b0b;
-    --color-buttons-1-selected: #968a7e;
-    --color-buttons-1-hover: #474747;
-    --color-buttons-2-hover: #e3e3e3;
-    --color-buttons-3-hover: #f9f9f9;
-    --color-buttons-4-hover: #181818;
-    --color-buttons-1-disabled: #cbcbcb;
-    --color-buttons-2-disabled: #8c8c8c;
-    --color-bullets-1: #0b0b0b;
+    --header-color-1: #6fc3df;
+    --header-color-2: #8d82c4;
+    --header-color-3: #ec8d81;
+    --header-color-4: #e7b788;
+    --header-color-5: #8ea9e8;
+    --header-color-6: #87c5a4;
     --interaction: rgb(225, 115, 23);
     --right: #5cb563;
     --wrong: #c74b32;
