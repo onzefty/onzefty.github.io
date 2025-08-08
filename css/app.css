@@ -10,13 +10,16 @@ body {
 }
 
 header {
-    position: fixed;
     display: flex;
     background-color: #2a2f4a;
     box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
     padding: 0.5rem 1rem;
     justify-content: space-between;
     z-index: 1000;
+}
+
+header.fixed {
+    position: fixed;
 }
 
 .header-left {
@@ -28,6 +31,24 @@ header {
 section {
     width: 100%;
 }
+
+section .title {
+    width: fit-content;
+}
+
+section .title::after {
+  content: '';
+  background-color: #ffffff;
+  display: block;
+  height: 2px;
+  margin: 0.325em 0 0.5em 0;
+  width: 100%;
+}
+
+#introduction {
+    padding: 4rem 2rem;
+}
+
 
 #projects-container {
     display: grid;
