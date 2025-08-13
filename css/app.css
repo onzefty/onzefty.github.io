@@ -28,6 +28,37 @@ header.fixed {
     gap: 1rem;    
 }
 
+.header-right ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.header-right ul li a {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.25em;
+    padding: .5rem 1.75em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.header-right ul li a:hover {
+    box-shadow: inset 0 0 0 2px #9bf1ff;
+    color: #9bf1ff;
+}
+
+
 section {
     width: 100%;
 }
@@ -67,7 +98,20 @@ section .title::after {
     min-height: 23em;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+#projects-container .project h2,
+#projects-container .project p {
+    position: relative;
+    z-index: 3;
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+} 
 
 #projects-container .project::before {
     -moz-transition: opacity 0.5s ease;
@@ -79,7 +123,7 @@ section .title::after {
     display: block;
     height: 100%;
     left: 0;
-    opacity: 0.85;
+    opacity: 0.95;
     position: absolute;
     width: 100%;
     z-index: 2;
@@ -102,6 +146,8 @@ section .title::after {
 #projects-container .project:nth-child(6n)::before {
   background-color: var(--header-color-6);
 }
-#projects-container .project:hover::before {
+#projects-container .project:hover::before,
+#projects-container .project:hover h2,
+#projects-container .project:hover p {
   opacity: 0;
 }

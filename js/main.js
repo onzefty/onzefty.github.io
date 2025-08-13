@@ -20,7 +20,6 @@ const observer = new IntersectionObserver(handleIntersection,{
 });
 
 mainDom.addEventListener(EVENTS.SCROLL, () => {
-    console.log(mainDom.scrollTop,header.offsetHeight);
     if (mainDom.scrollTop <= header.offsetHeight) {
         header.classList.remove('fixed');
     } 
@@ -30,7 +29,7 @@ observer.observe(header);
 
 
 function appReady() {
-    
+    console.log("App is ready");
 }
 
 app.on(App.READY, appReady);

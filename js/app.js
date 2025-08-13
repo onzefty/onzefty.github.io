@@ -5,7 +5,7 @@ import SoundManager from "./components/sound-manager.js";
 import { translationRender } from "./lib/dom.js";
 import EmitterMixin from "./emitter/emitter-mixin.js";
 
-const JSONSCONFIG = ["./json/${language}.json", "../../common/content/jsons/common-${language}.json"];
+const JSONSCONFIG = ["./assets/jsons/content.json",];
 
 const debugEvents = {};
 let instance = null;
@@ -48,6 +48,7 @@ export default class App extends EmitterMixin {
         this.loaded = false;
         this.ready = false;
         this.started = false;
+        this.boundHandleLoad = this.handleLoad.bind(this);
     }
 
     addListeners() {
@@ -70,19 +71,7 @@ export default class App extends EmitterMixin {
 
     setTranslations() {
         if (this.config.jsons.length > 0) {
-            this.mainDom.setAttribute("language", this.config.language);
-            this.sendTo("footer", {
-                type: MESSAGES.FOOTER_UPDATE,
-                texts: this.jsonsManager.jsons,
-                ID: this.scormInterface.datas.ID,
-                fileID: this.fileID,
-            });
-            this.sendTo("menu", {
-                type: MESSAGES.MENU_UPDATE,
-                texts: this.jsonsManager.jsons,
-                ID: this.scormInterface.datas.ID,
-                fileID: this.fileID
-            });
+            
             translationRender(this.jsonsManager.jsons, this.mainDom);
         }
     }
@@ -112,6 +101,24 @@ export default class App extends EmitterMixin {
                     break;
             }
         });
+    }
+
+    async handleLoad() {
+
+        //this.initRoot();
+        this.mainDom = document.querySelector("#main");
+        this.jsonsManager = new JsonsManager();
+        const ready = async () => {
+            await this.promify();
+
+            this.launch();
+        };
+
+        ready();
+
+        this.loaded = true;
+
+        this.emit(App.LOADED);
     }
 
     promify() {
@@ -146,10 +153,15 @@ export default class App extends EmitterMixin {
     }
 
     init(preloadData) {
-        
+        if (document.readyState === "complete") {
+            this.handleLoad();
+        } else {
+            window.addEventListener("load", this.boundHandleLoad);
+        }
     }
 
     launch() {
+        this.setTranslations();
         this.ready = true;
         this.emit(App.READY);
     }
