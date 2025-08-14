@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+    <!-- build:js ../../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script src="../../common/content/js/components/video-manager.js" charset=''></script>
+
+    <!-- build:js ../../common/content/js/components/lesson-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/device.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/timeline.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/scorm-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/navigation-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/language-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/toast.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/commons.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="js/screens.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="main" class="widthAll heightAll relative">     
+        <!-- Section 1 -->
+        <div id='section-1' class='section absolute'>
+            <div id="s1-content" class="absolute lt0 widthAll heightAll">
+                <div id="s1-fake" style="opacity: 0;"></div>
+                <div id="s1-bgs" class="widthAll heightAll lt0 absolute">
+                    <img id="s1-img-3" src="imgs/s1-img-3.jpg">
+                    <div id="s1-rect-black" class="absolute widthAll heightAll lt0"></div>
+                    <div id="s1-rect-green" class="absolute">
+                        <img id="s1-patterns" src="imgs/s1-patterns.png">
+                    </div>
+                </div>
+                <p id='s1-txt-5-1' class='s1-txt-5 BookAntiqua-Bold absolute'></p>
+                <p id='s1-txt-5-2' class='s1-txt-5 BookAntiqua-Bold absolute'></p>
+                <div id="s1-group-1" class="absolute flex col">
+                    <img id="s1-logo" src="imgs/s1-logo.png">
+                    <div class="flexXStart">
+                        <p id='title-word-1' class='title-word-1 BookAntiqua-Bold'></p>
+                        <img id="s1-leaf" src="imgs/leaf.svg">
+                        <div class="flexGrow"></div>
+                        <div id="s1-level-2-wrap" class="flexCenter"><p id="s1-level-2" class="s1-level-2 Roboto-Regular"></p></div>
+                    </div>
+                    <p id='title-word-2' class='title-word-2 BookAntiqua-Bold'></p>
+                    <div id="s1-bloc" class="flexCenter">
+                        <p id='s1-txt-1' class='s1-txt-1 Roboto-Regular'></p>
+                    </div>
+                    <p id="s1-version" class="Roboto-Italic absolute version"></p>
+                </div>
+                <div id="s1-group-2" class="absolute flex">
+                    <div id="s1-bloc-2-1" class="flex col">
+                        <img id="s1-headphones" src="imgs/headphones.svg" class="shaking">
+                        <p id='s1-txt-2' class='s1-txt-2 Roboto-Light'></p>
+                        <p id='s1-txt-3' class='s1-txt-3 Roboto-Italic'></p>
+                    </div>
+                    <div id="s1-sep"></div>
+                    <div id="s1-bloc-2-2" class="flex col">
+                        <img id="s1-clock" src="imgs/clock.svg">
+                        <p id='s1-txt-4' class='s1-txt-4 Roboto-Light'></p>
+                    </div>
+                    <div id="s1-link"></div>
+                    <div id="s1-btStart" class="button btNext flexCenter active">
+                        <img id="s1-edge" src="imgs/edge-white.svg">
+                    </div>
+                </div>
+                <img id="s1-img-1" src="imgs/s1-img-1.jpg" class="absolute">
+            </div>
+            <img id="s1-img-2" src="imgs/s1-img-2.jpg" class="absolute">
+            <img id="s3-img-1" src="imgs/s3-img-1.jpg" class="absolute">
+            <img id="s4-img-3" src="imgs/s4-img-3.png" class="absolute">
+            <div id="s3-video-wrap" class="absolute widthAll heightAll lt0 flexCenter">
+                <div id="s3-video-content" class="flexXStartCol col">
+                    <p id="s3-txt-1" class="s3-txt-1 BookAntiqua-Bold"></p>
+                    <div id="s3-video" class="widthAll">
+                        <iframe id='s3-video-iframe' class='video-container widthAll heightAll' loaded="true" scrolling='NO' allowfullscreen=true json='src-video' frameborder='0' ></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="s4-content" class="absolute widthAll heightAll lt0">
+                <div id="s4-rect" class="absolute heightAll"></div>
+                <img id="s4-patterns" class="absolute lt0 widthAll" src="imgs/s1-patterns.png">
+                <img id="s4-img-1" src="imgs/s4-img-1.png" class="absolute">
+                <div id="s4-img-2" class="absolute">
+                    <img src="imgs/s4-img-2.png" class="widthAll floatingY">
+                </div>
+                <div id="s4-group" class="absolute flex col">
+                    <div id="s4-row-1" class="flexXStart s4-row">
+                        <img src="imgs/goal.svg">
+                        <p id="s4-txt-1" class="s4-txt-1 BookAntiqua-Bold"></p>
+                    </div>
+                    <div id="s4-row-2" class="flexXStart s4-row">
+                        <div class="flexCenter relative"><div class="absolute"></div><img src="imgs/s4-icon-1.svg"></div>
+                        <p id="s4-txt-2" class="s4-txt-2 Roboto-Regular width80"></p>
+                    </div>
+                    <div id="s4-row-3" class="flexXStart s4-row">
+                        <div class="flexCenter relative"><div class="absolute"></div><img src="imgs/s4-icon-2.svg"></div>
+                        <p id="s4-txt-3" class="s4-txt-3 Roboto-Regular width80"></p>
+                    </div>
+                    <div id="s4-row-4" class="flexXStart s4-row">
+                        <div class="flexCenter relative"><div class="absolute"></div><img src="imgs/s4-icon-3.svg"></div>
+                        <p id="s4-txt-4" class="s4-txt-4 Roboto-Regular width80"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sélection de la langue -->
+        <div id="languages" class='absolute widthAll heightAll flexCenter hidden'>
+            <div id='languages-popup' class='flexCenter'>
+                <div class='earth-wrap flexCenter col'>
+                    <img class='earth' src='imgs/earth.svg'>
+                    <img class='edge' src='imgs/edge.svg'>
+                </div>
+                <div class='languages-wrap flex'>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

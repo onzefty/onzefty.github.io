@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Onlineformapro">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../common/content/css/helpers.css" />
+    <link rel="stylesheet" href="../common/content/css/fonts.css" />
+    <link rel="stylesheet" href="css/glossary.css" />
+
+    <!-- build:js ../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/lib/glossary-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/glossary.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+    <!-- /build -->
+</head>
+
+<body>
+    <div id="glossary-wrapper" class="heightAll widthAll flexCenter">
+        <div id="glossary">
+            <div id="glossary-row-1" class="widthAll flexXStart relative">
+                <img src="img/glossary.svg"><p class="glossary-glossary Roboto-Bold"></p>
+                <p id="glossary-title" class="Roboto-Bold glossary-title"></p>
+                <div id="glossary-button-close" class="button absolute flexCenter">
+                    <img id="glossary-button-close-img" src="img/cross-white.svg">
+                </div> 
+            </div>
+            <div id="glossary-row-2" class="widthAll flex">
+                <div id="glossary-words" class="width40 heightAll relative"></div>
+                <div id="glossary-definitions" class="width60 heightAll">
+                    <p id="glossary-definition-word" class="Roboto-Bold"></p>
+                    <div id="glossary-definition-sep" class="widthAll"></div>
+                    <div id="glossary-definition" class="Roboto-Regular"></div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</body>
+
+</html>

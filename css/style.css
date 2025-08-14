@@ -59,7 +59,6 @@ body {
     }
 }
 
-
 html * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
@@ -71,4 +70,14 @@ html * {
 
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
+}
+
+iframe {
+    display: block;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    border: none;
+    background: transparent;
 }

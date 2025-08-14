@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+    <!-- build:js ../../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script src="../../common/content/js/components/video-manager.js" charset=''></script>
+
+    <!-- build:js ../../common/content/js/components/lesson-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/device.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/movable.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/clickables.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/cards.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/infos.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/timeline.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/scorm-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/navigation-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/language-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/toast.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/commons.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="js/screens.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="main" class="widthAll heightAll relative">     
+        <!-- Section 1 -->
+        <div id='section-1' class='section absolute'>
+            <img id="s1-img-1" src="imgs/s1-img-1.jpg" class="absolute">
+            <img id="s1-img-2" src="imgs/s1-img-2.png" class="absolute">
+            <div id="s1-group" class="absolute">
+                <p id="s1-txt-1" class="s1-txt-1 BookAntiqua-Bold"></p>
+                <div class="widthAll flexXStart">
+                    <p id="s1-txt-2" class="s1-txt-2 Roboto-Regular"></p>
+                    <div id="s1-link" class="flexGrow"></div>
+                    <div id="s1-btNext" class="button btNext flexCenter">
+                        <img id="s1-edge" src="imgs/edge-white.svg">
+                    </div>     
+                </div>   
+            </div>
+            <div id="s2-group" class="absolute flexYStartCol col noEvents">
+                <p id="s2-txt-1" class="s2-txt-1 Roboto-Bold align-center"></p>
+                <p id="s2-txt-2" class="s2-txt-2 Roboto-Italic"></p>
+                <div id="s2-clickables">
+                    <div id="s2-clickable-1" class="s2-clickable flexYEnd relative">
+                        <div class="circle absolute">
+                            <img class="absolute normal" src="imgs/s2-icon-1.svg">
+                            <img class="absolute selected" src="imgs/s2-icon-white-1.svg">
+                        </div>
+                        <p id="s2-txt-3" class="s2-txt-3 Roboto-Regular"></p>
+                        <div class="state flexCenter absolute"></div>
+                    </div>
+                    <div id="s2-clickable-2" class="s2-clickable flexYEnd relative">
+                        <div class="circle absolute">
+                            <img class="absolute normal" src="imgs/s2-icon-2.svg">
+                            <img class="absolute selected" src="imgs/s2-icon-white-2.svg">
+                        </div>
+                        <p id="s2-txt-4" class="s2-txt-4 Roboto-Regular"></p>
+                        <div class="state flexCenter absolute"></div>
+                    </div>
+                    <div id="s2-clickable-3" class="s2-clickable flexYEnd relative">
+                        <div class="circle absolute">
+                            <img class="absolute normal" src="imgs/s2-icon-3.svg">
+                            <img class="absolute selected" src="imgs/s2-icon-white-3.svg">
+                        </div>
+                        <p id="s2-txt-5" class="s2-txt-5 Roboto-Regular"></p>
+                        <div class="state flexCenter absolute"></div>
+                    </div>
+                    <div id="s2-clickable-4" class="s2-clickable flexYEnd relative">
+                        <div class="circle absolute">
+                            <img class="absolute normal" src="imgs/s2-icon-4.svg">
+                            <img class="absolute selected" src="imgs/s2-icon-white-4.svg">
+                        </div>
+                        <p id="s2-txt-6" class="s2-txt-6 Roboto-Regular"></p>
+                        <div class="state flexCenter absolute"></div>
+                    </div>
+                </div>
+                <div id="s2-interactions" class="relative widthAll flexYStart">
+                    <div id="s2-button-validate" class="button flexCenter inactive" type="pulse">
+                        <p id="s2-button-validate-txt" class="validate Roboto-Regular"></p>
+                    </div>
+                    <div id="s2-feedback" class="feedback absolute flexXStartCol col">
+                        <p id="s2-txt-7" class="s2-txt-7 Roboto-BoldItalic wrongEl"></p>
+                        <p id="s2-txt-8" class="s2-txt-8 Roboto-Regular wrongEl"></p>
+                        <p id="s2-txt-9" class="s2-txt-9 Roboto-BoldItalic rightEl"></p>
+                        <p id="s2-txt-10" class="s2-txt-10 Roboto-Regular rightEl"></p>
+                        <div id="s2-button-next" class="absolute flexXStart">
+                            <p id="s2-txt-11" class="s2-txt-11 Roboto-Regular"></p>
+                            <div id="s2-btNext" class="button btNext flexCenter absolute">
+                                <img id="s2-edge" src="imgs/edge-white.svg">
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="s3-group" class="absolute noEvents widthAll heightAll lt0">
+                <div id="s3-rect" class="absolute heightAll">
+                    <img id="s3-patterns" src="imgs/patterns.png">
+                    <div id="s3-info-1" class="s3-info widthAll heightAll absolute lt0 flexCenter">
+                        <div class="s3-info-content">
+                            <div>
+                                <p id="s3-txt-4"  class="Roboto-Bold s3-txt-4"></p>
+                                <p id="s3-txt-5"  class="Roboto-Regular s3-txt-5"></p>
+                                <p id="s3-txt-6"  class="Roboto-Bold s3-txt-6"></p>    
+                            </div>
+                            <img id="s3-info-img-1" class="widthAll" src="imgs/s3-info-img-1.png">    
+                        </div>
+                    </div>
+                    <div id="s3-info-2" class="s3-info widthAll heightAll absolute lt0 flexCenter">
+                        <div class="s3-info-content">
+                            <div>
+                                <p id="s3-txt-7"  class="Roboto-Bold s3-txt-7"></p>
+                                <p id="s3-txt-8"  class="Roboto-Bold s3-txt-8"></p>    
+                            </div>
+                            <img id="s3-info-img-2" class="widthAll" src="imgs/s3-info-img-2.png">    
+                        </div>
+                    </div>
+                    <div id="s3-info-3" class="s3-info widthAll heightAll absolute lt0 flexCenter">
+                        <div class="s3-info-content">
+                            <div>
+                                <p id="s3-txt-9"  class="Roboto-Bold s3-txt-9"></p>
+                            </div>
+                            <img id="s3-info-img-3" class="widthAll" src="imgs/s3-info-img-3.png">    
+                        </div>
+                    </div>
+                </div>
+                <div id="s3-helper" class="absolute">
+                    <p id="s3-txt-10"  class="Roboto-BoldItalic s3-txt-10"></p>
+                </div>
+                <div id="s3-buttons-info" class="absolute flex col">
+                    <div id="s3-button-info-1" class="s3-button-info flexXStart">
+                        <div>
+                            <img src="imgs/s3-icon-1.svg">    
+                        </div>
+                        <p id="s3-txt-1" class="Roboto-Bold s3-txt-1 width60"></p>
+                    </div>
+                    <div id="s3-button-info-2" class="s3-button-info flexXStart">
+                        <div>
+                            <img src="imgs/s3-icon-2.svg">    
+                        </div>
+                        <p id="s3-txt-2" class="Roboto-Bold s3-txt-2 width60"></p>
+                    </div>
+                    <div id="s3-button-info-3" class="s3-button-info flexXStart">
+                        <div>
+                            <img src="imgs/s3-icon-3.svg">    
+                        </div>
+                        <p id="s3-txt-3" class="Roboto-Bold s3-txt-3 width60"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section 2 -->
+        <div id='section-2' class='section absolute'>
+            <img id="s4-bg" class="widthAll" src="imgs/s4-bg.jpg">
+            <p id="s4-txt-1" class="absolute s4-txt-1 Roboto-Bold"></p>
+            <div id="s4-group" class="absolute flexYStartCol col">
+                <p id="s4-txt-2" class="s4-txt-2 Roboto-Italic align-center"></p>
+                <div id="s4-gauge" class="flex">
+                    <div id="s4-level-1" class="s4-level flexCenter"></div>
+                    <div id="s4-level-2" class="s4-level flexCenter"></div>
+                    <div id="s4-level-3" class="s4-level flexCenter"></div>
+                    <div id="s4-level-4" class="s4-level flexCenter"></div>
+                </div>
+            </div>
+            <div id="s4-feedback" class="absolute feedback flexCenter col">
+                <p class="s2-txt-9 rightEl Roboto-BoldItalic"></p>
+                <p class="s2-txt-7 wrongEl Roboto-BoldItalic"></p>
+                <p id="s4-txt-7" class="s4-txt-7 Roboto-Regular align-center"></p>
+                <p id="s4-txt-8" class="s4-txt-8 Roboto-Regular align-center"></p>
+                <p id="s4-txt-13" class="s4-txt-13 Roboto-Italic align-center"></p>
+            </div>
+            <div id="s4-placeholder-left" class="s4-placeholder flexCenter absolute">
+                <img class="widthAll" src="imgs/s4-placeholder.png">
+                <p class="right-txt Roboto-Bold absolute widthAll"></p>
+            </div>
+            <div id="s4-placeholder-right" class="s4-placeholder flexCenter absolute">
+                <img class="widthAll" src="imgs/s4-placeholder.png">
+                <p class="wrong-txt Roboto-Bold absolute widthAll"></p>
+            </div>
+            <div id="s4-card-1" class="s4-card absolute">
+                <div class="card-content lt0 absolute widthAll heightAll">
+                    <div class="back lt0 absolute widthAll heightAll">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                    </div>
+                    <div class="front lt0 absolute widthAll heightAll flexCenter">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                        <div class="lt0 absolute widthAll heightAll flexCenter">
+                            <p id="s4-txt-3" class="s4-txt-3 Roboto-Regular"></p>
+                        </div>
+                    </div>
+                    <div class="indicator rect absolute flexCenter">
+                        <p class="correct left s4-txt-9 Roboto-Regular"></p>
+                        <p class="correct right s4-txt-10 Roboto-Regular"></p>
+                        <p class="wrong left s4-txt-11 Roboto-Regular"></p>
+                        <p class="wrong right s4-txt-12 Roboto-Regular"></p>
+                    </div> 
+                    <div class="indicator circle absolute flexCenter"></div> 
+                </div> 
+            </div>
+            <div id="s4-card-2" class="s4-card absolute">
+                <div class="card-content lt0 absolute widthAll heightAll">
+                    <div class="back lt0 absolute widthAll heightAll">
+                            <img class="widthAll" src="imgs/s4-card.png">
+                        </div>
+                    <div class="front lt0 absolute widthAll heightAll flexCenter">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                        <div class="lt0 absolute widthAll heightAll flexCenter">
+                            <p id="s4-txt-4" class="s4-txt-4 Roboto-Regular"></p>
+                        </div>
+                    </div>
+                    <div class="indicator rect absolute flexCenter">
+                        <p class="correct left s4-txt-9 Roboto-Regular"></p>
+                        <p class="correct right s4-txt-10 Roboto-Regular"></p>
+                        <p class="wrong left s4-txt-11 Roboto-Regular"></p>
+                        <p class="wrong right s4-txt-12 Roboto-Regular"></p>
+                    </div> 
+                    <div class="indicator circle absolute flexCenter"></div>   
+                </div>
+            </div>
+            <div id="s4-card-3" class="s4-card absolute">
+                <div class="card-content lt0 absolute widthAll heightAll">
+                    <div class="back lt0 absolute widthAll heightAll">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                    </div>
+                    <div class="front lt0 absolute widthAll heightAll flexCenter">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                        <div class="lt0 absolute widthAll heightAll flexCenter">
+                            <p id="s4-txt-5" class="s4-txt-5 Roboto-Regular"></p>
+                        </div>
+                    </div>
+                    <div class="indicator rect absolute flexCenter">
+                        <p class="correct left s4-txt-9 Roboto-Regular"></p>
+                        <p class="correct right s4-txt-10 Roboto-Regular"></p>
+                        <p class="wrong left s4-txt-11 Roboto-Regular"></p>
+                        <p class="wrong right s4-txt-12 Roboto-Regular"></p>
+                    </div> 
+                    <div class="indicator circle absolute flexCenter"></div>   
+                </div>
+            </div>
+            <div id="s4-card-4" class="s4-card absolute">
+                <div class="card-content lt0 absolute widthAll heightAll">
+                    <div class="back lt0 absolute widthAll heightAll">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                    </div>
+                    <div class="front lt0 absolute widthAll heightAll flexCenter">
+                        <img class="widthAll" src="imgs/s4-card.png">
+                        <div class="lt0 absolute widthAll heightAll flexCenter">
+                            <p id="s4-txt-6" class="s4-txt-6 Roboto-Regular"></p>
+                        </div>
+                    </div>
+                    <div class="indicator rect absolute flexCenter">
+                        <p class="correct left s4-txt-9 Roboto-Regular"></p>
+                        <p class="correct right s4-txt-10 Roboto-Regular"></p>
+                        <p class="wrong left s4-txt-11 Roboto-Regular"></p>
+                        <p class="wrong right s4-txt-12 Roboto-Regular"></p>
+                    </div> 
+                    <div class="indicator circle absolute flexCenter"></div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

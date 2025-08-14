@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Onlineformapro">
+  <title>IFCAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="../common/interface/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../common/content/css/fonts.css" />
+  <link rel="stylesheet" href="../common/interface/css/content.css"/>
+
+   <!-- build:js ../common/interface/js/lib/lib.js -->
+   <script type="text/javascript" src="../common/interface/js/lib/jquery-2.1.3.min.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/interface/js/lib/materialize.min.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/interface/js/lib/pipwerks.scorm.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/interface/js/lib/tincan.ofp.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/interface/js/lib/iframeresizer.js" charset="utf-8"></script>
+   <!-- /build -->
+
+   <!-- build:js ../common/content/js/lib/class-main-bundle.js -->
+   <script type="text/javascript" src="../common/content/js/lib/utils.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+   <!-- /build -->
+
+   <script type="text/javascript" src="../common/content/js/lib/window-resize.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/renderer.js" charset="utf-8"></script>
+
+   <!-- build:js ../common/content/js/lib/interface-scale-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/interface-resizer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/interface-main.js" charset="utf-8"></script>
+    <!-- /build -->
+</head>
+<body>
+  <div id="mainWrapper">
+    <div id="loader" class="loader">
+      <img class="img" src="../common/interface/img/ifcam.svg">
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="1" stroke-miterlimit="10"></circle>
+      </svg>
+    </div>
+
+    <div id="home"></div>
+    <!--
+    <div id="customHome" style="display:none;" class="widthAll heightAll absolute">
+    <iframe id="74ca342a-ff3d-4d01-82dc-a48ac322f3fc" allowfullscreen="" scrolling="no" style="overflow: hidden; min-width: 100%; min-height: 100%; margin: 0px; border: 0px none; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%;" src="../home/index.html" width="1px" height="1px"></iframe>
+    </div>
+    -->
+    <div id="end"></div>
+    <div id="menu"></div>
+    <div id="popupConfirmation"></div>
+
+    <div id="sound-trigger" style="display:none;">
+      <img id="sound-trigger-img" src="../common/interface/img/logo-ca.png" draggable="false">
+      <div id="sound-trigger-button"><p></p></div>
+    </div>
+
+    <div id="rotate">
+      <div class="noir">
+        <div id="mustRotateFlexWrapper">
+          <div class="rotateContentImg"></div>
+          <!-- <div id="rotateTextWrapper">
+            <span class="rotateTextImportant rotateTextWarn">ATTENTION !</span>
+            <span class="rotateTextImportant">Pivotez votre tablette</span>
+            <span class="rotateText">pour continuer l'expérience.</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="customMenu" class="unavailable">
+      <iframe id="menuFrame" allowfullscreen="" scrolling="no" style="overflow: hidden; min-width: 100%; min-height: 100%; margin: 0px; border: 0px none; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%;" src="../menu/index.html"></iframe>
+    </div>
+
+    <div id="customHeader">
+      <iframe id="header" allowfullscreen="" src="../header/index.html"
+      style="overflow: hidden; width: 100%; height: 100%; margin: 0px; border: 0px none; background: rgba(255, 255, 255, 0); display:block;" tabindex="-1"></iframe>
+    </div>
+
+    <div id="customGlossary" class="unavailable">
+      <iframe id="glossary" allowfullscreen="" scrolling="no" style="overflow: hidden; min-width: 100%; min-height: 100%; margin: 0px; border: 0px none; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%;" src="../glossary/index.html"></iframe>
+    </div>
+
+    <div id="customFooter">
+      <iframe id="footer" allowfullscreen="" src="../footer/index.html"
+      style="overflow: hidden; width: 100%; height: 100%; margin: 0px; border: 0px none; background: rgba(255, 255, 255, 0); display:block;" tabindex="-1"></iframe>
+    </div>
+
+    <div id="content"></div>
+
+    <div id="transition-loader" class="loader">
+      <div class="top"></div>
+          <div class="bottom"></div>
+          <img class="img" src="../common/interface/img/ifcam.svg">
+          <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="1" stroke-miterlimit="10"></circle>
+          </svg>
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="utf-8">
+    window.rootPath = './';
+  </script>
+
+  <!-- build:js ../common/interface/js/interface-bundle.js -->
+  <script src="../common/interface/js/constants.js" charset="utf-8"></script>
+  <script src="../common/interface/js/utility.js" charset="utf-8"></script>
+  <script src="../common/interface/js/polyfill.js" charset="utf-8"></script>
+  <script src="../common/interface/js/scorm-wrapper.js" charset="utf-8"></script>
+  <script src="../common/interface/js/xapi-wrapper.js" charset="utf-8"></script>
+  <script src="../common/interface/js/standard.js" charset="utf-8"></script>
+  <script src="../common/interface/js/emitter-mixin.js" charset="utf-8"></script>
+  <script src="../common/interface/js/translator.js" charset="utf-8"></script>
+  <script src="../common/interface/js/toaster.js" charset="utf-8"></script>
+  <script src="../common/interface/js/displayable.js" charset="utf-8"></script>
+  <script src="../common/interface/js/abstract-item.js" charset="utf-8"></script>
+  <script src="../common/interface/js/file.js" charset="utf-8"></script>
+  <script src="../common/interface/js/asset.js" charset="utf-8"></script>
+  <script src="../common/interface/js/player.js" charset="utf-8"></script>
+  <script src="../common/interface/js/timer.js" charset="utf-8"></script>
+  <script src="../common/interface/js/tutor.js" charset="utf-8"></script>
+  <script src="../common/interface/js/transition-loader.js" charset="utf-8"></script>
+  <script src="../common/interface/js/ofp.js" charset="utf-8"></script>
+  <script src="../common/interface/js/main.js" charset="utf-8"></script>
+  <!-- /build -->
+
+</body>
+</html>

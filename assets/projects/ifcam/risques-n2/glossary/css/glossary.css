@@ -1,0 +1,171 @@
+html, body {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    margin: 0;
+}
+
+#glossary-wrapper {
+    background-color: rgba(0,0,0,0.9);
+}
+
+#glossary {
+    width: 1513px;
+    height: 690px;
+    background-color: #006a4e;
+    background-image: url(../img/glossary-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+
+#glossary .button {
+	cursor: pointer;
+}
+
+#glossary-row-1 {
+    height: 62px;
+    padding: 0px 79px;
+}
+
+#glossary-title {
+    font-size: 24px;
+    color: #FFF;
+}
+
+#glossary-row-1 > img {
+    width: 29px;
+    margin-right: 18px;
+}
+
+#glossary-button-close {
+    width: 37px;
+    height: 37px;
+    background-color: #af8756;
+    border-radius: 50%;
+    border: solid 2px #FFF;
+    box-shadow: 29px 29px 35px 0px rgba(118,87,45,0.67);
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+#glossary-button-close img {
+    width: 14px;
+}
+
+#glossary-row-2 {
+    height: calc(100% - 62px);
+    background-color: #FFF;
+    border-radius: 0px 0px 20px 20px;
+}
+
+#glossary-words {
+    padding: 27px 18px 27px 55px;
+} 
+
+#glossary-words::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 588px;
+    right: 0px;
+    top: 18px;
+    background-color :#e6e6e6;
+}
+
+#glossary-words .word {
+    padding: 2px 0px 2px 25px;
+    font-size: 20px;
+    color: #af8756;
+    cursor: pointer;
+    display: block;
+}
+
+#glossary-words .word:hover,
+#glossary-words .word.selected {
+    background-color: #f1eae3;
+}
+
+#glossary-words .word:hover::before,
+#glossary-words .word.selected::before {
+    content: '';
+    position: absolute; 
+    width: 10px;
+    height: 16.32px;
+    background-image: url(../img/edge-brown.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#glossary-definitions {
+    padding: 20px 5px 0px 45px;
+}
+
+#glossary-definition-word {
+    font-size: 32px;
+    color: #006a4e;
+}
+
+#glossary-definition-sep {
+    height: 2px;
+    background-color :#e6e6e6;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#glossary-definition {
+    font-size: 17px;
+    color: #282828;
+    padding-right: 60px;
+}
+
+#glossary-definition p {
+    margin-bottom: 15px;
+}
+
+#glossary-definition ul {
+    margin-top: 15px;
+    padding: 0px 0px 0px 28px;
+}
+
+#glossary-definition .grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+#glossary-definition .grid > div  {
+    padding: 3px;
+}
+
+#glossary-definition .grid > div:nth-child(even)  {
+    background-color: #cbdddd;
+    font-size: 13px;
+}
+
+#glossary-definition .grid > div:nth-child(odd), #glossary-definition .grid > div:nth-child(2)  {
+    background-color: #009597;
+    color: #FFF;
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+    <!-- build:js ../../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script src="../../common/content/js/components/video-manager.js" charset=''></script>
+
+    <!-- build:js ../../common/content/js/components/lesson-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/device.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/rotable.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/clickables.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/infos.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/timeline.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/scorm-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/navigation-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/language-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/toast.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/commons.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="js/screens.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="main" class="widthAll heightAll relative">     
+        <!-- Section 1 -->
+        <div id='section-1' class='section absolute'>
+            <div id="s2-fake" style="opacity: 0;"></div>
+            <img id="s1-bg" src="imgs/s1-bg.jpg" class="absolute">
+            <div id="s1-group" class="absolute">
+                <p id="s1-txt-1" class="s1-txt-1 BookAntiqua-Bold"></p>
+                <div class="widthAll flexXStart">
+                    <p id="s1-txt-2" class="s1-txt-2 Roboto-Regular"></p>
+                    <div id="s1-link" class="flexGrow"></div>
+                    <div id="s1-btNext" class="button btNext flexCenter">
+                        <img id="s1-edge" src="imgs/edge-white.svg">
+                    </div>     
+                </div>   
+            </div>
+            <p id="s2-txt-1" class="s2-txt-1 Roboto-Bold absolute"></p>
+            <div id="s2-helper" class="absolute">
+                <p id="s2-txt-2" class="s2-txt-2 Roboto-Italic"></p>
+                <img id="s2-arrow" src="imgs/s2-arrow.png">
+            </div>
+            <div id="s2-info-1" class="s2-info absolute flexXStart">
+                <img src="imgs/s2-icon-1.svg">
+                <div>
+                    <p id="s2-txt-3" class="s2-txt-3 Roboto-Bold"></p>
+                    <ul>
+                        <li id="s2-txt-4" class="s2-txt-4 Roboto-Regular"></li>
+                        <li id="s2-txt-5" class="s2-txt-5 Roboto-Regular"></li>
+                    </ul>
+                </div>
+                <div class="link absolute"></div>
+            </div>
+            <div id="s2-info-2" class="s2-info absolute flexXStart">
+                <img src="imgs/s2-icon-2.svg">
+                <div>
+                    <p id="s2-txt-6" class="s2-txt-6 Roboto-Bold"></p>
+                    <ul>
+                        <li id="s2-txt-7" class="s2-txt-7 Roboto-Regular"></li>
+                    </ul>
+                </div>
+                <div class="link absolute"></div>
+            </div>
+            <div id="s2-info-3" class="s2-info absolute flexXStart">
+                <img src="imgs/s2-icon-3.svg">
+                <div>
+                    <p id="s2-txt-8" class="s2-txt-8 Roboto-Bold"></p>
+                    <ul>
+                        <li id="s2-txt-9" class="s2-txt-9 Roboto-Regular"></li>
+                        <li id="s2-txt-10" class="s2-txt-10 Roboto-Regular"></li>
+                    </ul>
+                </div>
+                <div class="link absolute"></div>
+            </div>
+            <div id="s2-info-4" class="s2-info absolute flexXStart">
+                <img src="imgs/s2-icon-4.svg">
+                <div>
+                    <p id="s2-txt-11" class="s2-txt-11 Roboto-Bold"></p>
+                    <ul>
+                        <li id="s2-txt-12" class="s2-txt-12 Roboto-Regular"></li>
+                    </ul>
+                </div>
+                <div class="link absolute"></div>
+            </div>
+            <div id="s2-info-5" class="s2-info absolute flexXStart">
+                <img src="imgs/s2-icon-5.svg">
+                <div>
+                    <p id="s2-txt-13" class="s2-txt-13 Roboto-Bold"></p>
+                    <ul>
+                        <li id="s2-txt-14" class="s2-txt-14 Roboto-Regular"></li>
+                        <li id="s2-txt-15" class="s2-txt-15 Roboto-Regular"></li>
+                    </ul>
+                </div>
+                <div class="link absolute"></div>
+            </div>
+            <div id="s2-group-1" class="absolute">
+                <div id="s2-rotated" class="widthAll heightAll relative">
+                    <img class="widthAll" src="imgs/s2-circle.png">
+                    <img id="s2-icon-1" class="s2-icon absolute" src="imgs/s2-icon-1.svg">
+                    <img id="s2-icon-2" class="s2-icon absolute" src="imgs/s2-icon-2.svg">
+                    <img id="s2-icon-3" class="s2-icon absolute" src="imgs/s2-icon-3.svg">
+                    <img id="s2-icon-4" class="s2-icon absolute" src="imgs/s2-icon-4.svg">
+                    <img id="s2-icon-5" class="s2-icon absolute" src="imgs/s2-icon-5.svg">
+                </div>
+                <img id="s2-logo" class="absolute" src="imgs/s2-logo.png">
+                <img id="s2-line" class="absolute" src="imgs/s2-line.png">
+                <div id="s2-button" class="absolute button flexCenter" type="pulse-white"><div class="dashed absolute"></div></div>
+            </div>
+        </div>
+        <!-- Section 2 -->
+        <div id='section-2' class='section absolute'>
+            <img id="s5-bg" class="lt0 absolute widthAll" src="imgs/s5-bg.jpg">
+            <img id="s7-bg" class="lt0 absolute widthAll" src="imgs/s7-bg.jpg">
+            <img id="s9-bg" class="lt0 absolute widthAll" src="imgs/s9-bg.jpg">
+            <div id="s11-rect-1" class="s11-rect absolute"></div>
+            <div id="s11-rect-2" class="s11-rect absolute"></div>
+            <div id="s11-rect-3" class="s11-rect absolute"></div>
+            <div id="s11-rect-4" class="s11-rect absolute"></div>
+            <div id="s11-rect-5" class="s11-rect absolute"></div>
+            <div id="s11-rect-6" class="s11-rect absolute"></div>
+            <div id="s17-rect-1" class="absolute"></div>
+            <img id="s19-circle" class="absolute" src="imgs/s19-circle.png">
+            <img id="s3-dots" class="lt0 absolute" src="imgs/s3-dots.png">
+            <img id="s3-dots-2" class="lt0 absolute" src="imgs/s3-dots-2.png">
+            <img id="s3-bg-left" class="absolute" src="imgs/s3-bg.png">
+            <img id="s3-bg-right" class="absolute" src="imgs/s3-bg.png">
+            <div id="s3-group-1" class="absolute flexCenter">
+                <div id="s3-group-1-left" class="widthAll heightAll lt0 absolute"></div>
+                <div id="s3-group-1-right" class="widthAll heightAll lt0 absolute"></div>
+                <p id="s3-txt-6" class="s3-txt-6 Roboto-Bold align-center"></p>
+                <div id="s3-bloc-1" class="s3-bloc absolute flexCenter">
+                    <div id="s3-bloc-content-1" class="widthAll heightAll flexCenter">
+                        <p class="Roboto-Bold">1</p>
+                        <div class="checked absolute flexCenter"></div>    
+                    </div>
+                    <p id="s3-txt-1" class="s3-txt-1 Roboto-Bold absolute"></p>
+                </div>
+                <div id="s3-bloc-2" class="s3-bloc absolute flexCenter">
+                    <div id="s3-bloc-content-2" class="widthAll heightAll flexCenter">
+                        <p class="Roboto-Bold">2</p>
+                        <div class="checked absolute flexCenter"></div>    
+                    </div>
+                    <p id="s3-txt-2" class="s3-txt-2 Roboto-Bold absolute"></p>
+                </div>
+                <div id="s3-bloc-3" class="s3-bloc absolute flexCenter">
+                    <div id="s3-bloc-content-3" class="widthAll heightAll flexCenter">
+                        <p class="Roboto-Bold">3</p>
+                        <div class="checked absolute flexCenter"></div>    
+                    </div>
+                    <p id="s3-txt-3" class="s3-txt-3 Roboto-Bold absolute"></p>
+                </div>
+                <div id="s3-bloc-4" class="s3-bloc absolute flexCenter">
+                    <div id="s3-bloc-content-4" class="widthAll heightAll flexCenter">
+                        <p class="Roboto-Bold">4</p>
+                        <div class="checked absolute flexCenter"></div>    
+                    </div>
+                    <p id="s3-txt-4" class="s3-txt-4 Roboto-Bold absolute"></p>
+                </div>
+                <div id="s3-bloc-5" class="s3-bloc absolute flexCenter">
+                    <div id="s3-bloc-content-5" class="widthAll heightAll flexCenter">
+                        <p class="Roboto-Bold">5</p>
+                        <div class="checked absolute flexCenter"></div>    
+                    </div>
+                    <p id="s3-txt-5" class="s3-txt-5 Roboto-Bold absolute"></p>
+                </div>
+            </div>
+            <div id="s3-button" class="absolute button-glass btNext button flexCenter" type="pulse-white"></div>
+            <div id="s14-button" class="absolute button-glass btNext button flexCenter" type="pulse-white"></div>
+            <div id="s16-button" class="absolute button-glass btNext button flexCenter" type="pulse-white"></div>
+            <div id="s18-button" class="absolute button-glass btNext button flexCenter" type="pulse-white"></div>
+            <div id="s20-button" class="absolute button-glass btNext button flexCenter" type="pulse-white"></div>
+            <div id="s4-content" class="lt0 absolute widthAll heightAll noEvents">
+                <div id="s4-number" class="absolute flexCenter"><p class="Roboto-Bold">1</p></div>
+                <div id="s4-group-1" class="absolute flexYStartCol col">
+                    <p><span class="s4-txt-1 Roboto-Bold"></span><span class="s4-txt-2 Roboto-Regular"></span></p>
+                    <p id="s4-txt-3" class="s4-txt-3 Roboto-Regular"></p>
+                </div>
+                <p id="s11-txt-1" class="s11-txt-1 Roboto-Bold absolute"></p>
+                <div id="s11-group-1" class="absolute flexXStart">
+                    <div class="rect flexCenter"><p class="Roboto-Bold">1</p></div>
+                    <div>
+                        <p id="s11-txt-2" class="s11-txt-2 Roboto-Bold"></p>
+                        <ul>
+                            <li class="s11-txt-3 Roboto-Regular"></li>
+                            <li class="s11-txt-4 Roboto-Regular"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="s12-group-1" class="absolute flexXStart">
+                    <div class="rect flexCenter"><p class="Roboto-Bold">2</p></div>
+                    <p id="s12-txt-1" class="s12-txt-1 Roboto-Regular"></p>
+                </div>
+                <div id="s13-dotted" class="absolute"></div>
+                <div id="s13-group-1" class="absolute flexCenter">
+                    <p id="s13-txt-4" class="s13-txt-4 Roboto-Regular" style="width: min-content;"></p>
+                </div>
+                <div id="s12-group-2" class="absolute">
+                    <div id="s12-group-2-bloc-1" class="s12-group-2-bloc">
+                        <p id="s12-txt-2" class="s12-txt-2 Roboto-Bold"></p>
+                        <p id="s12-txt-3" class="s12-txt-3 Roboto-Regular"></p>    
+                    </div>
+                    <div id="s12-group-2-bloc-2" class="s12-group-2-bloc">
+                        <p id="s12-txt-4" class="s12-txt-4 Roboto-Bold"></p>
+                        <p id="s12-txt-5" class="s12-txt-5 Roboto-Regular"></p>    
+                    </div>
+                    <div id="s12-group-2-bloc-3" class="s12-group-2-bloc">
+                        <p class="s12-txt-2 Roboto-Bold"></p>
+                        <ul>
+                            <li class="s13-txt-1 Roboto-Regular"></li>
+                            <li class="s13-txt-2 Roboto-Regular"></li>
+                        </ul>
+                    </div>
+                    <div id="s12-group-2-bloc-4" class="s12-group-2-bloc">
+                        <p class="s12-txt-4 Roboto-Bold"></p>
+                        <p id="s13-txt-3" class="s13-txt-3 Roboto-Regular"></p>    
+                    </div>
+                </div>
+                <div id="s12-group-3" class="absolute">
+                    <img src="imgs/s12-arrow.png" class="widthAll">
+                    <div id="s12-group-3-texts-1" class="lt0 absolute widthAll heightAll flexCenter">
+                        <p class="s12-txt-6 Roboto-Bold upper-case"></p>
+                    </div>
+                    <div id="s12-group-3-texts-2" class="lt0 absolute widthAll heightAll flexCenter">
+                        <p class="s13-txt-5 Roboto-Bold upper-case"></p>
+                    </div>
+                </div>
+                <div id="s11-group-2" class="absolute">
+                    <p id="s11-txt-5" class="s11-txt-5 Roboto-Bold"></p>
+                    <p id="s11-txt-6" class="s11-txt-6 Roboto-Regular"></p>
+                    <p id="s11-txt-7" class="s11-txt-7 Roboto-Regular"></p>
+                    <p id="s11-txt-8" class="s11-txt-8 Roboto-Regular"></p>
+                </div>
+                <div id="s4-group-4" class="s4-group absolute">
+                    <img class="widthAll" src="imgs/s4-img-3.png">
+                    <div class="s4-header absolute Roboto-Bold">
+                        <p>3</p>
+                        <p class="s4-txt-6"></p>
+                    </div>
+                    <div id="s4-checked-3" class="s4-checked absolute flexCenter">
+                        <div id="s4-button-3" class="absolute btNext button flexCenter" type="pulse-white"></div>
+                    </div>
+                </div>
+                <div id="s4-group-3" class="s4-group absolute">
+                    <img class="widthAll" src="imgs/s4-img-2.png">
+                    <div class="s4-header absolute Roboto-Bold">
+                        <p>2</p>
+                        <p class="s4-txt-5"></p>
+                    </div>
+                    <img id="s4-arrow-2" class="s4-arrow absolute" src="imgs/s4-arrow.png">
+                    <div id="s4-checked-2" class="s4-checked absolute flexCenter">
+                        <div id="s4-button-2" class="absolute btNext button flexCenter" type="pulse-white"></div>
+                    </div>
+                </div>
+                <div id="s4-group-2" class="s4-group absolute">
+                    <img class="widthAll" src="imgs/s4-img-1.png">
+                    <div class="s4-header absolute Roboto-Bold">
+                        <p>1</p>
+                        <p class="s4-txt-4 unopen-el"></p>
+                        <p class="s5-txt-1 open-el"></p>
+                    </div>
+                    <img id="s4-arrow-1" class="s4-arrow absolute" src="imgs/s4-arrow.png">
+                    <div id="s4-checked-1" class="s4-checked absolute flexCenter">
+                        <div id="s4-button-1" class="absolute btNext button flexCenter" type="pulse-white"></div>
+                    </div>
+                </div>
+                <div id="s11-group-3" class="absolute">
+                    <p id="s11-txt-9" class="s11-txt-9 Roboto-Bold"></p>
+                    <p id="s11-txt-10" class="s11-txt-10 Roboto-Regular"></p>
+                    <p id="s11-txt-11" class="s11-txt-11 Roboto-Regular"></p>
+                </div>
+                <div id="s5-infos" class="absolute noEvents">
+                    <p id="s5-txt-2" class="s5-txt-2 Roboto-Bold s5-infos-row-1"></p>
+                    <img id="s5-img-1" class="s5-infos-row-1" src="imgs/s5-img-1.png">
+                    <img id="s5-img-2" class="s5-infos-row-1" src="imgs/s5-img-2.png">
+                    <p id="s5-txt-3" class="s5-txt-3 Roboto-Bold s5-infos-row-2"></p>
+                    <img id="s5-img-3" class="s5-infos-row-2" src="imgs/s5-img-3.png">
+                    <img id="s5-img-4" class="s5-infos-row-2" src="imgs/s5-img-4.png">
+                </div>
+                <div id="s7-infos" class="absolute noEvents">
+                    <p id="s7-txt-1" class="s7-txt-1 Roboto-Bold s7-infos-row-1"></p>
+                    <img id="s5-img-1" class="s7-infos-row-1" src="imgs/s7-img-1.png">
+                    <div class="sep"></div>
+                    <p id="s7-txt-2" class="s7-txt-2 Roboto-Bold s7-infos-row-2"></p>
+                    <img id="s5-img-2" class="s7-infos-row-2" src="imgs/s7-img-2.png">
+                    <div class="sep"></div>
+                    <p id="s7-txt-3" class="s7-txt-3 Roboto-Bold s7-infos-row-3"></p>
+                    <img id="s5-img-3" class="s7-infos-row-3" src="imgs/s7-img-3.png">
+                </div>
+                <div id="s9-infos" class="absolute flex noEvents">
+                    <div id="s9-infos-left" class="flex col">
+                        <p id="s9-txt-0" class="s4-txt-6 Roboto-Bold"></p> 
+                        <div class="Roboto-Italic" style="font-size:18px;">
+                            <p id="s9-txt-1" class="s9-txt-1"></p> 
+                            <p id="s9-txt-2" class="s9-txt-2"></p> 
+                        </div>
+                        <div id="s9-proposal" class="flexXStart Roboto-Regular relative">
+                            <p id="s9-txt-7" class="s9-txt-7"></p> 
+                            <p id="s9-txt-8" class="s9-txt-8 hidden"></p> 
+                            <p id="s9-txt-9" class="s9-txt-9 hidden"></p> 
+                            <p id="s9-txt-10" class="s9-txt-10 hidden"></p> 
+                            <p id="s9-txt-11" class="s9-txt-11 hidden"></p>
+                            <img class="absolute" src="imgs/s9-links.png">
+                        </div>
+                        <div id="s9-gauge" class="flex">
+                            <div class="s9-level flexCenter"></div>
+                            <div class="s9-level flexCenter"></div>
+                            <div class="s9-level flexCenter"></div>
+                            <div class="s9-level flexCenter"></div>
+                            <div class="s9-level flexCenter"></div>
+                        </div>
+                    </div>
+                    <div id="s9-infos-right" class="flex col">
+                        <div id="s9-bloc-1" class="s9-bloc flex">
+                            <div id="s9-button-1" class="button flexCenter"></div>
+                            <div class="rect flexCenter">
+                                <p id="s9-txt-3" class="s9-txt-3 Roboto-Regular"></p>
+                            </div>
+                        </div>
+                        <div id="s9-bloc-2" class="s9-bloc flex">
+                            <div id="s9-button-2" class="button flexCenter"></div>
+                            <div class="rect flexCenter">
+                                <p id="s9-txt-4" class="s9-txt-4 Roboto-Regular"></p>
+                            </div>
+                        </div>
+                        <div id="s9-bloc-3" class="s9-bloc flex">
+                            <div id="s9-button-3" class="button flexCenter"></div>
+                            <div class="rect flexCenter">
+                                <p id="s9-txt-5" class="s9-txt-5 Roboto-Regular"></p>
+                            </div>
+                        </div>
+                        <div id="s9-bloc-4" class="s9-bloc flex">
+                            <div id="s9-button-4" class="button flexCenter"></div>
+                            <div class="rect flexCenter">
+                                <p id="s9-txt-6" class="s9-txt-6 Roboto-Regular"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s9-feedback" class="absolute feedback flexXStartCol col hidden">
+                        <p class="s9-txt-12 rightEl Roboto-BoldItalic"></p>
+                        <p class="s9-txt-13 wrongEl Roboto-BoldItalic"></p>
+                        <p class="s9-txt-14 Roboto-Regular"></p>
+                    </div>
+                </div>
+                <div id="s5-helper" class="absolute">
+                    <p id="s5-txt-4" class="s5-txt-4 Roboto-Italic"></p>
+                    <img id="s5-arrow" src="imgs/s5-arrow.png">
+                </div>
+            </div>
+            <div id="s15-content" class="lt0 absolute widthAll heightAll noEvents">
+                <div id="s15-header" class="absolute flexYStartCol col">
+                    <div id="s15-number" class="flexCenter"><p class="Roboto-Bold">2</p></div>
+                    <p id="s15-txt-1" class="s15-txt-1 Roboto-Bold"></p>
+                </div>
+                <div id="s15-circle" class="absolute"></div>
+                <img id="s15-img-1" class="absolute" src="imgs/s15-img-1.png">
+                <img id="s15-img-2" class="absolute" src="imgs/s15-img-2.png">
+                <img id="s15-img-3" class="absolute" src="imgs/s15-img-3.png">
+                <div id="s15-group-1" class="s15-group absolute flexXStartCol col">
+                    <p id="s15-txt-2" class="s15-txt-2 Roboto-Bold"></p>
+                    <p id="s15-txt-3" class="s15-txt-3 Roboto-Regular"></p>
+                    <div class="circle absolute flexCenter">
+                        <img id="s15-icon-1" src="imgs/s15-icon-1.svg">
+                    </div>
+                </div>
+                <img id="s15-arrow" class="absolute" src="imgs/s15-arrow.png">
+                <div id="s15-group-2" class="s15-group absolute flexXStartCol col">
+                    <p id="s15-txt-4" class="s15-txt-4 Roboto-Bold"></p>
+                    <div id="s15-bloc-2" class="relative">
+                        <div id="s15-bloc-content-2" class="lt0 flex col absolute widthAll heightAll">
+                            <p id="s15-txt-5" class="s15-txt-5 Roboto-Bold"></p>
+                            <div class="flex flexGrow" style="gap:17px;">
+                                <div id="s15-bloc-content-left-2" class="flexXStartYEndCol col">
+                                    <p class="s15-txt-6 Roboto-Regular width55"></p>
+                                    <img id="s15-img-4" src="imgs/s15-img-4.png">
+                                </div>
+                                <div id="s15-bloc-content-right-2" class="flexXStartYEndCol col">
+                                    <p class="s15-txt-7 Roboto-Regular width55"></p>
+                                    <img id="s15-img-5" src="imgs/s15-img-5.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle absolute flexCenter">
+                        <img id="s15-icon-2" src="imgs/s15-icon-2.svg">
+                    </div>
+                </div>
+                <div id="s15-button" class="button absolute flexCenter">
+                    <img id="s1-edge" src="imgs/edge-white.svg">
+                </div>  
+            </div>
+            <div id="s17-content" class="lt0 absolute widthAll heightAll noEvents">
+                <img id="s17-img-2" class="absolute" src="imgs/s17-img-2.png">
+                <img id="s17-img-1" class="absolute" src="imgs/s17-img-1.png">
+                <div id="s17-header" class="absolute flexYStartCol col">
+                    <div id="s17-number" class="flexCenter"><p class="Roboto-Bold">3</p></div>
+                    <p id="s17-txt-1" class="s17-txt-1 Roboto-Bold"></p>
+                </div>
+                <div id="s17-group-1" class="s17-group absolute flexXStart">
+                    <div class="rect flexCenter"><img src="imgs/s17-icon-1.svg"></div>
+                    <p id="s17-txt-2" class="s17-txt-2 Roboto-Regular"></p>
+                </div>
+                <div id="s17-group-2" class="s17-group absolute flexXStart">
+                    <div class="rect flexCenter"><img src="imgs/s17-icon-2.svg"></div>
+                    <div>
+                        <p id="s17-txt-3" class="s17-txt-3 Roboto-Regular"></p> 
+                        <p id="s17-txt-4" class="s17-txt-4 Roboto-Regular"></p>    
+                    </div>
+                </div>
+                <div id="s17-group-3" class="s17-group absolute flexXStart">
+                    <div class="rect flexCenter"><img src="imgs/s17-icon-3.svg"></div>
+                    <p id="s17-txt-5" class="s17-txt-5 Roboto-Regular"></p>
+                </div>
+            </div>
+            <div id="s19-content" class="lt0 absolute widthAll heightAll noEvents">
+                <div id="s19-header" class="absolute flexYStartCol col">
+                    <div id="s19-number" class="flexCenter"><p class="Roboto-Bold">4</p></div>
+                    <p id="s19-txt-1" class="s19-txt-1 Roboto-Bold"></p>
+                </div>
+                <div id="s19-group-1" class="absolute">
+                    <div id="s19-group-1-bloc-1" class="s19-group-1-bloc flexXStartCol col">
+                        <p id="s19-txt-2" class="s19-txt-2 Roboto-Regular"></p>
+                        <ul>
+                            <li class="s19-txt-4 Roboto-Regular"></li>
+                            <li class="s19-txt-5 Roboto-Regular"></li>
+                        </ul> 
+                    </div>
+                    <div id="s19-group-1-bloc-2" class="s19-group-1-bloc flexXStart">
+                        <p id="s19-txt-3" class="s19-txt-3 Roboto-Regular"></p>
+                    </div>
+                    <div id="s19-group-1-bloc-3" class="s19-group-1-bloc flexXStart">
+                        <p id="s19-txt-6" class="s19-txt-6 Roboto-Regular"></p>
+                    </div>
+                    <div id="s19-group-1-bloc-4" class="s19-group-1-bloc flexXStartCol col">
+                        <p id="s19-txt-7" class="s19-txt-7 Roboto-Regular"></p>
+                        <ul>
+                            <li class="s19-txt-8 Roboto-Regular"></li>
+                            <li class="s19-txt-9 Roboto-Regular"></li>
+                        </ul>   
+                    </div>
+                </div>
+            </div>
+            <div id="s21-content" class="lt0 absolute widthAll heightAll noEvents">
+                <img id="s21-img-1" class="absolute lt0" src="imgs/s21-img-1.jpg">
+                <div id="s21-header" class="absolute flexXStartCol col">
+                    <div id="s21-number" class="flexCenter"><p class="Roboto-Bold">5</p></div>
+                    <p id="s21-txt-1" class="s21-txt-1 Roboto-Bold"></p>
+                </div>
+                <div id="s21-groups" class="absolute flex">
+                    <div id="s21-group-1" class="s21-group">
+                        <div class="lt0 absolute widthAll heightAll" style="overflow: hidden; border-radius: 20px;">
+                            <img id="s21-img-2" class="absolute" src="imgs/s21-img-2.jpg">
+                        </div>
+                        <div class="s21-group-content flex col lt0 absolute widthAll heightAll">
+                            <p id="s21-txt-2" class="s21-txt-2 Roboto-Bold title"></p>
+                            <div id="s22-bloc" class="bloc">
+                                <p id="s22-txt-1" class="s22-txt-1 Roboto-Bold"></p>
+                                <p id="s22-txt-2" class="s22-txt-2 Roboto-Bold"></p>
+                                <ul>
+                                    <li class="s22-txt-3 Roboto-Regular"></li>
+                                    <li class="s22-txt-4 Roboto-Regular"></li>
+                                </ul>  
+                            </div>
+                        </div>
+                        <div id="s21-button" class="absolute button flexCenter" type="pulse"></div>
+                    </div>
+                    <div id="s21-group-2" class="s21-group">
+                        <div class="lt0 absolute widthAll heightAll" style="overflow: hidden; border-radius: 20px;">
+                            <img id="s21-img-3" class="absolute" src="imgs/s21-img-3.jpg">
+                        </div>
+                        <div class="s21-group-content flex col lt0 absolute widthAll heightAll">
+                            <p id="s21-txt-3" class="s21-txt-3 Roboto-Bold title"></p>
+                            <div id="s23-bloc" class="bloc">
+                                <p id="s23-txt-1" class="s23-txt-1 Roboto-Bold"></p>
+                                <ul>
+                                    <li class="s23-txt-2 Roboto-Regular"></li>
+                                    <li class="s23-txt-3 Roboto-Regular"></li>
+                                    <li class="s23-txt-4 Roboto-Regular"></li>
+                                </ul>  
+                            </div>
+                        </div>
+                        <div id="s22-button" class="absolute button flexCenter" type="pulse"></div>
+                    </div>
+                    <div id="s21-group-3" class="s21-group">
+                        <div class="lt0 absolute widthAll heightAll" style="overflow: hidden; border-radius: 20px;">
+                            <img id="s21-img-4" class="absolute" src="imgs/s21-img-4.jpg">
+                        </div>
+                        <div class="s21-group-content flex col lt0 absolute widthAll heightAll">
+                            <p id="s21-txt-4" class="s21-txt-4 Roboto-Bold title"></p>
+                            <div id="s24-bloc" class="bloc">
+                                <p id="s24-txt-1" class="s24-txt-1 Roboto-Bold"></p>
+                                <ul>
+                                    <li class="s24-txt-2 Roboto-Regular"></li>
+                                    <li class="s24-txt-3 Roboto-Regular"></li>
+                                    <li class="s24-txt-4 Roboto-Regular"></li>
+                                </ul>  
+                            </div>
+                        </div>
+                        <div id="s23-button" class="absolute button flexCenter" type="pulse"></div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

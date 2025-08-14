@@ -1,0 +1,262 @@
+html, body {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    margin: 0;
+}
+
+.footer {
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    background-color: #006a4e;
+}
+
+.footer .button {
+	cursor: pointer;
+}
+
+#button-menu div {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+}
+
+#button-menu div:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+#button-menu div:nth-of-type(2) {
+    width: 20px;
+}
+
+#button-menu.close div:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+
+#button-menu.close div:nth-of-type(2) {
+    opacity: 0;
+}
+
+#button-menu.close div:nth-of-type(3) {
+    transform: translateY(2px) rotate(-45deg);
+}
+
+#button-subtitle {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#button-subtitle img {
+    width: 27px;
+}
+
+#button-subtitle.on .on,
+#button-subtitle.off .off {
+    display: block;
+}
+
+#button-subtitle.off .on,
+#button-subtitle.on .off {
+    display: none;
+}
+
+#footer-title-wrapper {
+    width: 216px;
+}
+
+#footer-title-module {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#footer-logo-wrapper {
+    width: 412px;
+}
+
+#footer-logo-wrapper div {
+    width: 570px;
+    height: 540px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: calc((412px - 570px) / 2);
+    top: -28px;
+}
+
+#footer-logo-wrapper img {
+    width: 192px;
+    z-index: 1;
+}
+
+#footer-sound-wrapper {
+    width: 150px;
+}
+
+#sound-volume {
+    cursor: pointer;
+}
+
+#sound-volume img {
+    width: 20px;
+}
+
+#volume-bars {
+    height: 16px;
+    margin-left: 19px;
+    margin-right: 19px;
+}
+
+.volume-bar {
+    width: 2px;
+    background-color: #FFF;
+}
+
+.volume-bar.off {
+    opacity: 0.2;
+}
+
+#volume-bars .volume-bar:not(:last-child) {
+    margin-right: 2px;
+}
+
+#sound-duration {
+    width: 50px;
+    height: 2px;
+    background-color: #062c22;
+    margin-top: 8px;
+}
+
+#sound-duration > div {
+    width: 0%;
+    height: 100%;
+    background-color: #82ca9c;
+}
+
+.button-nav {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform .8s;
+}
+
+.button-nav img {
+    width: 13px;
+}
+
+#button-next img {
+    transform: scaleX(-1);
+}
+
+#button-next.active img {
+    -webkit-animation: fadingX .8s ease-out infinite;
+    animation: fadingX .8s ease-out infinite;
+}
+
+.button-nav.inactive {
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.button-nav.inactive img {
+    opacity: 0.2;
+}
+
+#footer-progress {
+    font-size: 16px;
+    color: #FFF;
+}
+
+@-webkit-keyframes fadingX {
+    0% {
+        opacity: 1;
+        transform: translateX(0%) scaleX(-1);
+    }
+    25% {
+        opacity: 0;
+        transform: translateX(60%) scaleX(-1);
+    }
+    75% {
+       opacity: 0;
+        transform: translateX(-60%) scaleX(-1); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%) scaleX(-1);
+    }
+}
+
+@keyframes fadingX {
+    0% {
+        opacity: 1;
+        transform: translateX(0%) scaleX(-1);
+    }
+    25% {
+        opacity: 0;
+        transform: translateX(60%) scaleX(-1);
+    }
+    75% {
+       opacity: 0;
+        transform: translateX(-60%) scaleX(-1); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%) scaleX(-1);
+    }
+}
+
+@-webkit-keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.3);
+    }
+    75% {
+        transform: scale(0.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.3);
+    }
+    75% {
+        transform: scale(0.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#footer-navigation-wrapper {
+    width: 90px;
+}

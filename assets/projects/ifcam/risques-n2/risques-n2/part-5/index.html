@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+    <!-- build:js ../../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/lesson-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/device.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/clickables.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/dragdrop.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/lists.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/timeline.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/scorm-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/navigation-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/language-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/sound-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/toast.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/commons.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="js/screens.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="main" class="widthAll heightAll relative">     
+        <!-- Section 1 -->
+        <div id='section-1' class='section absolute'>
+            <img id="s1-img-1" src="imgs/s1-img-1.jpg" class="absolute">
+            <div id="s1-group" class="absolute flexCenter col">
+                <img id="s1-icon" src="imgs/s1-icon.svg">
+                <p id="s1-txt-1" class="s1-txt-1 BookAntiqua-Bold"></p>
+                <p id="s1-txt-2" class="s1-txt-2 Roboto-Regular align-center"></p>
+                <p id="s1-txt-3" class="s1-txt-3 Roboto-BoldItalic align-center"></p>
+                <div id="s1-link" class="origin50-0"></div>
+                <div id="s1-btNext" class="button btNext flexCenter active">
+                    <img id="s1-edge" src="imgs/edge-white.svg">
+                </div>
+            </div>
+            <div id="s3-group" class="absolute flexCenter col hidden">
+                <img id="s3-icon" src="imgs/s3-icon.svg">
+                <p id="s3-txt-1" class="result-txt-1 BookAntiqua-Bold align-center"></p>
+                <p id="s3-txt-2" class="s3-feedback-txt-score Roboto-Bold align-center"></p>
+                <div id="s3-link"></div>
+                <p id="s3-txt-3" class="result-txt-2 Roboto-Regular align-center" ></p>
+                <div id="s3-buttons">
+                    <div id="s3-button-quit" class="button btQuit flexCenter active">
+                        <img src="imgs/quit.svg"><p id="s3-button-quit-txt" class="Roboto-Regular quit"></p>
+                    </div>
+                    <div id="s3-button-redo" class="button btPrev flexCenter active">
+                        <img src="imgs/redo.svg"><p id="s3-button-redo-txt" class="Roboto-Regular quiz-redo"></p>
+                    </div>
+                    <div id="s3-button-corrections" class="button flexCenter active">
+                        <p id="s3-button-corrections-txt" class="Roboto-Regular quiz-corrections"></p>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="s3-quiz-corrections-wrap" class="absolute lt0 widthAll heightAll hidden">
+                <div id="s3-circle" class="absolute"></div>
+                <img id="s3-patterns" class="absolute" src="imgs/s3-patterns.png">
+                <div id="s3-quiz-corrections-content" class="absolute">
+                    <div id="s3-quiz-corrections-header" class="flexXStart">
+                        <img src="imgs/s1-icon.svg">
+                        <p id="s3-correction-txt-1" class="s3-correction-txt-1 Roboto-Regular upperCase"></p>
+                    </div>
+                    <div id="s3-quiz-corrections-middle">
+                        <div id="s3-quiz-corrections-middle-left" class="relative">
+                            <div id="s3-quiz-corrections-button-1" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>1</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-2" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>2</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-3" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>3</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-4" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>4</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-5" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>5</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-6" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>6</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-7" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>7</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                            <div id="s3-quiz-corrections-button-8" class="s3-quiz-corrections-button relative">
+                                <div class="absolute lt0 widthAll heightAll flexCenter">
+                                    <p class="Roboto-Light"><span class="question"></span> <span>8</span></p>
+                                    <img class="edge-white" src="imgs/edge-white.svg">    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="s3-quiz-corrections-middle-right" class="relative">
+                            <div id="s3-quiz-corrections-sentence-wrapper" class="widthAll">
+                                <p id="s3-quiz-corrections-sentence" class="Roboto-Regular"></p>
+                            </div>
+                            <div id="s3-quiz-corrections-right-wrapper" class="relative widthAll">
+                                <div class="flexCenter circle absolute"><img src="imgs/checkmark-white.svg"></div>
+                            </div>
+                            <div id="s3-quiz-corrections-wrong-wrapper" class="relative widthAll">
+                                <div class="flexCenter circle absolute"><img src="imgs/cross-white.svg"></div>
+                            </div>
+                            <div id="s3-quiz-corrections-helper" class="absolute">
+                                <p id="s3-correction-txt-2" class="s3-correction-txt-2 Roboto-Italic"></p>
+                                <img class="absolute" src="imgs/s3-correction-helper.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s3-quiz-corrections-button-close" class="flexCenter button absolute"><img src="imgs/cross-white.svg" ></div>
+            </div>
+        </div>
+        <!-- Section 2 -->
+        <div id='section-2' class='section absolute'>
+            <div id="quiz-imgs" class="absolute lt0 widthAll heightAll">
+                <img id="q1-img" class="absolute lt0 widthAll" src="imgs/q1-img.jpg">
+                <img id="q2-img" class="absolute lt0 widthAll" src="imgs/q2-img.jpg">
+                <img id="q3-img" class="absolute lt0 widthAll" src="imgs/q3-img.jpg">
+                <img id="q4-img" class="absolute lt0 widthAll" src="imgs/q4-img.jpg">
+                <img id="q5-img" class="absolute lt0 widthAll" src="imgs/q5-img.jpg">
+                <img id="q6-img" class="absolute lt0 widthAll" src="imgs/q6-img.jpg">
+                <img id="q7-img" class="absolute lt0 widthAll" src="imgs/q7-img.jpg">
+                <img id="q8-img" class="absolute lt0 widthAll" src="imgs/q8-img.jpg">
+                <img id="q9-img" class="absolute lt0 widthAll" src="imgs/q9-img.jpg">
+            </div>
+            <div id="quiz-wrapper" class="absolute">
+                <div id="quiz-wrapper-circle" class="lt0 absolute widthAll heightAll"></div>
+                <div id="quiz-content" class="absolute widthAll">
+                    <div id="quiz-question-wrapper" class="widthAll flexYStart">
+                        <p id="quiz-question" class="Roboto-Light"></p>
+                    </div>
+                    <div id="quiz-sentence-wrapper" class="widthAll flexYStart">
+                        <p id="quiz-sentence" class="Roboto-Medium align-center"></p>
+                    </div>
+                    <div id="quiz-helper-wrapper" class="widthAll flexYStart">
+                        <p id="quiz-helper" class="Roboto-Italic"></p>
+                    </div>
+                    <div id="quiz-interactions-wrapper" class="widthAll flexCenter">
+                        <div id="quiz-interactions-clickables" class="hidden">
+                            <div id="quiz-clickable-1" class="quiz-clickable flexXStart">
+                                <p class="Roboto-Regular"></p>
+                            </div>
+                            <div id="quiz-clickable-2" class="quiz-clickable flexXStart">
+                                <p class="Roboto-Regular"></p>
+                            </div>
+                            <div id="quiz-clickable-3" class="quiz-clickable flexXStart">
+                                <p class="Roboto-Regular"></p>
+                            </div>
+                            <div id="quiz-clickable-4" class="quiz-clickable flexXStart">
+                                <p class="Roboto-Regular"></p>
+                            </div>
+                        </div>
+                        <div id="quiz-interactions-lists" class="width70 hidden">
+                            
+                        </div>
+                        <div id="quiz-interactions-drags" class="hidden relative heightAll">
+                            <img id="q9-ellipse" src="imgs/q9-ellipse.png">
+                            <div id="quiz-drop-1" class="quiz-drop Roboto-Bold absolute flexXStart"><p></p><div class="circle flexCenter absolute"><p>1</p></div></div>
+                            <div id="quiz-drop-2" class="quiz-drop Roboto-Bold absolute flexXStart"><p></p><div class="circle flexCenter absolute"><p>2</p></div></div>
+                            <div id="quiz-drop-3" class="quiz-drop Roboto-Bold absolute flexXStart"><p></p><div class="circle flexCenter absolute"><p>3</p></div></div>
+                            <div id="quiz-drop-4" class="quiz-drop Roboto-Bold absolute flexXStart"><p></p><div class="circle flexCenter absolute"><p>4</p></div></div>
+                            <div id="quiz-drop-5" class="quiz-drop Roboto-Bold absolute flexXStart"><p></p><div class="circle flexCenter absolute"><p>5</p></div></div>
+                            <div id="quiz-drag-1" class="quiz-drag Roboto-Regular absolute flexXStart"><p></p></div>
+                            <div id="quiz-drag-2" class="quiz-drag Roboto-Regular absolute flexXStart"><p></p></div>
+                            <div id="quiz-drag-3" class="quiz-drag Roboto-Regular absolute flexXStart"><p></p></div>
+                            <div id="quiz-drag-4" class="quiz-drag Roboto-Regular absolute flexXStart"><p></p></div>
+                            <div id="quiz-drag-5" class="quiz-drag Roboto-Regular absolute flexXStart"><p></p></div>
+
+                        </div>
+                    </div>
+                    <div id="quiz-validate-wrapper" class="widthAll flexYStart">
+                        <div id="quiz-button-validate" class="button flexCenter" type="pulse">
+                            <p id="quiz-button-validate-txt" class="validate Roboto-Regular"></p>
+                        </div> 
+                    </div>
+                    <div id="quiz-progress-wrapper" class="widthAll flexYStart">
+                        <div class="current"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
