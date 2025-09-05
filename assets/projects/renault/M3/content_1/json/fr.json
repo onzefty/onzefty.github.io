@@ -1,0 +1,46 @@
+{
+	"s1-txt-1": "Quiz",
+	"s1-txt-2": "d’entrée",
+	"s1-txt-3": "Répondez à 5 questions pour évaluer vos compétences initiales.",
+	
+	"s2-txt-1": "Quelles interactions le client peut-il réaliser avec son Conseiller Service grâce à Digital care service ?<br><span class='multiple'>Plusieurs réponses possibles</span>",
+	"s2-txt-2": "Accepter ou refuser une proposition commerciale",
+	"s2-txt-3": "Prendre rendez-vous en concession pour un essai routier",
+	"s2-txt-4": "Suivre ses travaux",
+	"s2-txt-5": "Échanger des documents",
+	"s2-txt-6": "Consulter le solde de ses points<br>de fidélité en temps réel",
+	"s2-txt-7": "Payer en ligne",
+
+	"s3-txt-1": "Quel est l’ordre des actions à réaliser lors de la mise en œuvre de la méthode CCPS ?",
+	"s3-txt-2": "Constat",
+	"s3-txt-3": "Conséquence",
+	"s3-txt-4": "Proposition",
+	"s3-txt-5": "Silence",
+	"s3-txt-6": "1",
+	"s3-txt-7": "2",
+	"s3-txt-8": "3",
+	"s3-txt-9": "4",
+
+	"s4-txt-1": "Que permet de réaliser le Digital Services Portal ?<br><span class='multiple'>Plusieurs réponses possibles</span>",
+	"s4-txt-2": "Faire payer en ligne",
+	"s4-txt-3": "Accéder aux informations du rendez-vous",
+	"s4-txt-4": "Prendre rendez-vous",
+	"s4-txt-5": "Gérer les rendez-vous digitaux",
+
+	"s5-txt-1": "Dans ce contexte, quelle est la phrase parfaite à utiliser ?",
+	"s5-txt-2": "Lors du tour du véhicule avec votre client, vous remarquez que les pneumatiques à l’avant sont<br>arrivés au témoin d’usure.",
+	"s5-txt-3": "Regardez, vous voyez ici, l’usure de votre pneumatique arrive aux témoins d’usure",
+	"s5-txt-4": "Regardez, vos pneus commencent à être légèrement usés sur les côtés",
+	"s5-txt-5": "Regardez, vos pneus avant ont des craquelures sur les flans, ils ne sont plus réglementaires",
+
+	"s6-txt-1": "Quel est le critère estimé comme le plus important par nos clients lors de la restitution ?",
+	"s6-txt-2": "Tous les documents sont prêts à mon arrivée",
+	"s6-txt-3": "Le conseiller montre ce qui a été fait",
+	"s6-txt-4": "Le conseiller commente les contrôles effectués",
+	"s6-txt-5": "Le conseiller me rappelle le prix à payer avant toute autre explication",
+
+	"results-txt-5": "D’après vos résultats, vous êtes tout à fait disposé à devenir un ambassadeur des marques.",
+	"results-txt-4": "Vous semblez posséder de bonnes connaissance initiales, profitez de cette formation pour les affiner !",
+	"results-txt-3": "Vous avez des connaissance initiales, mais elles demandent à être renforcées.",
+	"results-txt-2": "D’après ce résultat, il semble nécessaire que vous suiviez cette formation. Un quiz en fin de formation vous permettra de valider vos connaissances."
+}

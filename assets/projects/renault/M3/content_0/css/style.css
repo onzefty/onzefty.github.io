@@ -1,0 +1,106 @@
+#screen_1 .screen-content {
+    display: flex;
+    background-image: url(../imgs/s1-background.webp);
+    background-position: center;
+    padding: 4.7rem;
+}
+
+#screen_1 .screen-texts {
+    margin-top: auto;
+}
+
+#screen_1 .screen-2col-title {
+    font-size: var(--font-size-70);
+    color: var(--color-txt-main-2);
+    line-height: 0.9em;
+}
+
+.s1-txt-2 {
+    padding-top: 1rem;
+}
+
+
+
+
+#screen_3 .screen-left {
+    background-image: url(../imgs/s3-img.webp);
+    --background-size: 150% auto;
+    --background-position: left 0%;
+    scale: -1 1;
+}
+
+#screen_3 #s3-img {
+    width: min(80%, 80%);
+    scale: -1 1;
+}
+
+#screen_3 .screen-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    color: #282828;
+}
+
+#screen_3 .s3-bloc {
+    gap: var(--font-size-24);
+    padding: 0 var(--font-size-60);
+    font-size: var(--font-size-18);
+}
+
+#screen_3 .s3-bloc:nth-of-type(2),
+#screen_3 .s3-bloc:nth-of-type(3) {
+    background-color: #ffffff;
+}
+
+#screen_3 .s3-bloc:nth-of-type(1),
+#screen_3 .s3-bloc:nth-of-type(4) {
+    background-color: #f4f4f4;
+}
+
+#screen_3 .s3-bloc img {
+    width: 20%;
+}
+
+#screen_4 .screen-content {
+    background-color: #000009;
+}
+
+#screen_4 .screen-right {
+    background-image: url(../imgs/s4-background.webp);
+}
+
+#screen_4 #s4-list {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: var(--font-size-24);
+    font-size: var(--font-size-24);
+    margin-top: var(--font-size-24);
+}
+
+#screen_4 #s4-list > div {
+    display: grid;
+    grid-template-columns: var(--font-size-32) 1fr;
+    grid-column-gap: var(--font-size-24);
+}
+
+#screen_4 #s4-list > div > div {
+    position: relative;
+}
+
+#screen_4 #s4-list > div .s4-list-bullet {
+    background-color: var(--color-txt-main-2);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+}
+
+#screen_4 #s4-list > div:not(:last-child) .s4-list-line {
+    display: block;
+    position: absolute;
+    background-color: var(--color-txt-main-2);
+    left: 50%;
+    top: 0;
+    bottom: calc(0px - var(--font-size-24));
+    width: 0.1rem;
+    translate: -50% 0%;
+}

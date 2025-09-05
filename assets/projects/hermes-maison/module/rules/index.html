@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="../../common/content/css/media-queries.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+
+    <script type="module" src="js/main.js" charset="utf-8"></script>
+
+</head>
+<body>
+	<div id="main">     
+        <div class="container flexCenter relative">
+            <div id="rules-container" class="container-queries relative">
+                <div id="s1-container" class="absolute widthAll heightAll lt0">
+                    <div id="s1-content" class="absolute widthAll heightAll lt0 flex col">
+                        <div id="s1-bubble-1" class="s1-bubble width95 flex col relative">
+                            <p class="s1-txt-1 Roboto-Bold"></p>
+                            <p class="s1-txt-2"></p>
+                        </div>
+                        <div id="s1-bubble-2" class="s1-bubble width95 flex col relative">
+                            <p class="s1-txt-3 Roboto-Bold"></p>
+                            <p class="s1-txt-4"></p>
+                        </div>
+                    </div>
+                    <div id="s11-content" class="absolute widthAll heightAll lt0 flex col">
+                        <div id="s11-bubble-1" class="s1-bubble width95 flex col relative">
+                            <p class="s11-txt-1"></p>
+                            <p class="s11-txt-2"></p>
+                        </div>
+                        <div id="s11-bubble-2" class="s1-bubble width95 flex col relative">
+                            <p class="s11-txt-3"></p>
+                            <!-- <p class="s11-txt-4"></p> -->
+                        </div>
+                    </div>
+                    <div id="s14-content" class="absolute widthAll heightAll lt0 flexXStartYEndCol col">
+                        <div id="s14-bubble-1" class="s1-bubble width95 flex col relative">
+                            <p class="s14-txt-1"></p>
+                            <p class="s14-txt-2"></p>
+                        </div>
+                        <div id="s14-bubble-2" class="s1-bubble width95 flex col relative">
+                            <p class="s14-txt-3"></p>
+                            <p class="s14-txt-4"></p>
+                            <ul class="Roboto-Bold">
+                                <li class="s14-txt-5"></li>
+                                <li class="s14-txt-6"></li>
+                                <li class="s14-txt-7"></li>
+                                <li class="s14-txt-8"></li>
+                                <li class="s14-txt-9"></li>
+                                <li class="s14-txt-10"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="s21-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s21-bubble" class="absolute width85 flex col">
+                            <p class="s21-txt-1"></p>
+                            <p class="s21-txt-2"></p>
+                        </div>
+                        <img draggable="false" id="s21-man" class="absolute" src="./imgs/s7-man.webp">
+                    </div>
+                    <div id="s25-content" class="absolute widthAll heightAll lt0 flex col">
+                        <div id="s25-bubble-1" class="s1-bubble width95 flex col relative">
+                            <p class="s25-txt-1"></p>
+                        </div>
+                        <div id="s25-bubble-2" class="s1-bubble width95 flex col relative">
+                            <p class="s25-txt-2"></p>
+                            <p class="s25-txt-3 Roboto-Bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="s2-container" class="absolute widthAll heightAll lt0">
+                    <div id="s2-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <img draggable="false" id="s2-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <img draggable="false" id="s3-woman" class="absolute" src="./imgs/s3-woman.webp">
+                        <div id="s2-bubble" class="absolute width85 flex col Roboto-Bold">
+                            <p class="s2-txt-1"></p>
+                            <ul>
+                                <li class="s2-txt-2"></li>
+                                <li class="s2-txt-3"></li>
+                                <li class="s2-txt-4"></li>
+                                <li class="s2-txt-5"></li>
+                                <li class="s2-txt-6"></li>
+                            </ul>
+                            <div>
+                                <p class="s2-txt-7 Roboto-Regular"></p>
+                                <p class="s2-txt-8"></p>
+                            </div>
+                        </div>
+                        <div id="s3-bubble" class="absolute width85 flex col">
+                            <p class="s3-txt-1 Roboto-Bold"></p>
+                            <p class="s3-txt-2"></p>
+                            <p class="s3-txt-3"></p>
+                        </div>
+                    </div>
+                    <div id="s7-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s7-bubble" class="absolute width85 flex col">
+                            <p class="s7-txt-1"></p>
+                            <p class="s7-txt-2"></p>
+                            <div id="s7-colors-panel">
+                                <div id="s7-color-picker-1" class="color-picker s7-color-picker" color="blue"></div>
+                                <div id="s7-color-picker-2" class="color-picker s7-color-picker" color="green"></div>
+                                <div id="s7-color-picker-3" class="color-picker s7-color-picker" color="yellow"></div>
+                                <div id="s7-color-picker-4" class="color-picker s7-color-picker" color="red"></div>
+                                <div id="s7-color-picker-5" class="color-picker s7-color-picker" color="orange"></div>
+                                <div id="s7-color-picker-6" class="color-picker s7-color-picker" color="pink"></div>
+                                <div id="s7-color-picker-1" class="color-picker s7-color-picker" color="beige"></div>
+                                <div id="s7-color-picker-2" class="color-picker s7-color-picker" color="grey"></div>
+                                <div id="s7-color-picker-3" class="color-picker s7-color-picker" color="leather"></div>
+                                <div id="s7-color-picker-4" class="color-picker s7-color-picker" color="wood-light"></div>
+                                <div id="s7-color-picker-5" class="color-picker s7-color-picker" color="wood-dark"></div>
+                                <div id="s7-color-picker-6" class="color-picker s7-color-picker" color="wicker"></div>
+                            </div>
+                        </div>
+                        <div id="s8-bubble" class="absolute width85 flex col">
+                            <p class="s8-txt-1 Roboto-Bold"></p>
+                            <p class="s8-txt-2"></p>
+                            <p class="s8-txt-3"></p>
+                            <p class="s8-txt-4"></p>
+                        </div>
+                        <div id="s45-bubble" class="absolute width85 flex col">
+                            <p class="s45-txt-1 Roboto-Bold"></p>
+                            <p class="s45-txt-2"></p>
+                            <p class="s45-txt-3 Roboto-Bold"></p>
+                        </div>
+                        <img draggable="false" id="s7-man" class="absolute" src="./imgs/s7-man.webp">
+                        <img draggable="false" id="s8-woman" class="absolute" src="./imgs/s2-woman.webp">
+                    </div>
+                </div>
+                <div id="s4-container" class="absolute widthAll heightAll lt0">
+                    <div id="s4-content" class="absolute widthAll heightAll lt0">
+                        <div id="s4-colors-panel">
+                            <div id="s4-color-picker-1" class="color-picker s4-color-picker" color="blue"></div>
+                            <div id="s4-color-picker-2" class="color-picker s4-color-picker" color="green"></div>
+                            <div id="s4-color-picker-3" class="color-picker s4-color-picker" color="yellow"></div>
+                            <div id="s4-color-picker-4" class="color-picker s4-color-picker" color="red"></div>
+                            <div id="s4-color-picker-5" class="color-picker s4-color-picker" color="orange"></div>
+                            <div id="s4-color-picker-6" class="color-picker s4-color-picker" color="pink"></div>
+                            <div id="s4-color-picker-1" class="color-picker s4-color-picker" color="beige"></div>
+                            <div id="s4-color-picker-2" class="color-picker s4-color-picker" color="grey"></div>
+                            <div id="s4-color-picker-3" class="color-picker s4-color-picker" color="leather"></div>
+                            <div id="s4-color-picker-4" class="color-picker s4-color-picker" color="wood-light"></div>
+                            <div id="s4-color-picker-5" class="color-picker s4-color-picker" color="wood-dark"></div>
+                            <div id="s4-color-picker-6" class="color-picker s4-color-picker" color="wicker"></div>
+                        </div>
+                        <div id="s4-bubble" class="relative flex col">
+                            <p class="s4-txt-1"></p>
+                            <p class="s4-txt-2 Roboto-Bold"></p>
+                        </div>
+                        <img draggable="false" id="s4-woman" class="absolute" src="./imgs/s4-woman.webp">
+                    </div>
+                    <div id="s5-content" class="absolute widthAll heightAll lt0">
+                        <div id="s5-colors-panel">
+                            <div id="s5-color-picker-1" class="color-picker s5-color-picker" color="blue"><p class="s5-txt-4 absolute"></p></div>
+                            <div id="s5-color-picker-2" class="color-picker s5-color-picker" color="green"><p class="s5-txt-5 absolute"></p></div>
+                            <div id="s5-color-picker-3" class="color-picker s5-color-picker" color="yellow"><p class="s5-txt-6 absolute"></p></div>
+                            <div id="s5-color-picker-4" class="color-picker s5-color-picker" color="red"><p class="s5-txt-7 absolute"></p></div>
+                            <div id="s5-color-picker-5" class="color-picker s5-color-picker" color="orange"><p class="s5-txt-8 absolute"></p></div>
+                            <div id="s5-color-picker-6" class="color-picker s5-color-picker" color="pink"><p class="s5-txt-9 absolute"></p></div>
+                        </div>
+                        <div id="s5-interactions-wrap">
+                            <p class="s5-txt-3 Roboto-Italic align-center"></p>
+                            <div id="s5-cards-wrap" class="relative">
+                                <div id="s5-card-1" class="s5-card absolute">
+                                    <div class="card-content widthAll heightAll flexCenter">
+                                        <div class="hermes-logo">
+                                            <div class="hermes-row-wrap">
+                                                <p class="logo-txt-1"></p>
+                                                <div class="hermes-row hermes-row-1"></div>
+                                            </div>
+                                            <div class="hermes-row-wrap">
+                                                <p class="logo-txt-2"></p>
+                                                <div class="hermes-row hermes-row-2"></div>
+                                            </div>
+                                            <p class="logo-txt-3 relative"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="s5-card-2" class="s5-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s5-card-3" class="s5-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s5-card-4" class="s5-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s5-card-5" class="s5-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s5-card-6" class="s5-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s5-card-7" class="s5-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <img id="s5-cursor" class="absolute" src="./imgs/cursor.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s6-content" class="absolute widthAll heightAll lt0">
+                        <div id="s6-colors-panel">
+                            <div id="s6-color-picker-1" class="color-picker s6-color-picker" color="beige"><p class="s6-txt-2 absolute"></p></div>
+                            <div id="s6-color-picker-2" class="color-picker s6-color-picker" color="grey"><p class="s6-txt-3 absolute"></p></div>
+                            <div id="s6-color-picker-3" class="color-picker s6-color-picker" color="leather"><p class="s6-txt-4 absolute"></p></div>
+                            <div id="s6-color-picker-4" class="color-picker s6-color-picker" color="wood-light"><p class="s6-txt-5 absolute"></p></div>
+                            <div id="s6-color-picker-5" class="color-picker s6-color-picker" color="wood-dark"><p class="s6-txt-6 absolute"></p></div>
+                            <div id="s6-color-picker-6" class="color-picker s6-color-picker" color="wicker"><p class="s6-txt-7 absolute"></p></div>
+                        </div>
+                        <div id="s6-interactions-wrap">
+                            <p class="s5-txt-3 Roboto-Italic align-center"></p>
+                            <div id="s6-cards-wrap" class="relative">
+                                <div id="s6-card-1" class="s6-card absolute">
+                                    <div class="card-content widthAll heightAll flexCenter">
+                                        <div class="hermes-logo">
+                                            <div class="hermes-row-wrap">
+                                                <p class="logo-txt-1"></p>
+                                                <div class="hermes-row hermes-row-1"></div>
+                                            </div>
+                                            <div class="hermes-row-wrap">
+                                                <p class="logo-txt-2"></p>
+                                                <div class="hermes-row hermes-row-2"></div>
+                                            </div>
+                                            <p class="logo-txt-3 relative"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="s6-card-2" class="s6-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s6-card-3" class="s6-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s6-card-4" class="s6-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s6-card-5" class="s6-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s6-card-6" class="s6-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <div id="s6-card-7" class="s6-card absolute"><div class="card-content widthAll heightAll"></div></div>
+                                <img id="s6-cursor" class="absolute" src="./imgs/cursor.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s10-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s10-circle-2" class="absolute"></div>
+                        <div id="s10-circle-1" class="absolute"></div>
+                        <img draggable="false" id="s10-item-1" class="absolute" src="./imgs/s10-item-1.webp">
+                        <img draggable="false" id="s10-item-2" class="absolute" src="./imgs/s10-item-2.webp">
+                        <img draggable="false" id="s10-item-4" class="absolute" src="./imgs/s10-item-4.webp">
+                        <img draggable="false" id="s10-item-5" class="absolute" src="./imgs/s10-item-5.webp">
+                        <div id="s10-texts" class="flex col">
+                            <p id="s10-txt-1" class="s10-txt-1"></p>
+                            <div>
+                                <p id="s10-txt-2" class="s10-txt-2"></p>
+                                <p id="s10-txt-3" class="s10-txt-3 Roboto-Bold"></p>    
+                            </div>
+                            <div id="s10-texts-center">
+                                <img draggable="false" id="s10-item-3" src="./imgs/s10-item-3.webp">
+                                <div id="s10-colors" class="flexCenter col">
+                                    <div id="s10-color-picker-1" class="color-picker s10-color-picker" color="blue"></div>
+                                    <p>+</p>
+                                    <div id="s10-color-picker-2" class="color-picker s10-color-picker" color="red"></div>
+                                    <p>+</p>
+                                    <div id="s10-color-picker-3" class="color-picker s10-color-picker" color="beige"></div>
+                                </div>
+                            </div>
+                            <p id="s10-txt-4" class="s10-txt-4"></p>
+                        </div>
+                    </div>
+                    <div id="s24-content" class="absolute widthAll heightAll lt0 flexYStart">
+                        <div id="s24-circle-2" class="absolute"></div>
+                        <div id="s24-circle-1" class="absolute"></div>
+                        <div id="s24-texts" class="flex col">
+                            <div id="s24-bloc-top">
+                                <img draggable="false" id="s24-img-1" class="s24-img widthAll" src="./imgs/s24-img-1.webp">
+                                <img draggable="false" id="s24-img-2" class="s24-img widthAll" src="./imgs/s24-img-2.webp">
+                                <p id="s24-txt-1" class="s24-txt-1"></p>
+                            </div>
+                            <p id="s24-txt-2" class="s24-txt-2 Roboto-Bold"></p>    
+                            <p id="s24-txt-3" class="s24-txt-3"></p>
+                            <div id="s24-bloc-bottom">
+                                <img draggable="false" id="s24-img-3" class="s24-img widthAll" src="./imgs/s24-img-3.webp">
+                                <img draggable="false" id="s24-img-4" class="s24-img widthAll" src="./imgs/s24-img-4.webp">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s5-bubble" class="width90 height15 absolute">
+                        <div class="relative widthAll heightAll" style="overflow: hidden;">
+                            <div id="s5-bubble-txt" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                <p id="s5-txt-1" class="s5-txt-1"></p>  
+                                <p id="s5-txt-2" class="s5-txt-2 Roboto-Bold"></p>    
+                            </div>  
+                            <div id="s6-bubble-txt" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                <p id="s6-txt-1" class="s6-txt-1"></p>  
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div id="s9-container" class="absolute widthAll heightAll lt0">
+                    <div id="s9-content" class="absolute widthAll heightAll lt0">
+                        <div id="s9-items">
+                            <div id="s9-item-1" class="s9-item"></div>
+                            <div id="s9-item-2" class="s9-item"></div>
+                            <div id="s9-item-3" class="s9-item"></div>
+                            <div id="s9-item-4" class="s9-item"></div>
+                            <div id="s9-item-5" class="s9-item"></div>
+                            <div id="s9-item-6" class="s9-item"></div>
+                            <div id="s9-item-7" class="s9-item"></div>
+                            <div id="s9-item-8" class="s9-item"></div>
+                            <div id="s9-item-9" class="s9-item"></div>
+                            <div id="s9-item-10" class="s9-item"></div>
+                            <div id="s9-item-11" class="s9-item"></div>
+                            <div id="s9-item-12" class="s9-item"></div>
+                            <div id="s9-item-13" class="s9-item"></div>
+                            <div id="s9-item-14" class="s9-item"></div>
+                            <div id="s9-item-15" class="s9-item"></div>
+                            <div id="s9-item-16" class="s9-item"></div>
+                            <div id="s9-item-17" class="s9-item"></div>
+                            <div id="s9-item-18" class="s9-item"></div>
+                            <div id="s9-item-19" class="s9-item"></div>
+                        </div>
+                        <div id="s9-interactions-wrap" class="relative">
+                            <div id="s9-button-wrong" class="s9-button">
+                                <div class="flexCenter"></div>
+                            </div>
+                            <div id="s9-suggestions" class="flexCenter">
+                                <div id="s9-suggestion-1" class="s9-suggestion">
+                                    <img draggable="false" class="card-content widthAll" src="../vm/imgs/items/046131P.webp">
+                                </div>
+                                <div id="s9-suggestion-2" class="s9-suggestion">
+                                    <img draggable="false" class="card-content widthAll" src="../vm/imgs/items/312110M01_face.webp">
+                                </div>
+                                <div id="s9-suggestion-3" class="s9-suggestion">
+                                    <img draggable="false" class="card-content widthAll" src="../vm/imgs/items/314254M01.webp">
+                                </div>
+                                <div id="s9-suggestion-4" class="s9-suggestion">
+                                    <img draggable="false" class="card-content widthAll" src="../vm/imgs/items/102665M62.webp">
+                                </div>
+                                <div id="s9-suggestion-5" class="s9-suggestion">
+                                    <img draggable="false" class="card-content widthAll" src="../vm/imgs/items/400230M01_face.webp">
+                                </div>
+                                <img id="s9-cursor" class="absolute" src="./imgs/cursor.svg">
+                            </div>
+                            <div id="s9-button-right" class="s9-button">
+                                <div class="flexCenter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s12-container" class="absolute widthAll heightAll lt0">
+                    <div id="s12-content" class="absolute widthAll heightAll lt0">
+                        <div id="s12-shadow" class="absolute"></div>
+                        <div id="s12-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s12-txt-1"></p>
+                            <div>
+                                <p class="s12-txt-2 Roboto-Bold"></p>
+                                <p class="s12-txt-3"></p>
+                            </div>
+                            <p class="s12-txt-4"></p>
+                        </div>
+                        <img draggable="false" id="s12-woman" class="absolute" src="./imgs/s2-woman.webp">
+                    </div>
+                </div>
+                <div id="s13-container" class="absolute widthAll heightAll lt0">
+                    <div id="s13-content" class="absolute widthAll heightAll lt0">
+                        <div id="s13-shadow" class="absolute"></div>
+                        <div id="s13-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s13-txt-1"></p>
+                            <div>
+                                <p class="s13-txt-2 Roboto-Bold"></p>
+                                <p class="s13-txt-3"></p>
+                            </div>
+                            <p class="s13-txt-4"></p>
+                        </div>
+                        <img draggable="false" id="s13-woman" class="absolute" src="./imgs/s13-woman.webp">
+                    </div>
+                </div>
+                <div id="s15-container" class="absolute widthAll heightAll lt0">
+                    <div id="s15-content" class="absolute widthAll heightAll lt0">
+                        <div id="s15-slide" class="absolute widthAll heightAll lt0"></div>
+                        <div id="s16-slide" class="absolute widthAll heightAll lt0"></div>
+                        <div id="s17-slide" class="absolute widthAll heightAll lt0"></div>
+                        <div id="s18-slide" class="absolute widthAll heightAll lt0"></div>
+                        <div id="s19-slide" class="absolute widthAll heightAll lt0"></div>
+                        <div id="s20-slide" class="absolute widthAll heightAll lt0"></div>
+                    </div>
+                    <div id="s15-bubble" class="width95 absolute">
+                        <div class="relative widthAll heightAll" style="overflow: hidden;">
+                            <div id="s15-bubble-txt" class="s15-bubble-txt absolute lt0 flex col heightAll widthAll">
+                                <p id="s15-txt-1" class="s15-txt-1 upper-case Roboto-Bold"></p>  
+                                <p id="s15-txt-2" class="s15-txt-2"></p>    
+                            </div>  
+                            <div id="s16-bubble-txt" class="s15-bubble-txt absolute lt0 flex col heightAll widthAll">
+                                <p id="s16-txt-1" class="s16-txt-1 upper-case Roboto-Bold"></p>  
+                                <p id="s16-txt-2" class="s16-txt-2"></p>    
+                            </div> 
+                            <div id="s17-bubble-txt" class="s15-bubble-txt absolute lt0 flex col heightAll widthAll">
+                                <p id="s17-txt-1" class="s17-txt-1 upper-case Roboto-Bold"></p>  
+                                <p id="s17-txt-2" class="s17-txt-2"></p>    
+                            </div>
+                            <div id="s18-bubble-txt" class="s15-bubble-txt absolute lt0 flex col heightAll widthAll">
+                                <p id="s18-txt-1" class="s18-txt-1 upper-case Roboto-Bold"></p>  
+                                <p id="s18-txt-2" class="s18-txt-2"></p>    
+                            </div>
+                            <div id="s19-bubble-txt" class="s15-bubble-txt absolute lt0 flex col heightAll widthAll">
+                                <p id="s19-txt-1" class="s19-txt-1 upper-case Roboto-Bold"></p>  
+                                <p id="s19-txt-2" class="s19-txt-2"></p>  
+                            </div>
+                            <div id="s20-bubble-txt" class="s15-bubble-txt absolute lt0 flex col heightAll widthAll">
+                                <p id="s20-txt-1" class="s20-txt-1 upper-case Roboto-Bold"></p>  
+                                <p id="s20-txt-2" class="s20-txt-2"></p>    
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="s19-bubble" class="width90 height15 flexXStart absolute">
+                        <p class="s19-txt-1 upper-case Roboto-Bold absolute"></p>
+                        <p class="s19-txt-2"></p>
+                    </div> -->
+                </div>
+                <div id="s22-container" class="absolute widthAll heightAll lt0">
+                    <div id="s22-content" class="absolute widthAll heightAll lt0">
+                        <div id="s22-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s22-txt-1"></p>
+                            <p class="s22-txt-2"></p>
+                        </div>
+                        <img draggable="false" id="s22-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <div id="s22-drop" class="absolute"></div>
+                    </div>
+                    <div id="s23-content" class="absolute widthAll heightAll lt0">
+                        <img draggable="false" id="s23-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <div id="s23-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s23-txt-1 Roboto-Bold" feedback="right"></p>
+                            <p class="s23-txt-2 Roboto-Bold" feedback="wrong"></p>
+                            <p class="s23-txt-3" feedback="right"></p>
+                            <p class="s23-txt-4" feedback="wrong"></p>
+                            <p class="s23-txt-5"></p>
+                        </div>
+                    </div>
+                    <div id="s23-interactions-wrap" class="absolute lb0 widthAll height20">
+                        <div class="column flexCenter">
+                            <div id="s23-drag-1" class="s23-drag flexCenter">
+                                <img draggable="false" id="s23-item-1" src="./imgs/s23-item-1.webp">
+                            </div>   
+                        </div>
+                        <div class="column flexCenter">
+                            <div id="s23-drag-2" class="s23-drag flexCenter">
+                                <img draggable="false" id="s23-item-2" src="./imgs/s23-item-2.webp">
+                            </div>  
+                        </div>
+                        <div class="column flexCenter">
+                            <div id="s23-drag-3" class="s23-drag flexCenter">
+                                <img draggable="false" id="s23-item-3" src="./imgs/s23-item-3.webp">
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div id="s26-container" class="absolute widthAll heightAll lt0">
+                    <div id="s26-content" class="absolute widthAll heightAll lt0 flexYStartCol col">
+                        <img id="s26-frame-1" draggable="false" class="widthAll" src="./imgs/s26-frame-1.webp">
+                        <img id="s26-frame-2" draggable="false" class="widthAll" src="./imgs/s26-frame-2.webp">
+                    </div>
+                    <div id="s27-content" class="absolute widthAll heightAll lt0 flexYStartCol col">
+                        <div id="s27-frame-1" class="widthAll relative">
+                            <img draggable="false" class="widthAll" src="./imgs/s27-frame-1.webp">
+                            <img draggable="false" id="s27-triangle-1" class="absolute" src="./imgs/s27-triangle-1.webp">
+                        </div>
+                        <div id="s27-frame-2" class="widthAll relative">
+                            <img draggable="false" class="widthAll" src="./imgs/s27-frame-2.webp">
+                            <img draggable="false" id="s27-triangle-2" class="absolute" src="./imgs/s27-triangle-2.webp">
+                        </div>
+                    </div>
+                    <div id="s28-content" class="absolute widthAll heightAll lt0 flexYStartCol col">
+                        <div id="s28-frame-1" class="widthAll relative">
+                            <img draggable="false" class="widthAll" src="./imgs/s27-frame-1.webp">
+                            <img draggable="false" id="s28-triangle-1" class="absolute" src="./imgs/s27-triangle-1.webp">
+                        </div>
+                        <div id="s28-frame-2" class="widthAll relative">
+                            <img draggable="false" class="widthAll" src="./imgs/s28-frame-1.webp">
+                            <img draggable="false" id="s28-triangle-2" class="absolute" src="./imgs/s28-triangle-1.webp">
+                        </div>
+                    </div>
+                    <div id="s26-bubble" class="s1-bubble width95 flex col absolute">
+                        <p class="s26-txt-1"></p>
+                        <p class="s26-txt-2 Roboto-Bold"></p>
+                        <p class="s26-txt-3"></p>
+                    </div>
+                    <div id="s27-bubble" class="s1-bubble width95 flex col absolute">
+                        <p class="s27-txt-1"></p>
+                        <p class="s27-txt-2"></p>
+                    </div>
+                    <div id="s28-bubble" class="s1-bubble width95 flex col absolute">
+                        <p class="s28-txt-1"></p>
+                        <p class="s28-txt-2"></p>
+                    </div>
+                    <div id="s29-bubble" class="s1-bubble width95 flex col absolute">
+                        <div>
+                            <p class="s29-txt-1 Roboto-Bold"></p>
+                            <p class="s29-txt-2"></p>    
+                        </div>
+                    </div>
+                    <img draggable="false" id="s26-woman" class="absolute" src="./imgs/s1-woman.webp">
+                    <img draggable="false" id="s27-man" class="absolute" src="./imgs/s7-man.webp">
+                    <img draggable="false" id="s29-woman" class="absolute" src="./imgs/s4-woman.webp">
+                </div>
+                <div id="s30-container" class="absolute widthAll heightAll lt0">
+                    <div id="s30-content" class="absolute widthAll heightAll lt0 flexYStart">
+                        <img draggable="false" id="s30-floor" class="absolute lb0 widthAll" src="./imgs/s30-floor.webp">
+                        <div id="s30-shelf" class="height90 absolute">
+                            <div id="s35-space-break-1" class="s35-space-break absolute flexCenter"></div>
+                            <div id="s35-space-break-2" class="s35-space-break absolute flexCenter"></div>
+                            <div id="s35-space-break-3" class="s35-space-break absolute flexCenter"></div>
+                            <div id="s35-space-break-4" class="s35-space-break absolute flexCenter"></div>
+                            <div id="s35-space-break-5" class="s35-space-break absolute flexCenter"></div>
+                            <div id="s35-space-break-6" class="s35-space-break absolute flexCenter"></div>
+                            <div id="s35-space-break-7" class="s35-space-break absolute flexCenter"></div>
+                            <img draggable="false" id="s32-item" class="absolute" src="./imgs/s32-item.webp">
+                            <img draggable="false" id="s33-item-1" class="absolute" src="./imgs/s33-item-1.webp">
+                            <img draggable="false" id="s33-item-2" class="absolute" src="./imgs/s33-item-2.webp">
+                            <img draggable="false" id="s33-item-1-2" class="absolute" src="./imgs/s33-item-1.webp">
+                            <img draggable="false" id="s33-item-2-2" class="absolute" src="./imgs/s33-item-2.webp">
+                            <img draggable="false" id="s33-item-3" class="absolute" src="./imgs/s33-item-3.webp">
+                            <img draggable="false" id="s36-shapes" class="absolute" src="./imgs/s36-shapes.webp">
+                            <img draggable="false" id="s37-shapes" class="absolute" src="./imgs/s37-shapes.webp">
+                            <img draggable="false" id="s38-shapes" class="absolute" src="./imgs/s38-shapes.webp">
+                            <div id="s30-drop" class="absolute"></div>
+                            <div id="s33-drop-1" class="s33-drop absolute"></div>
+                            <div id="s33-drop-2" class="s33-drop absolute"></div>
+                            <div id="s33-drop-3" class="s33-drop absolute"></div>
+                        </div>
+                        <div id="s36-shadow" class="absolute"></div>
+                        <div id="s30-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s30-txt-1 Roboto-Bold"></p>
+                            <p class="s30-txt-2"></p>
+                            <p class="s30-txt-3"></p>
+                        </div>
+                        <div id="s34-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s34-txt-1 Roboto-Bold"></p>
+                            <p class="s34-txt-2"></p>
+                            <p class="s34-txt-3"></p>
+                        </div>
+                        <div id="s35-bubble" class="s1-bubble width95 height30 flex col absolute">
+                            <div class="relative widthAll heightAll" style="overflow: hidden;">
+                                <div id="s35-bubble-txt" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                    <p class="s35-txt-1"></p>
+                                    <p class="s35-txt-2"></p> 
+                                </div>  
+                                <div id="s36-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                                    <p class="s36-txt-1"></p>
+                                </div>
+                                <div id="s37-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                                    <p class="s37-txt-1"></p>
+                                </div>
+                                <div id="s38-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                                    <p class="s38-txt-1"></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div id="s39-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s39-txt-1"></p>
+                            <ul class="Roboto-Bold">
+                                <li class="s39-txt-2"></li>
+                                <li class="s39-txt-3"></li>
+                                <li class="s39-txt-4"></li>
+                            </ul>
+                        </div>
+                        <div id="s32-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s32-txt-1"></p>
+                        </div>
+                        <img draggable="false" id="s30-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <img draggable="false" id="s34-woman" class="absolute" src="./imgs/s13-woman.webp">
+                        <div id="s31-interactions-wrap" class="absolute lb0 widthAll height20">
+                            <div class="column flexCenter"></div>
+                            <div class="column flexCenter">
+                                <div id="s31-drag-1" class="s31-drag flexCenter">
+                                    <img draggable="false" src="./imgs/s32-item.webp">
+                                </div>  
+                            </div>
+                            <div class="column flexCenter"></div>
+                        </div>
+                        <div id="s33-interactions-wrap" class="absolute lb0 widthAll height20">
+                            <div class="column flexCenter">
+                                <div id="s33-drag-1" class="s33-drag flexCenter">
+                                    <img draggable="false" ondragstart="(e)=>e.preventDefault()" src="./imgs/s33-item-3.webp">
+                                </div>  
+                            </div>
+                            <div class="column flexCenter">
+                                <div id="s33-drag-2" class="s33-drag flexCenter">
+                                    <img draggable="false" src="./imgs/s33-item-2.webp">
+                                </div>  
+                            </div>
+                            <div class="column flexCenter">
+                                <div id="s33-drag-3" class="s33-drag flexCenter">
+                                    <img draggable="false" src="./imgs/s33-item-1.webp">
+                                </div>  
+                            </div>
+                        </div>
+                        <div id="s31-bubble" class="s1-bubble width60 absolute">
+                            <p class="s31-txt-1"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="s40-container" class="absolute widthAll heightAll lt0">
+                    <div id="s40-content" class="absolute widthAll heightAll lt0">
+                        <div id="s40-bubble" class="absolute width85 flex col">
+                            <p class="s40-txt-1"></p>
+                            <p class="s40-txt-2"></p>
+                            <p class="s40-txt-3"></p>
+                            <p class="s40-txt-4 Roboto-Bold"></p>
+                        </div>
+                        <div id="s41-bubble" class="absolute width85 flex col">
+                            <p class="s41-txt-1"></p>
+                        </div>
+                        <img draggable="false" id="s40-man" class="absolute" src="./imgs/s40-man.webp">
+                        <img draggable="false" id="s41-woman" class="absolute" src="./imgs/s2-woman.webp">
+                    </div>
+                    <div id="s42-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s42-clock-wrap" class="flexCenter relative width80">
+                            <div id="s42-clock" class="flexCenter width75 relative">
+                                <img draggable="false" id="s42-elapsed" class="absolute" src="./imgs/s42-elapsed.webp">
+                                <div id="s42-hand"></div>
+                            </div>
+                            <p id="s42-txt-1" class="s42-txt-1 absolute"></p>
+                        </div>
+                    </div>
+                    <div id="s43-content" class="absolute widthAll heightAll lt0">
+                        <img draggable="false" id="s43-floor" class="absolute lb0 widthAll" src="./imgs/s30-floor.webp">
+                        <div id="s43-shelf" class="height90 absolute">
+                            <div id="s43-clickable-1" class="s43-clickable absolute">
+                                <img id="s43-item-1-wrong" state="wrong" src="./imgs/s43-item-1-wrong.webp" class="absolute">
+                                <img id="s43-item-1-right" state="right" src="./imgs/s43-item-1-right.webp" class="absolute">
+                                <div class="absolute flexCenter" indicator="true"></div>
+                            </div>
+                            <div id="s43-clickable-2" class="s43-clickable absolute">
+                                <img id="s43-item-2-wrong" state="wrong" src="./imgs/s43-item-2-wrong.webp" class="absolute">
+                                <div class="absolute flexCenter" indicator="true"></div>
+                            </div>
+                            <div id="s43-clickable-3" class="s43-clickable absolute">
+                                <img id="s43-item-3-wrong" state="wrong" src="./imgs/s43-item-3-wrong.webp" class="absolute">
+                                <div class="absolute flexCenter" indicator="true"></div>
+                            </div>
+                            <div id="s43-clickable-4" class="s43-clickable absolute">
+                                <img id="s43-item-4-wrong" state="wrong" src="./imgs/s43-item-4-wrong.webp" class="absolute">
+                                <img id="s43-item-4-right" state="right" src="./imgs/s43-item-4-right.webp" class="absolute">
+                                <div class="absolute flexCenter" indicator="true"></div>
+                            </div>
+                        </div>
+                        <div id="s43-bubble" class="s1-bubble width95 height30 absolute">
+                            <div id="s43-slider" class="relative widthAll heightAll">
+                                <div id="s33-slide-1" class="slide absolute lt0 flex col heightAll widthAll">
+                                    <p class="s43-txt-1"></p>
+                                    <p class="s43-txt-2 Roboto-Bold"></p>
+                                </div>
+                                <div id="s33-slide-2" class="slide absolute lt0 flex col heightAll widthAll">
+                                    <p class="s43-txt-3 Roboto-Bold"></p>
+                                    <p class="s43-txt-4"></p>
+                                </div>
+                                <div id="s33-slide-3" class="slide absolute lt0 flex col heightAll widthAll">
+                                    <p class="s43-txt-5 Roboto-Bold"></p>
+                                    <p class="s43-txt-6"></p>
+                                    <p class="s43-txt-7"></p>
+                                </div>
+                                <div id="s33-slide-4" class="slide absolute lt0 flex col heightAll widthAll">
+                                    <p class="s43-txt-8 Roboto-Bold"></p>
+                                    <p class="s43-txt-9"></p>
+                                </div>
+                                <div id="s33-slide-5" class="slide absolute lt0 flex col heightAll widthAll">
+                                    <p class="s43-txt-10 Roboto-Bold"></p>
+                                    <p class="s43-txt-11"></p>
+                                </div>
+                            </div>  
+                        </div>
+                        <div id="s44-bubble" class="s1-bubble width95 flex col absolute">
+                            <div>
+                                <p class="s44-txt-1 Roboto-Bold"></p>
+                                <p class="s44-txt-2"></p>
+                            </div>
+                            <div>
+                                <p class="s44-txt-3"></p>
+                                <p class="s44-txt-4 Roboto-Bold"></p>
+                            </div>
+                        </div>
+                        <img draggable="false" id="s43-woman" class="absolute" src="./imgs/s2-woman.webp">
+                    </div>
+                </div>
+                <div id="s46-container" class="absolute widthAll heightAll lt0">
+                    <div id="s46-content" class="absolute widthAll heightAll lt0">
+                        <div id="s46-bubble" class="absolute width90 height65">
+                            <div id="s46-slider" class="relative widthAll heightAll">
+                                <div id="s46-slide-1" class="slide absolute lt0 flexCenter col heightAll widthAll">
+                                    <img id="s46-img-1" class="widthAll" src="./imgs/s46-img-1.webp">
+                                    <div></div>
+                                    <div>
+                                        <p class="s46-txt-1"></p>    
+                                    </div>
+                                </div>
+                                <div id="s46-slide-2" class="slide absolute lt0 flexCenter col heightAll widthAll">
+                                    <img id="s46-img-2" class="widthAll" src="./imgs/s46-img-2.webp">
+                                    <div></div>
+                                    <div>
+                                        <p class="s46-txt-2"></p>    
+                                    </div>
+                                </div>
+                                <div id="s46-slide-3" class="slide absolute lt0 flexCenter col heightAll widthAll">
+                                    <img id="s46-img-3" class="widthAll" src="./imgs/s46-img-3.webp">
+                                    <div></div>
+                                    <div>
+                                        <p class="s46-txt-3"></p>    
+                                    </div>
+                                </div>
+                                <div id="s46-slide-4" class="slide absolute lt0 flexCenter col heightAll widthAll">
+                                    <img id="s46-img-4" class="widthAll" src="./imgs/s46-img-4.webp">
+                                    <div></div>
+                                    <div>
+                                        <p class="s46-txt-4"></p>    
+                                    </div>
+                                </div>
+                                <div id="s46-slide-5" class="slide absolute lt0 flexCenter col heightAll widthAll">
+                                    <img id="s46-img-5" class="widthAll" src="./imgs/s46-img-5.webp">
+                                    <div></div>
+                                    <div>
+                                        <p class="s46-txt-5"></p>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="s46-slider-interactions" class="absolute widthAll heightAll lt0">
+                                <div></div>
+                                <div id="s46-slider-interactions-content">
+                                    <div id="s46-slider-button-prev" class="button flexCenter"></div>
+                                    <div id="s46-gauge">
+                                        <div class="s46-level flexCenter"></div>
+                                        <div class="s46-level flexCenter"></div>
+                                        <div class="s46-level flexCenter"></div>
+                                        <div class="s46-level flexCenter"></div>
+                                        <div class="s46-level flexCenter"></div>
+                                    </div>
+                                    <div id="s46-slider-button-next" class="button flexCenter"></div> 
+                                </div>
+                                <div></div>  
+                            </div>
+                        </div>
+                        <img draggable="false" id="s46-woman" class="absolute" src="./imgs/s13-woman.webp">
+                    </div>
+                </div>
+                <div id="s47-container" class="absolute widthAll heightAll lt0">
+                    <div id="s47-content" class="absolute widthAll heightAll lt0 flexYEnd">
+                        <div id="s47-circle-1" class="absolute"></div>
+                        <!-- <img draggable="false" id="s47-circle-texts-1" class="absolute" src="./imgs/s47-circle-texts.webp"> -->
+                        <div id="s47-texts" class="flexCenter col width80">
+                            <p id="s47-txt-1" class="s47-txt-1"></p>
+                            <p id="s47-txt-3" class="s47-txt-3"></p>
+                            <!-- <p id="s47-txt-2" class="s47-txt-2"></p> -->
+                            <ul>
+                                <li class="s2-txt-2"></li>
+                                <li class="s2-txt-3"></li>
+                                <li class="s2-txt-4"></li>
+                                <li class="s2-txt-5"></li>
+                                <li class="s2-txt-6"></li>
+                            </ul>
+                        </div>
+                        <img draggable="false" id="s47-man" class="absolute" src="./imgs/s47-man.webp">
+                        <img draggable="false" id="s47-woman" class="absolute" src="./imgs/s13-woman.webp">
+                    </div>
+                </div>
+                <div id="s48-container" class="absolute widthAll heightAll lt0">
+                    <div id="s48-content" class="absolute widthAll heightAll lt0 flex col">
+                        <div id="s48-bubble-1" class="s1-bubble width95 flex col relative">
+                            <p class="s48-txt-1"></p>
+                            <p class="s48-txt-2 Roboto-Bold"></p>
+                        </div>
+                        <div id="s48-bubble-2" class="s1-bubble width95 flex col relative">
+                            <p class="s48-txt-3"></p>
+                            <p class="s48-txt-4"></p>
+                        </div>
+                    </div>
+                    <div id="s49-content" class="absolute widthAll heightAll lt0">
+                        <div id="s49-bars" class="absolute widthAll heightAll lt0">
+                            <img id="s49-background" src="./imgs/s49-background.webp" class="widthAll">
+                            <img id="s49-bars-1" src="./imgs/s49-bars-1.webp" class="absolute">
+                            <img id="s49-plaid-1" src="./imgs/s49-plaid-1.webp" class="absolute">
+                            <img id="s56-plaid-1" src="./imgs/s56-plaid-1.webp" class="absolute">
+                            <img id="s49-bars-2" src="./imgs/s49-bars-2.webp" class="absolute">
+                            <img id="s49-plaid-2" src="./imgs/s49-plaid-2.webp" class="absolute">
+                            <img id="s49-bars-3" src="./imgs/s49-bars-3.webp" class="absolute">
+                            <div id="s55-drop" class="absolute"></div>
+                            <div id="s50-drop" class="absolute s50-drop">
+                                <div class="absolute flexCenter" indicator="true"></div>
+                            </div>
+                        </div>
+                        <div id="s49-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s49-txt-1"></p>
+                            <p class="s49-txt-2 Roboto-Bold"></p>
+                        </div>
+                        <img draggable="false" id="s49-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <div id="s53-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s53-txt-1"></p>
+                        </div>
+                        <img draggable="false" id="s53-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <div id="s57-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s57-txt-1 Roboto-Bold"></p>
+                            <ul>
+                                <li class="s57-txt-2"></li>
+                                <li class="s57-txt-3"></li>
+                                <li class="s57-txt-4"></li>
+                                <li class="s57-txt-5"></li>
+                            </ul>
+                        </div>
+                        <img draggable="false" id="s57-woman" class="absolute" src="./imgs/s2-woman.webp">
+                        <div id="s54-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s54-txt-1 Roboto-Bold"></p>
+                            <p class="s54-txt-2"></p>
+                            <!-- <p class="s54-txt-3"></p> -->
+                        </div>
+                        <img draggable="false" id="s54-man" class="absolute" src="./imgs/s1-man.webp">
+                        <div id="s58-bubble" class="s1-bubble width95 flex col absolute">
+                            <p class="s58-txt-1"></p>
+                        </div>
+                        <img draggable="false" id="s58-man" class="absolute" src="./imgs/s1-man.webp">
+                        <div id="s50-bubble" class="width90 height15 absolute">
+                            <div class="relative widthAll heightAll" style="overflow: hidden;">
+                                <div id="s50-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                                    <p id="s50-txt-1" class="s50-txt-1"></p>    
+                                </div>
+                                <div id="s50-bubble-txt-wrong" class="absolute lt0 flexXStart heightAll widthAll">
+                                    <p id="s50-txt-2" class="s50-txt-2"></p>    
+                                </div>  
+                                <div id="s50-bubble-txt-right" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                    <p id="s50-txt-3" class="s50-txt-3 Roboto-Bold"></p>   
+                                    <p id="s50-txt-4" class="s50-txt-4"></p>    
+                                </div>    
+                            </div>
+                        </div>
+                        <div id="s56-bubble" class="width90 height20 absolute">
+                            <div class="relative widthAll heightAll" style="overflow: hidden;">
+                                <div id="s56-bubble-txt" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                    <p id="s56-txt-1" class="s56-txt-1"></p>
+                                    <p id="s56-txt-1" class="s56-txt-2"></p>
+                                </div>
+                                <div id="s56-bubble-txt-right" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                    <p id="s56-txt-3" class="s56-txt-3"></p>   
+                                </div>    
+                            </div>
+                        </div>
+                        <div id="s50-interactions-wrap" class="absolute lb0 widthAll height20">
+                            <div class="column flexCenter">
+                                <div id="s50-drag-1" class="s50-drag flexCenter">
+                                    <img draggable="false" src="./imgs/s50-item-1.webp">
+                                </div>  
+                            </div>
+                            <div class="column flexCenter">
+                                <div id="s50-drag-2" class="s50-drag flexCenter">
+                                    <img draggable="false" src="./imgs/s50-item-2.webp">
+                                </div>  
+                            </div>
+                            <div class="column flexCenter">
+                                <div id="s50-drag-3" class="s50-drag flexCenter">
+                                    <img draggable="false" src="./imgs/s50-item-3.webp">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s51-content" class="absolute widthAll heightAll lt0 flex col">
+                        <div id="s51-bubble-1" class="s1-bubble width95 flex col relative">
+                            <p class="s51-txt-1"></p>
+                        </div>
+                        <div id="s51-bubble-2" class="s1-bubble width95 flex col relative">
+                            <p class="s51-txt-2"></p>
+                        </div>
+                        <div id="s52-bubble" class="s1-bubble width95 flex col relative">
+                            <p class="s52-txt-1 Roboto-Bold"></p>
+                            <p class="s52-txt-2"></p>
+                        </div>
+                        <div id="s55-interactions-wrap" class="absolute lb0 widthAll height45">
+                            <div class="column flexCenter">
+                                <div id="s55-clickable-1" class="s55-clickable flexCenter">
+                                    <img draggable="false" src="./imgs/s55-item-1.webp">
+                                    <div class="absolute flexCenter" indicator="true"></div>
+                                </div>  
+                            </div>
+                            <div class="column flexCenter">
+                                <div id="s55-clickable-2" class="s55-clickable flexCenter">
+                                    <img draggable="false" src="./imgs/s55-item-2.webp">
+                                    <div class="absolute flexCenter" indicator="true"></div>
+                                </div>  
+                            </div>
+                            <div class="column flexCenter">
+                                <div id="s55-clickable-3" class="s55-clickable flexCenter">
+                                    <img draggable="false" src="./imgs/s55-item-3.webp">
+                                    <div class="absolute flexCenter" indicator="true"></div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div id="s55-bubble" class="width90 height25 absolute">
+                            <div class="relative widthAll heightAll" style="overflow: hidden;">
+                                <div id="s55-bubble-txt" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                    <p id="s55-txt-1" class="s55-txt-1 Roboto-Bold"></p>    
+                                    <p id="s55-txt-2" class="s55-txt-2"></p>    
+                                </div>
+                                <div id="s55-bubble-txt-right" class="absolute lt0 flexXStartCol col heightAll widthAll">
+                                    <div>
+                                        <p id="s55-txt-3" class="s55-txt-3 Roboto-Bold"></p>   
+                                        <p id="s55-txt-4" class="s55-txt-4"></p>
+                                    </div>  
+                                    <p id="s55-txt-5" class="s55-txt-5"></p>    
+                                </div>    
+                            </div>
+                        </div>
+                        <img draggable="false" id="s55-woman" class="absolute" src="./imgs/s55-woman.webp">
+                        <div id="s56-interactions-wrap" class="width50 absolute">
+                            <img draggable="false" src="./imgs/s56-edge.svg">
+                            <div id="s56-line" class="relative flexXStart">
+                                <div id="s56-dot"></div>
+                            </div>
+                            <img draggable="false" src="./imgs/s56-edge.svg">
+                        </div>
+                        <img id="s56-cursor" class="absolute noEvents" src="./imgs/cursor.svg">
+                    </div>
+                </div>
+                <div id="s59-container" class="absolute widthAll heightAll lt0">
+                    <div id="s59-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s59-circle-1" class="absolute"></div>
+                        <img draggable="false" id="s59-img-1" src="./imgs/s59-img-1.webp" class="absolute">
+                        <img draggable="false" id="s59-img-2" src="./imgs/s59-img-2.webp" class="absolute">
+                        <img draggable="false" id="s59-img-3" src="./imgs/s59-img-3.webp" class="absolute">
+                        <div id="s59-texts" class="flex col width80">
+                            <p id="s59-txt-1" class="s59-txt-1"></p>
+                            <p id="s59-txt-2" class="s59-txt-2"></p>
+                            <p id="s59-txt-2" class="s59-txt-3 Roboto-Bold"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

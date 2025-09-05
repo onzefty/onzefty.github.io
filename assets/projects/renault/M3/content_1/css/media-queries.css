@@ -1,0 +1,88 @@
+
+/* 
+    ##Device = *
+    ##Screen = under 920px
+  */
+
+@media (max-width: 920px) {
+
+  #screen_3 .screen-content.quiz-question-content .quiz-question-datas{
+    padding: 5%;
+  }
+
+  #screen_3 .question-drops {
+  justify-content: left;
+  width: 100%;
+  }
+
+
+}
+
+@media (pointer: coarse) and (min-width: 685px) and (max-width: 980px) and (orientation: landscape) {
+  .screen-content.quiz-question-content {
+    .question-clickables {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (pointer: coarse) and (min-width: 768px) and (max-width: 1024px) {
+  
+
+  #screen_4 .screen-content.quiz-question-content {
+
+    .question-clickable {
+        font-size: var(--font-size-22);
+        width: 30rem;
+        aspect-ratio: 868/78;
+        padding: 0 var(--font-size-20)
+    }
+  }
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (min-width: 481px) and (max-width: 932px) {
+    
+
+
+  }
+    
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  
+  
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Landscape) */
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 844px) 
+                    {
+    
+  
+}

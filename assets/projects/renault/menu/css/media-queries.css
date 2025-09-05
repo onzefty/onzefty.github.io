@@ -1,0 +1,78 @@
+
+@media (max-width: 685px) and (orientation: portrait) {
+  #menu .menu-wrapper {
+    background-image: none;
+  }
+  #menu-left {
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (pointer: coarse) and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #menu .menu-wrapper {
+    background-image: none;
+  }
+  #menu-left {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (pointer: coarse) and (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) {
+    #menu-left {
+    align-items: center;
+  }
+
+  /* #menu .menu-wrapper {
+    padding: 9vh 4.5vw 11vh 4.5vw;
+  } */
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (pointer: coarse) and (min-width: 685px) and (max-width: 980px) and (orientation: landscape) {
+  #menu-left {
+    justify-content: center;
+  }
+
+  /* #menu .menu-wrapper {
+    padding: 9vh 4.5vw 19vh 4.5vw;
+  } */
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #menu-left {
+    justify-content: center;
+  }
+   
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Landscape) */
+@media only screen and (min-width: 480px) and (max-width: 844px) and (orientation: landscape) {
+  #menu-left {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* #menu .menu-wrapper {
+    padding: 9vh 4.5vw 19vh 4.5vw;
+  } */
+}

@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Renault";
+  src: url("fonts/renault/RenaultGroup.woff") format("woff"),
+    url("fonts/renault/RenaultGroup.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Renault";
+  src: url("fonts/renault/RenaultGroup-Light.woff") format("woff"),
+    url("fonts/renault/RenaultGroup-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Renault";
+  src: url("fonts/renault/RenaultGroup-Semibold.woff") format("woff"),
+    url("fonts/renault/RenaultGroup-Semibold.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Renault";
+  src: url("fonts/renault/RenaultGroup-Bold.woff") format("woff"),
+    url("fonts/renault/RenaultGroup-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Renault";
+  src: url("fonts/renault/RenaultGroup-Extrabold.woff") format("woff"),
+    url("fonts/renault/RenaultGroup-Extrabold.woff2") format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/roboto/Roboto-Regular.woff") format("woff"),
+    url("fonts/roboto/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("fonts/roboto/Roboto-Medium.woff") format("woff"),
+    url("fonts/roboto/Roboto-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/roboto/Roboto-Bold.woff") format("woff"),
+    url("fonts/roboto/Roboto-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("fonts/roboto/Roboto-Black.woff") format("woff"),
+    url("fonts/roboto/Roboto-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("fonts/roboto/Roboto-Light.woff") format("woff"),
+    url("fonts/roboto/Roboto-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url("fonts/roboto/Roboto-Italic.woff") format("woff"),
+    url("fonts/roboto/Roboto-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url("fonts/roboto/Roboto-LightItalic.woff") format("woff"),
+    url("fonts/roboto/Roboto-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-BoldItalic";
+  src: url("fonts/roboto/Roboto-BoldItalic.woff") format("woff"),
+    url("fonts/roboto/Roboto-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-BlackItalic";
+  src: url("fonts/roboto/Roboto-BlackItalic.woff") format("woff"),
+    url("fonts/roboto/Roboto-BlackItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("fonts/Kalam/Kalam-Light.woff") format("woff"),
+      url("fonts/Kalam/Kalam-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("fonts/Kalam/Kalam-Regular.woff") format("woff"),
+      url("fonts/Kalam/Kalam-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("fonts/Kalam/Kalam-Bold.woff") format("woff"),
+      url("fonts/Kalam/Kalam-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+*[data-font="light"] {
+  font-weight: 300;
+}
+
+*[data-font="semi-bold"] {
+  font-weight: 500;
+}
+
+*[data-font="bold"] {
+  font-weight: 700;
+}
+
+*[data-font="extra-bold"] {
+  font-weight: 800;
+}

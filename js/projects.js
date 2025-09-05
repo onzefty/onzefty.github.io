@@ -59,11 +59,9 @@ function renderProjects() {
     });
 }
 
-
-
 function appReady() {
     if(elements.projectsContainer.children.length === 0) {
-        renderProjects()
+        renderProjects();
     }
 }
 

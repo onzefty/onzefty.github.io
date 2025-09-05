@@ -1,0 +1,76 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  @media (max-width: 768px) {
+  }
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  /* @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    html{
+      font-size: 22px;
+    }
+  } */
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    #s2-gauge {
+      bottom: 12vh;
+   }
+
+  /* #s1-cursor {
+    transform-origin: 50% 4.6cm;
+  } */
+  }
+  
+  /* For iPhone 4 Portrait or Landscape View */
+  @media screen and (min-device-width: 320px) 
+      and (-webkit-min-device-pixel-ratio: 2) {
+  }
+  
+  /* For iPhone 5 Portrait or Landscape View */
+  @media (device-height: 568px) 
+      and (device-width: 320px) 
+      and (-webkit-min-device-pixel-ratio: 2) {
+  }
+  
+  /* For iPhone 6 and 6 plus Portrait or Landscape View */
+  @media (min-device-height: 667px) 
+      and (min-device-width: 375px) 
+      and (-webkit-min-device-pixel-ratio: 3) {
+  };

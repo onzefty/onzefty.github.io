@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="../../common/content/css/media-queries.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+
+    <script type="module" src="js/main.js" charset="utf-8"></script>
+
+</head>
+<body>
+	<div id="main">     
+        <div class="container flexCenter relative">
+            <div id="introduction-container" class="container-queries relative">
+                <div id="s1-container" class="absolute widthAll heightAll lt0">
+                    <div id="s1-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s1-feedback" class="absolute width80">
+                            <p class="s1-txt-2 Roboto-Bold" feedback="right"></p>
+                            <p class="s1-txt-3 Roboto-Bold" feedback="wrong"></p>
+                            <p id="s1-txt-4" class="s1-txt-4"></p>
+                            <p id="s1-txt-5" class="s1-txt-5"></p>
+                        </div>
+                        <div id="s1-earth" interaction="bgColor" class="relative flexCenter width60">
+                            <p class="Roboto-Black">5</p>
+                            <div id="s1-circle-3" class="absolute"></div>
+                            <div id="s1-circle-2" class="absolute"></div>
+                            <div id="s1-circle-1" class="absolute"></div>
+                            <div id="s1-dots" class="absolute">
+                                <div id="s1-dot-1" class="s1-dot absolute"></div>
+                                <div id="s1-dot-2" class="s1-dot absolute"></div>
+                                <div id="s1-dot-3" class="s1-dot absolute"></div>
+                                <div id="s1-dot-4" class="s1-dot absolute"></div>
+                                <div id="s1-dot-5" class="s1-dot absolute"></div>
+                                <div id="s1-dot-6" class="s1-dot absolute"></div>
+                                <div id="s1-dot-7" class="s1-dot absolute"></div>
+                                <div id="s1-dot-8" class="s1-dot absolute"></div>
+                                <div id="s1-dot-9" class="s1-dot absolute"></div>
+                                <div id="s1-dot-10" class="s1-dot absolute"></div>
+                                <div id="s1-cursor" class="absolute flexCenter" interaction="bgColor"></div>
+                            </div>
+                        </div>
+                        <div id="s1-button-validate" class="button-validate button flexCenter absolute">
+                            <p class="validate Roboto-Regular"></p>
+                        </div>
+                    </div>
+                    <div id="s2-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s2-feedback" class="absolute width90">
+                            <p class="s1-txt-2 Roboto-Bold" feedback="right"></p>
+                            <p class="s1-txt-3 Roboto-Bold" feedback="wrong"></p>
+                            <p id="s2-txt-2" class="s2-txt-2"></p>
+                            <p id="s2-txt-3" class="s2-txt-3"></p>
+                        </div>
+                        <div id="s2-clickables" class="relative flexCenter widthAll">
+                            <div id="s2-rect-2" class="absolute"></div>
+                            <div id="s2-rect-1" class="absolute"></div>
+                            <div id="s2-clickable-1" class="s2-clickable flexCenter Roboto-Black absolute">
+                                <div class="s2-clickable-content widthAll heightAll flexCenter relative">
+                                    <p>4</p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s2-clickable-2" class="s2-clickable flexCenter Roboto-Black absolute">
+                                <div class="s2-clickable-content widthAll heightAll flexCenter relative">
+                                    <p>2</p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s2-clickable-3" class="s2-clickable flexCenter Roboto-Black absolute">
+                                <div class="s2-clickable-content widthAll heightAll flexCenter relative">
+                                    <p>7</p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s2-clickable-4" class="s2-clickable flexCenter Roboto-Black absolute">
+                                <div class="s2-clickable-content widthAll heightAll flexCenter relative">
+                                    <p>5</p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="s2-button-validate" class="button-validate button flexCenter absolute">
+                            <p class="validate Roboto-Regular"></p>
+                        </div>
+                    </div>
+                    <div id="s4-content" class="absolute widthAll heightAll lt0">
+                        <div id="s4-clickables">
+                            <div id="s4-clickable-1" class="s4-clickable flexCenter">
+                                <div class="s4-clickable-content width90 height80 flexCenter relative" interaction="bgColor">
+                                    <p class="s4-txt-2"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s4-clickable-2" class="s4-clickable flexCenter">
+                                <div class="s4-clickable-content width90 height80 flexCenter relative" interaction="bgColor">
+                                    <p class="s4-txt-3"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s4-clickable-3" class="s4-clickable flexCenter">
+                                <div class="s4-clickable-content width90 height80 flexCenter relative" interaction="bgColor">
+                                    <p class="s4-txt-4"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s4-clickable-4" class="s4-clickable flexCenter">
+                                <div class="s4-clickable-content width90 height80 flexCenter relative" interaction="bgColor">
+                                    <p class="s4-txt-5"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s4-clickable-5" class="s4-clickable flexCenter">
+                                <div class="s4-clickable-content width90 height80 flexCenter relative" interaction="bgColor">
+                                    <p class="s4-txt-6"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s4-clickable-6" class="s4-clickable flexCenter">
+                                <div class="s4-clickable-content width90 height80 flexCenter relative" interaction="bgColor">
+                                    <p class="s4-txt-7"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="s4-validate-wrap" class="flexYStartCol col">
+                            <div class="flexXStart" style="gap:.5rem;">
+                                <div id="s4-validate-circle" class="flexCenter"></div>
+                                <p class="s4-txt-8"></p>
+                            </div>
+                            <div id="s4-button-validate" class="button-validate button flexCenter">
+                                <p class="validate Roboto-Regular"></p>
+                            </div>
+                        </div>
+                        <div id="s4-feedback" class="absolute width90">
+                            <p class="s4-txt-9 Roboto-Bold" feedback="right"></p>
+                            <p class="s4-txt-9-2 Roboto-Bold" feedback="wrong"></p>
+                            <p id="s4-txt-10" class="s4-txt-10"></p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="s3-container" class="absolute widthAll heightAll lt0">
+                    <div id="s3-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <img draggable="false" id="s3-woman" class="absolute" src="./imgs/s3-woman.webp">
+                        <div id="s3-feedback" class="absolute width90">
+                            <p class="s3-txt-4 Roboto-Bold" feedback="right"></p>
+                            <p class="s3-txt-4-2 Roboto-Bold" feedback="wrong"></p>
+                            <p id="s3-txt-5" class="s3-txt-5"></p>
+                            <p id="s3-txt-6" class="s3-txt-6"></p>
+                        </div>
+                        <div id="s3-bubble" class="absolute width85 height45">
+                            <div id="s3-bubble-txts" class="flex col">
+                                <p class="s3-txt-1"></p>
+                                <p class="s3-txt-2"></p>
+                            </div>
+                            <div id="s3-clickables">
+                                <div id="s3-clickable-1" class="s3-clickable flexCenter relative" interaction="bgColor">
+                                    <p>7</p>
+                                    <div indicator="true"></div>
+                                </div>
+                                <div id="s3-clickable-2" class="s3-clickable flexCenter relative" interaction="bgColor">
+                                    <p>24</p>
+                                    <div indicator="true"></div>
+                                </div>
+                                <div id="s3-clickable-3" class="s3-clickable flexCenter relative" interaction="bgColor">
+                                    <p>356</p>
+                                    <div indicator="true"></div>
+                                </div>
+                                <div id="s3-clickable-4" class="s3-clickable flexCenter relative" interaction="bgColor">
+                                    <p class="s3-txt-3"></p>
+                                    <div indicator="true"></div>
+                                </div>
+                            </div>
+                            <div id="s3-button-validate" class="button-validate button flexCenter absolute">
+                                <p class="validate Roboto-Regular"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s5-container" class="absolute widthAll heightAll lt0">
+                    <div id="s5-content" class="absolute widthAll heightAll lt0 flex col">
+                        <div id="s5-bubble-1" class="s5-bubble width90 relative">
+                            <p class="s5-txt-1"></p>
+                        </div>
+                        <div id="s5-bubble-2" class="s5-bubble width90 relative">
+                            <p class="s5-txt-2"></p>
+                            <p class="s5-txt-3"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="s6-container" class="absolute widthAll heightAll lt0">
+                    <div id="s6-content" class="absolute widthAll heightAll lt0 flexCenter">
+                        <div id="s6-circle-2" class="absolute"></div>
+                        <div id="s6-circle-1" class="absolute"></div>
+                        <img draggable="false" id="s6-item-1" class="absolute" src="./imgs/s6-item-1.webp">
+                        <img draggable="false" id="s6-item-2" class="absolute" src="./imgs/s6-item-2.webp">
+                        <img draggable="false" id="s6-item-3" class="absolute" src="./imgs/s6-item-3.webp">
+                        <img draggable="false" id="s6-item-4" class="absolute" src="./imgs/s6-item-4.webp">
+                        <img draggable="false" id="s6-item-5" class="absolute" src="./imgs/s6-item-5.webp">
+                        <img draggable="false" id="s6-item-6" class="absolute" src="./imgs/s6-item-6.webp">
+                        <img draggable="false" id="s6-item-7" class="absolute" src="./imgs/s6-item-7.webp">
+                        <img draggable="false" id="s6-item-8" class="absolute" src="./imgs/s6-item-8.webp">
+                        <div id="s6-texts" class="flex col width80">
+                            <p id="s6-txt-1" class="s6-txt-1"></p>
+                            <p>
+                                <span class="s6-txt-2"></span>
+                                <span class="s6-txt-3"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="s1-bubble" class="width90 height15 absolute">
+                    <div class="relative widthAll heightAll" style="overflow: hidden;">
+                        <div id="s1-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                            <p id="s1-txt-1" class="s1-txt-1 Roboto-Regular"></p>    
+                        </div>
+                        <div id="s2-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                            <p id="s2-txt-1" class="s2-txt-1 Roboto-Regular"></p>    
+                        </div>  
+                        <div id="s4-bubble-txt" class="absolute lt0 flexXStart heightAll widthAll">
+                            <p id="s4-txt-1" class="s4-txt-1 Roboto-Regular"></p>    
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

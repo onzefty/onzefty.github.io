@@ -1,0 +1,10 @@
+#screen_1 {
+    background-image: url(../imgs/s1-background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#screen_1 .screen-video {
+    --video-ratio-width: 4096;
+    --video-ratio-height: 2458;
+}

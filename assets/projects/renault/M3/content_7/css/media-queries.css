@@ -1,0 +1,28 @@
+/* 
+    ##Device = *
+    ##Screen = under 920px
+  */
+
+@media (max-width: 920px) {
+    #screen_8 .screen-content.quiz-question-content .question-clickables {
+        grid-template-rows: 1fr;
+    }
+
+    #screen_4 .question-drops {
+        width: auto;
+    }
+
+    #screen_11 .screen-content.quiz-question-content .question-clickables {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #screen_8 .screen-content.quiz-question-content .question-clickables {
+        grid-template-rows: 1fr;
+    }
+
+    #screen_11 .screen-content.quiz-question-content .question-clickables {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

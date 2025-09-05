@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/roboto/Roboto-Regular.woff") format("woff"),
+    url("fonts/roboto/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("fonts/roboto/Roboto-Medium.woff") format("woff"),
+    url("fonts/roboto/Roboto-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/roboto/Roboto-Bold.woff") format("woff"),
+    url("fonts/roboto/Roboto-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("fonts/roboto/Roboto-Black.woff") format("woff"),
+    url("fonts/roboto/Roboto-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("fonts/roboto/Roboto-Light.woff") format("woff"),
+    url("fonts/roboto/Roboto-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url("fonts/roboto/Roboto-Italic.woff") format("woff"),
+    url("fonts/roboto/Roboto-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url("fonts/roboto/Roboto-LightItalic.woff") format("woff"),
+    url("fonts/roboto/Roboto-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-BoldItalic";
+  src: url("fonts/roboto/Roboto-BoldItalic.woff") format("woff"),
+    url("fonts/roboto/Roboto-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto-BlackItalic";
+  src: url("fonts/roboto/Roboto-BlackItalic.woff") format("woff"),
+    url("fonts/roboto/Roboto-BlackItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AkzidenzGroteskBQ-Reg";
+  src: url("fonts/akzidenz/AkzidenzGroteskBQ-Reg.woff") format("woff"),
+    url("fonts/akzidenz/AkzidenzGroteskBQ-Reg.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AkzidenzGroteskBQ-Light";
+  src: url("fonts/akzidenz/AkzidenzGroteskBQ-Light.woff") format("woff"),
+    url("fonts/akzidenz/AkzidenzGroteskBQ-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AkzidenzGroteskBQ-Italic";
+  src: url("fonts/akzidenz/AkzidenzGroteskBQ-Italic.woff") format("woff"),
+    url("fonts/akzidenz/AkzidenzGroteskBQ-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AkzidenzGroteskBQ-Bold";
+  src: url("fonts/akzidenz/AkzidenzGroteskBQ-Bold.woff") format("woff"),
+    url("fonts/akzidenz/AkzidenzGroteskBQ-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BookAntiqua-Regular";
+  src: url("fonts/bookantiqua/BookAntiqua.woff") format("woff"),
+    url("fonts/bookantiqua/BookAntiqua.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BookAntiqua-Italic";
+  src: url("fonts/bookantiqua/BookAntiqua-Italic.woff") format("woff"),
+    url("fonts/bookantiqua/BookAntiqua-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BookAntiqua-Bold";
+  src: url("fonts/bookantiqua/BookAntiqua-Bold.woff") format("woff"),
+    url("fonts/bookantiqua/BookAntiqua-Bold.woff2") format("woff2");
+}
+
+.Roboto-Regular {
+  font-family: "Roboto-Regular";
+}
+
+.Roboto-Medium {
+  font-family: "Roboto-Medium";
+}
+
+.Roboto-Bold {
+  font-family: "Roboto-Bold";
+}
+
+.Roboto-Black {
+  font-family: "Roboto-Black";
+}
+
+.Roboto-Light {
+  font-family: "Roboto-Light";
+}
+
+.Roboto-Italic {
+  font-family: "Roboto-Italic";
+}
+
+.Roboto-LightItalic {
+  font-family: "Roboto-LightItalic";
+}
+
+.Roboto-BoldItalic {
+  font-family: "Roboto-BoldItalic";
+}
+
+.Roboto-BlackItalic {
+  font-family: "Roboto-BlackItalic";
+}
+
+.AkzidenzGroteskBQ-Reg {
+  font-family: "AkzidenzGroteskBQ-Reg";
+}
+
+.AkzidenzGroteskBQ-Light {
+  font-family: "AkzidenzGroteskBQ-Light";
+}
+
+.AkzidenzGroteskBQ-Italic {
+  font-family: "AkzidenzGroteskBQ-Italic";
+}
+
+.AkzidenzGroteskBQ-Bold {
+  font-family: "AkzidenzGroteskBQ-Bold";
+}
+
+.BookAntiqua-Regular {
+  font-family: "BookAntiqua-Regular";
+}
+
+.BookAntiqua-Italic {
+  font-family: "BookAntiqua-Italic";
+}
+
+.BookAntiqua-Bold {
+  font-family: "BookAntiqua-Bold";
+}

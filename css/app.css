@@ -28,6 +28,11 @@ header.fixed {
     gap: 1rem;    
 }
 
+.header-right {
+  display: flex;
+  align-content: center;
+}
+
 .header-right ul {
     margin: 0;
     padding: 0;

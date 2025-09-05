@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="../../common/content/css/media-queries.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+
+    <script type="module" src="js/main.js" charset="utf-8"></script>
+
+</head>
+<body>
+	<div id="main" class="widthAll heightAll relative">     
+        <div class="container flexXCenter">
+            <div id="container-queries" class="container-queries relative">
+                <div id="start-container" class="absolute lt0 widthAll heightAll">
+                    <div id="start-bubble" class="relative flexXStartCol col">
+                        <p class="start-txt-1 Roboto-Bold"></p>
+                        <p class="start-txt-2"></p>
+                    </div>
+                    <div id="start-templates">
+                        <div class="start-template flexYEnd" data-index="0">
+                            <div class="start-template-content">
+                                <div>
+                                    <p class="start-template-level Roboto-Bold"><span class="start-level"></span>1</p>
+                                    <p class="start-template-score"><span class="start-score"></span> : <span class="start-score-points"></span></p>
+                                    <p class="start-locked" state="locked"></p>
+                                    <p class="start-unlocked" state="unlocked"></p>
+                                </div>
+                                <div class="circle flexCenter">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="start-template flexYEnd" data-index="1">
+                            <div class="start-template-content">
+                                <div>
+                                    <p class="start-template-level Roboto-Bold"><span class="start-level"></span>2</p>
+                                    <p class="start-template-score"><span class="start-score"></span> : <span class="start-score-points"></span></p>
+                                    <p class="start-locked" state="locked"></p>
+                                    <p class="start-unlocked" state="unlocked"></p>
+                                </div>
+                                <div class="circle flexCenter">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="start-template flexYEnd" data-index="2">
+                            <div class="start-template-content">
+                                <div>
+                                    <p class="start-template-level Roboto-Bold"><span class="start-level"></span>3</p>
+                                    <p class="start-template-score"><span class="start-score"></span> : <span class="start-score-points"></span></p>
+                                    <p class="start-locked" state="locked"></p>
+                                    <p class="start-unlocked" state="unlocked"></p>
+                                </div>
+                                <div class="circle flexCenter">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="start-template flexYEnd" data-index="3">
+                            <div class="start-template-content">
+                                <div>
+                                    <p class="start-template-level Roboto-Bold"><span class="start-level"></span>4</p>
+                                    <p class="start-template-score"><span class="start-score"></span> : <span class="start-score-points"></span></p>
+                                    <p class="start-locked" state="locked"></p>
+                                    <p class="start-unlocked" state="unlocked"></p>
+                                </div>
+                                <div class="circle flexCenter">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="vm-container" class="absolute lt0 widthAll heightAll">
+                    <div id="background-ground"></div>
+                    <div id="shelves" class="absolute">
+                        <div class="shelf large">
+                            <div class="left"></div>
+                            <div class="center"></div>
+                            <div class="right"></div>
+                            <div class="depth absolute"></div>
+                            <div id="slot-1" class="slot absolute" level="1" axis="left" name="A4"></div>
+                            <div id="slot-2" class="slot absolute" level="1" axis="right" name="B4"></div>
+                        </div>
+                        <div class="split" style="grid-template-columns: repeat(2, 1fr);">
+                            <div>A4</div>
+                            <div>B4</div>
+                        </div>
+                        <div class="shelf large">
+                            <div></div>
+                            <div class="depth"></div>
+                            <div></div>
+                            <div class="left"></div>
+                            <div class="center"></div>
+                            <div class="right"></div>
+                            <div id="slot-3" class="slot absolute" level="2" axis="left" name="A3"></div>
+                            <div id="slot-4" class="slot absolute" level="2" axis="center" name="B3"></div>
+                            <div id="slot-5" class="slot absolute" level="2" axis="right" name="C3"></div>
+                        </div>
+                        <div class="split">
+                            <div>A3</div>
+                            <div>B3</div>
+                            <div>C3</div>
+                        </div>
+                        <div class="shelf large">
+                            <div></div>
+                            <div class="depth"></div>
+                            <div></div>
+                            <div class="left"></div>
+                            <div class="center"></div>
+                            <div class="right"></div>
+                            <div id="slot-6" class="slot absolute" level="3" axis="left" name="A2"></div>
+                            <div id="slot-7" class="slot absolute" level="3" axis="center" name="B2"></div>
+                            <div id="slot-8" class="slot absolute" level="3" axis="right" name="C2"></div>
+                        </div>
+                        <div class="split">
+                            <div>A2</div>
+                            <div>B2</div>
+                            <div>C2</div>
+                        </div>
+                        <div class="shelf large">
+                            <div></div>
+                            <div class="depth"></div>
+                            <div></div>
+                            <div class="left"></div>
+                            <div class="center"></div>
+                            <div class="right"></div>
+                            <div id="slot-9" class="slot absolute" level="4" axis="left" name="A1"></div>
+                            <div id="slot-10" class="slot absolute" level="4" axis="center" name="B1"></div>
+                            <div id="slot-11" class="slot absolute" level="4" axis="right" name="C1"></div>
+                        </div>
+                        <div class="bottom">
+                            <div>A1</div>
+                            <div>B1</div>
+                            <div>C1</div>
+                        </div> 
+                    </div>
+                    <div id="vm-view" class="absolute lt0 widthAll heightAll">
+                        <div id="vm-view-top">
+                            <div id="vm-view-buttons" class="flex">
+                                <div id="vm-view-delete" class="vm-view-button flexCenter">
+                                    <img src="./imgs/trash.svg">
+                                </div> 
+                                <div id="vm-view-rotate" class="vm-view-button flexCenter">
+                                    <img src="./imgs/arrow-up.svg">
+                                </div>
+                                <div id="vm-view-close" class="vm-view-button flexCenter">
+                                    <img src="../../common/content/img/right-white.svg">
+                                </div>  
+                            </div>
+                            <div id="vm-view-shelf" class="relative">
+                                <div id="vm-view-shelf-depth">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div id="vm-view-shelf-content" class="relative">
+                                    <div></div>
+                                    <div></div>
+                                    <div id="vm-view-grid" class="absolute widthAll heightAll"></div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div id="vm-view-items">
+                            <div class="content">
+                                <div class="scrollable" class="widthAll"> 
+                                </div>
+                                <div class="spy absolute"></div>
+                            </div>
+                            <div class="bottom flexCenter">
+                                <div class="categories heightAll width95">
+                                    <div class="category flexYEndCol col" category="textile"><div></div><p class="items-category-1"></p></div>
+                                    <div class="category flexYEndCol col" category="decoration"><div></div><p class="items-category-2"></p></div>
+                                    <div class="category flexYEndCol col" category="table"><div></div><p class="items-category-3"></p></div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vm-button-analyze" class="absolute width90 height10">
+                        <div class="rect absolute lt0 widthAll heightAll"></div>
+                        <div class="flexXStart lt0 widthAll heightAll absolute">
+                            <img src="./imgs/ico-analyze.svg" class="ico">
+                            <p class="vm-analyze"></p>
+                            <img src="./imgs/vm-woman.webp" class="absolute woman">
+                        </div>
+                    </div>
+                    <div id="analyzing">
+                        <div class="circle">
+                            <svg class="circular" viewBox="25 25 50 50">
+                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke="#444444" stroke-miterlimit="10"></circle>
+                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke="#dd7014" stroke-miterlimit="10"></circle>
+                            </svg>
+                            <div class="content">
+                                <img src="./imgs/analyzing.svg">
+                                <p class="analyzing"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="results-container" class="absolute lt0 widthAll heightAll">
+                    <div id="results-top">
+                        <div id="results-top-svg-wrap" class="relative">
+                            <svg id="results-top-svg" viewBox="0 0 200 120">
+                                <defs>
+                                    <linearGradient id="arcGrey" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#bfbfbf;stop-opacity:1"></stop>
+                                        <stop offset="70%" style="stop-color:#acacac;stop-opacity:1"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:red;stop-opacity:1"></stop>
+                                        <stop offset="30%" style="stop-color:orange;stop-opacity:1"></stop>
+                                        <stop offset="80%" style="stop-color:yellow;stop-opacity:1"></stop>
+                                        <stop offset="100%" style="stop-color:green;stop-opacity:1"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path id="results-svg-path-grey" d="M15,105 A30,30 0 0,1 185,105" fill="none" stroke="url(#arcGrey)" stroke-width="25" stroke-linecap="round"></path>
+                                <path id="results-svg-path-levels" d="M15,105 A30,30 0 0,1 185,105" fill="none" stroke="url(#arcGradient)" stroke-width="25" stroke-linecap="round"></path>
+                            </svg>
+                            <div id="results-score-wrap" class="absolute widthAll flexYStartCol col">
+                                <p class="results-score-global Roboto-Light"></p>
+                                <p class="results-score-numbers Roboto-Black"><span class="results-score">80</span>%</p>
+                            </div>
+                        </div>
+                        <div id="results-top-feedbacks" class="flexYStartCol col align-center">
+                            <p id="results-feedback-1">Texte</p>
+                            <p id="results-feedback-2">Texte</p>
+                        </div>
+                    </div>
+                    <div id="results-bottom" class="flexYStartCol col">
+                        <div data-rule="colors" class="results-rule relative">
+                            <div class="rules-main"><p class="results-txt-1 Roboto-Light"></p><p class="results-rule-score Roboto-Bold">0%</p></div>
+                            <div class="rules-details flex col Roboto-Regular">
+                            </div>
+                            <div class="absolute button flexCenter"></div>
+                        </div>
+                        <div data-rule="diversity" class="results-rule relative">
+                            <div class="rules-main"><p class="results-txt-2 Roboto-Light"></p><p class="results-rule-score Roboto-Bold">0%</p></div>
+                            <div class="rules-details flex col Roboto-Regular">
+                            </div>
+                            <div class="absolute button flexCenter"></div>
+                        </div>
+                        <div data-rule="dynamism" class="results-rule relative">
+                            <div class="rules-main"><p class="results-txt-3 Roboto-Light"></p><p class="results-rule-score Roboto-Bold">0%</p></div>
+                            <div class="rules-details flex col Roboto-Regular">
+                            </div>
+                            <div class="absolute button flexCenter"></div>
+                        </div>
+                        <div data-rule="integrity" class="results-rule relative">
+                            <div class="rules-main"><p class="results-txt-4 Roboto-Light"></p><p class="results-rule-score Roboto-Bold">0%</p></div>
+                            <div class="rules-details flex col Roboto-Regular">
+                            </div>
+                            <div class="absolute button flexCenter"></div>
+                        </div>
+                    </div>
+                    <div id="results-buttons" class="absolute lb0 widthAll Roboto-Regular">
+                        <img id="results-woman" draggable="false" src="./imgs/results-woman.webp" class="absolute lb0">
+                        <div id="results-button-restart" class="button flexCenter col">
+                            <img src="./imgs/restart.svg">
+                            <p class="results-restart"></p>
+                        </div>
+                        <div id="results-button-next" class="button flexCenter col">
+                            <img src="./imgs/next.svg">
+                            <p class="results-next"></p>
+                        </div>
+                        <div id="results-button-return" class="button flexCenter">
+                            <p class="results-return"></p>
+                            <img src="./imgs/ico-shelves.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- <div class="bubble" style="left: 5vw;top: 15vh;width: 18rem;"> 
+            <p class="bubble-txt-1"></p>
+            <p json="bubble-txt-2"></p>
+            <div class="button"></div>
+        </div> 
+        <div class="helper absolute hidden"></div>-->
+        
+    </div>
+</body>
+</html>
