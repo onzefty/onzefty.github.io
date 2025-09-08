@@ -18,7 +18,7 @@ ofp.player.dataprovider = {
             score: false,
             save: false,
             lockIfCompleted: false,
-            errorAlert: "critical"
+            //errorAlert: "critical"
         },
 
         resumeLastLocation: true,
