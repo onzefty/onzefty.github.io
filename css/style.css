@@ -3,10 +3,13 @@
 /*---------------------------- Globals ----------------------------*/
 
 :root {
-    --color-background: #242943;
-    --color-txt-main-1: #FFF;
-    --color-txt-main-2: #E04475;
-    --color-txt-main-3: #315676;
+    --color-background: #F7F9FA;
+    --color-main-1: #1abc9c;
+    --color-main-1-hover: #16A085;
+    --color-main-2: #0E4E5A;
+    --color-main-3: #dcf9f5;
+    --color-txt-main-1: #2C3E50;
+    --color-txt-main-2: #7F8C8D;
     --header-color-1: #6fc3df;
     --header-color-2: #8d82c4;
     --header-color-3: #ec8d81;

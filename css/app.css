@@ -7,13 +7,13 @@ body {
     overflow: auto;
     width: 100%;
     height: 100%;
-    background-image: url(../assets/imgs/background.webp);
-    background-size: cover;
+    /* background-image: url(../assets/imgs/background.webp);
+    background-size: cover; */
 }
 
 header {
     display: flex;
-    background-color: #2a2f4a;
+    background-color: var(--color-main-1);
     box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
     padding: 0.5rem 1rem;
     justify-content: space-between;
@@ -44,9 +44,6 @@ header.fixed {
 }
 
 .header-right ul li a {
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
     box-shadow: inset 0 0 0 2px #ffffff;
     color: #ffffff;
     cursor: pointer;
@@ -54,7 +51,6 @@ header.fixed {
     letter-spacing: 0.25em;
     padding: .5rem 1.75em;
     text-align: center;
-    text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -76,13 +72,38 @@ section .title {
 
 section .title::after {
   content: '';
-  background-color: #ffffff;
+  background-color: var(--color-txt-main-1);
   display: block;
   height: 2px;
   margin: 0.325em 0 0.5em 0;
   width: 100%;
 }
 
+#formation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+#formation-container article {
+  width: min(40rem,100%);
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: var(--font-size-20);
+  padding: 1rem;
+}
+
+#formation-container article .text {
+  color: var(--color-txt-main-2);
+}
+
+#formation-container article i {
+  font-size: var(--font-size-50);
+}
 
 /* Projects page */
 
@@ -168,4 +189,30 @@ section .title::after {
 #main:has(#project-iframe.loaded) #projects-container .project {
   height: 10rem;
   padding: 2em 4em 2em 2em;
+}
+
+footer {
+  background-color: var(--color-main-1);
+  padding: 0.5rem 1rem;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+footer .social-links li a {
+  display: flex;
+  width: var(--font-size-40);
+  aspect-ratio: 1/1;
+  place-content: center;
+  flex-wrap: wrap;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  cursor: pointer;
 }

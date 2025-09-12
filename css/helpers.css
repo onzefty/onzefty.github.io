@@ -58,6 +58,13 @@
     pointer-events: auto;
 }
 
+a {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    text-decoration: none;
+}
+
 /*---------------------------- Shadow ----------------------------*/
 
 .popupShadow {
