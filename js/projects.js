@@ -5,10 +5,24 @@ import {EVENTS} from "./utils/utils.js";
 const app = new App(CONFIG);
 const {projects = []} = CONFIG;
 const elements = {};
+elements.main = document.querySelector("#main");
 elements.introduction = document.querySelector('#introduction');
 elements.projectsContainer = document.querySelector('#projects-container');
 elements.iframe = document.querySelector('#project-iframe');
 const projectsMap = new Map();
+
+const handleIntersection = (entries,observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.classList.contains("visible")) {
+            entry.target.classList.add("visible");
+        }
+    });
+};
+
+const observer = new IntersectionObserver(handleIntersection,{
+    root: elements.main,
+    rootMargin: '0px'
+});
 
 
 function loadIframe(url) {
@@ -44,18 +58,35 @@ function renderProjects() {
     const create = (project) => {
         const projectElement = document.createElement('article');
         projectElement.classList.add('project');
-        projectElement.style.backgroundImage = `url(${project.image})`;
-        projectElement.innerHTML = `
+        const projectLeftElement = document.createElement("div");
+        projectLeftElement.classList.add("project-left");
+        projectLeftElement.style.backgroundImage = `url(${project.image})`;
+        const projectRightElement = document.createElement("div");
+        projectRightElement.classList.add("project-right");
+        projectRightElement.innerHTML = `
             <h2>${project.title}</h2>
             <p>${project.description}</p>
         `;
+        if(project.tools){
+            const projectToolsContainer = document.createElement("div");
+            projectToolsContainer.classList.add("project-tools-container");
+            project.tools.forEach(tool => {
+                const projectToolElement = document.createElement("div");
+                projectToolElement.innerHTML = tool;
+                projectToolsContainer.appendChild(projectToolElement);
+            });
+            projectRightElement.append(projectToolsContainer);
+        }
+        projectElement.append(projectLeftElement,projectRightElement);
         projectElement.addEventListener(EVENTS.CLICK_TOUCH, handleProjectClick);
         projectsMap.set(projectElement, project);
         return projectElement;
     }
 
     projects.forEach((project) => {
-        elements.projectsContainer.appendChild(create(project));
+        const projectElement = create(project)
+        elements.projectsContainer.appendChild(projectElement);
+        observer.observe(projectElement);
     });
 }
 

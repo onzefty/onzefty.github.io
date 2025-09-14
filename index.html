@@ -48,11 +48,36 @@
                     </ul>
                 </nav>
             </header>
-            <section id="introduction" class="section">
-                <h1></h1>
+            <section id="introduction" class="section relative">
+                <h1 data-font="italic" json="introduction-text-1"></h1>
+                <div id="introduction-image" class="relative">
+                    <img id="introduction-image-normal" class="absolute lt0 widthAll" draggable="false" alt="Aurélien Bouillon" src="./assets/imgs/me-normal.webp" />
+                    <img id="introduction-image-sketch" class="absolute lt0 widthAll" draggable="false" alt="Aurélien Bouillon" src="./assets/imgs/me-sketch.webp" />
+                </div>
+                <h1 data-font="italic" json="introduction-text-2"></h1>
+            </section>
+            <section id="presentation" class="section relative">
+                <p class="skill skill-1 absolute">&lt;HTML5&gt;</p>
+                <p class="skill skill-2 absolute">&lt;CSS3&gt;</p>
+                <p class="skill skill-3 absolute">&lt;JAVASCRIPT&gt;</p>
+                <p class="skill skill-4 absolute">&lt;REACT&gt;</p>
+                <p class="skill skill-5 absolute">&lt;ANGLAIS&gt;</p>
+                <p class="skill skill-6 absolute">&lt;ESPAGNOL&gt;</p>
+                <h1 data-font="italic" json="presentation-text-1"></h1>
+                <h1 data-font="italic" json="presentation-text-2"></h1>
             </section>
             <section id="experiences" class="section">
-                
+                <h2 class="title" json="experiences"></h2>
+                <div id="experiences-container">
+                    <article id="experience-1">
+                        <i class="fa fa-briefcase"></i>
+                        <h2 json="formation-1-title"></h2>
+                        <h3 json="formation-1-dates"></h3>
+                        <p class="text" json="formation-1-description-1"></p>
+                        <p class="text" json="formation-1-description-2"></p>
+                        <p class="text" json="formation-1-description-3"></p>
+                    </article>
+                </div> 
             </section>
             <section id="formation" class="section">
                 <h2 class="title" json="formation"></h2>

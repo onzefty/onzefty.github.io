@@ -15,7 +15,7 @@ header {
     display: flex;
     background-color: var(--color-main-1);
     box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     justify-content: space-between;
     z-index: 1000;
 }
@@ -79,6 +79,37 @@ section .title::after {
   width: 100%;
 }
 
+#introduction {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#introduction #introduction-image {
+  width: min(80vw, 20rem);
+  aspect-ratio: 1661 / 2509;
+}
+
+#introduction #introduction-image img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: var(--font-size-20);
+  transition: opacity .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#introduction #introduction-image:hover #introduction-image-sketch {
+  opacity: 0;
+}
+
+#presentation {
+  color: var(--color-txt-main-2);
+}
+
+#presentation p {
+  font-size: var(--font-size-24);
+}
+
 #formation-container {
   display: flex;
   flex-wrap: wrap;
@@ -107,25 +138,80 @@ section .title::after {
 
 /* Projects page */
 
+#projects {
+  padding: 0;
+}
+
 #projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr)); */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
 }
 
 #projects-container .project {
-    padding: 4em 4em 2em 4em;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     cursor: default;
-    height: 20rem;
     overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+}
+
+#projects-container .project-left {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: min(100vw,30rem);
+    flex-grow: 1;
+    aspect-ratio: 1843/ 911;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: var(--font-size-20);
+    opacity: 0;
+    translate: -5rem 0;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#projects-container .project-right {
+    width: min(100vw,50rem);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    translate: 5rem 0;
+    transition: all .5s .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: var(--font-size-20);
+}
+
+#projects-container .project.visible .project-left,
+#projects-container .project.visible .project-right {
+  opacity: 1;
+  translate: 0rem 0;
+}
+
+#projects-container .project .project-tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+#projects-container .project .project-tools-container > div {
+  border-radius: .5rem;
+  padding: .3rem .6rem;
+  background-color: var(--color-main-1);
+  color: #FFF;
+}
+
+#projects-container .project h2 {
+  color: var(--color-txt-main-1);
 }
 
 #projects-container .project h2,
@@ -144,7 +230,6 @@ section .title::after {
     -ms-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
     bottom: 0;
-    content: '';
     display: block;
     height: 100%;
     left: 0;
@@ -171,17 +256,17 @@ section .title::after {
 #projects-container .project:nth-child(6n)::before {
   background-color: var(--header-color-6);
 }
-#projects-container .project:hover::before,
+/* #projects-container .project:hover::before,
 #projects-container .project:hover h2,
 #projects-container .project:hover p {
   opacity: 0;
-}
+} */
 
 #project-iframe:not(.loaded) {
     display: none;
 }
 
-#main:has(#project-iframe.loaded) #introduction,
+#main:has(#project-iframe.loaded) #presentation,
 #main:has(#project-iframe.loaded) #projects-container .project p {
     display: none;
 }
