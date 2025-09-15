@@ -135,17 +135,41 @@ section .title::after {
 #presentation {
   color: var(--color-txt-main-2);
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#presentation article {
+  font-size: var(--font-size-24);
+  width: min(100%,40rem);
+  padding: 1.2rem;
+  color: var(--color-main-2);
+}
+
+#presentation .skills {
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
-#presentation p {
-  font-size: var(--font-size-24);
+#presentation .skill-wrap {
+  font-size: var(--font-size-30);
+  font-weight: 700;
+  color: var(--color-main-2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: var(--font-size-20);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem;
 }
 
-#presentation .skill {
-
+#presentation .skill-wrap div {
+  color: var(--color-main-1);
 }
 
 #formation-container {
