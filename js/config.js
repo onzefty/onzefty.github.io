@@ -2,7 +2,7 @@ export default {
     title: "Aurelien Bouillon - Portfolio",
     projects: [
         {
-            title: "IFCAM",
+            title: "IFCAM - Risques Environnementaux",
             description: "Module de formation sur les Risques Environnementaux.",
             tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Sounds"],
             url: "./assets/projects/ifcam/risques-n2/risques-n2/index.html",
@@ -28,6 +28,20 @@ export default {
             tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Videos","IA"],
             url: "./assets/projects/renault/M3/index.html",
             image: "./assets/imgs/projects/rugby.webp"
+        },
+        {
+            title: "Port de Charges",
+            description: "Module de formation sur les bonnes pratiques de Port de Charges dans les entreprises.",
+            tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Videos"],
+            url: "./assets/projects/renault/M3/index.html",
+            image: "./assets/imgs/projects/rugby.webp"
+        },
+        {
+            title: "IFCAM - Quiz Éthiques",
+            description: "Module d'évaluation sur les questions éthiques.",
+            tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Sounds"],
+            url: "./assets/projects/ifcam/risques-n2/risques-n2/index.html",
+            image: "./assets/imgs/projects/ifcam.webp"
         },
     ]
 };

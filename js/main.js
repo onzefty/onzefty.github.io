@@ -3,30 +3,39 @@ import App from "./app.js";
 import {EVENTS} from "./utils/utils.js";
 
 const app = new App(CONFIG);
-const mainDom = document.querySelector('#main');
-const header = mainDom.querySelector('header');
+const elements = {};
+elements.main = document.querySelector("#main");
+elements.header = elements.main.querySelector('header');
+elements.nav = elements.header.querySelector("nav");
+elements.buttonMenu = elements.header.querySelector("#button-menu");
 
 const handleIntersection = ([entry],observer) => {
     if (!entry.isIntersecting) {
-        header.classList.add('fixed');
+        elements.header.classList.add('fixed');
     } else {
-        header.classList.remove('fixed');
+        elements.header.classList.remove('fixed');
     }
 };
 
+const handleMenuToggle = () => {
+    const state = elements.nav.getAttribute("state");
+    elements.nav.setAttribute("state",state==="close"?"open":"close");
+};
+
 const observer = new IntersectionObserver(handleIntersection,{
-    root: mainDom,
+    root: elements.main,
     rootMargin: '0px'
 });
 
-mainDom.addEventListener(EVENTS.SCROLL, () => {
-    if (mainDom.scrollTop <= header.offsetHeight) {
-        header.classList.remove('fixed');
+elements.main.addEventListener(EVENTS.SCROLL, () => {
+    if (elements.main.scrollTop <= header.offsetHeight) {
+        elements.header.classList.remove('fixed');
     } 
 });
 
-observer.observe(header);
+elements.buttonMenu.addEventListener(EVENTS.CLICK_TOUCH,handleMenuToggle);
 
+observer.observe(elements.header);
 
 function appReady() {
     console.log("App is ready");
