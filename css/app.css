@@ -107,9 +107,8 @@ section .title::after {
 
 #introduction {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -135,7 +134,6 @@ section .title::after {
 #presentation {
   color: var(--color-txt-main-2);
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
   justify-content: center;
@@ -146,6 +144,10 @@ section .title::after {
   width: min(100%,40rem);
   padding: 1.2rem;
   color: var(--color-main-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #presentation .skills {
@@ -157,7 +159,7 @@ section .title::after {
 }
 
 #presentation .skill-wrap {
-  font-size: var(--font-size-30);
+  font-size: var(--font-size-26);
   font-weight: 700;
   color: var(--color-main-2);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -170,6 +172,31 @@ section .title::after {
 
 #presentation .skill-wrap div {
   color: var(--color-main-1);
+}
+
+#presentation .skill-wrap i:nth-child(1),
+#presentation .skill-wrap i:nth-child(2) {
+  color: #D1F2EB;
+}
+
+#presentation .skill-wrap i:nth-child(3),
+#presentation .skill-wrap i:nth-child(4) {
+  color: #76D7C4;
+}
+
+#presentation .skill-wrap i:nth-child(5),
+#presentation .skill-wrap i:nth-child(6) {
+  color: #1ABC9C;
+}
+
+#presentation .skill-wrap i:nth-child(7),
+#presentation .skill-wrap i:nth-child(8) {
+  color: #0E4E5A;
+}
+
+#presentation .skill-wrap i:nth-child(9),
+#presentation .skill-wrap i:nth-child(10) {
+  color: #E67E22;
 }
 
 #formation-container {

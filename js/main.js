@@ -28,7 +28,7 @@ const observer = new IntersectionObserver(handleIntersection,{
 });
 
 elements.main.addEventListener(EVENTS.SCROLL, () => {
-    if (elements.main.scrollTop <= header.offsetHeight) {
+    if (elements.main.scrollTop <= elements.header.offsetHeight) {
         elements.header.classList.remove('fixed');
     } 
 });
