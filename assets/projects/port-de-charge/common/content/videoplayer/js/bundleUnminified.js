@@ -1,0 +1,1239 @@
+/*! Copyright © Onlineformapro 2020. Build:2020-05-11 */
+function VideoPlayer(a) {
+    var b = {
+        src: "",
+        container: null,
+        currentTime: -1,
+        playedTime: 0,
+        allowSeekingForward: !0,
+        defaultQuality: "high",
+        vttSource: null,
+        multiformat: !1,
+        has480p: !1,
+        noRightClick: !1,
+        mediaElementOptions: null,
+        handlers: { onLoadedMetaData: function (a) {}, onPlay: function () {}, onPlaying: function (a) {}, onPause: function () {}, onEnded: function () {}, onError: function (a) {} },
+    };
+    return (
+        (this.options = Utility.extend(!0, b, a || {})),
+        (this.id = Utility.uuidv4()),
+        (this.data = {}),
+        (this.allowSeekingForward = this.options.allowSeekingForward),
+        (this.currentTime = 0),
+        (this.playedTime = this.options.playedTime),
+        (this.boundHandleLoadedMetaData = this.handleLoadedMetaData.bind(this)),
+        (this.boundHandleLoadStart = this.handleLoadStart.bind(this)),
+        (this.boundHandleCanPlay = this.handleCanPlay.bind(this)),
+        (this.boundHandleCanPlayThrough = this.handleCanPlayThrough.bind(this)),
+        (this.boundHandlePlay = this.handlePlay.bind(this)),
+        (this.boundHandlePlaying = this.handlePlaying.bind(this)),
+        (this.boundHandlePause = this.handlePause.bind(this)),
+        (this.boundHandleSeeking = this.handleSeeking.bind(this)),
+        (this.boundHandleTimeUpdate = this.handleTimeUpdate.bind(this)),
+        (this.boundHandleEnded = this.handleEnded.bind(this)),
+        (this.boundHandleError = this.handleError.bind(this)),
+        this.init(),
+        this
+    );
+}
+!(function (a) {
+    "use strict";
+    "undefined" == typeof a.console &&
+        (a.console = {
+            log: function () {},
+            debug: function () {},
+            info: function () {},
+            warn: function () {},
+            exception: function () {},
+            assert: function () {},
+            dir: function () {},
+            dirxml: function () {},
+            trace: function () {},
+            group: function () {},
+            groupCollapsed: function () {},
+            groupEnd: function () {},
+            profile: function () {},
+            profileEnd: function () {},
+            count: function () {},
+            clear: function () {},
+            time: function () {},
+            timeEnd: function () {},
+            timeStamp: function () {},
+            table: function () {},
+            error: function () {},
+        });
+})("undefined" == typeof window ? this : window),
+    (function (a) {
+        "use strict";
+        (a.requestAnimationFrame =
+            a.requestAnimationFrame ||
+            a.webkitRequestAnimationFrame ||
+            a.mozRequestAnimationFrame ||
+            a.msRequestAnimationFrame ||
+            a.oRequestAnimationFrame ||
+            function (b) {
+                var c = new Date().getTime(),
+                    d = Math.max(0, 16 - (c - ("undefined" != typeof lastTime ? lastTime : 0))),
+                    e = a.setTimeout(function () {
+                        b(c + d);
+                    }, d);
+                return (lastTime = c + d), e;
+            }),
+            (a.cancelAnimationFrame =
+                a.cancelAnimationFrame ||
+                function (b) {
+                    a.clearTimeout(b);
+                });
+    })("undefined" == typeof window ? this : window),
+    (function (a) {
+        function b() {}
+        function c(a, b) {
+            return function () {
+                a.apply(b, arguments);
+            };
+        }
+        function d(a) {
+            if ("object" != typeof this) throw new TypeError("Promises must be constructed via new");
+            if ("function" != typeof a) throw new TypeError("not a function");
+            (this._state = 0), (this._handled = !1), (this._value = void 0), (this._deferreds = []), j(a, this);
+        }
+        function e(a, b) {
+            for (; 3 === a._state; ) a = a._value;
+            return 0 === a._state
+                ? void a._deferreds.push(b)
+                : ((a._handled = !0),
+                  void l(function () {
+                      var c = 1 === a._state ? b.onFulfilled : b.onRejected;
+                      if (null === c) return void (1 === a._state ? f : g)(b.promise, a._value);
+                      var d;
+                      try {
+                          d = c(a._value);
+                      } catch (e) {
+                          return void g(b.promise, e);
+                      }
+                      f(b.promise, d);
+                  }));
+        }
+        function f(a, b) {
+            try {
+                if (b === a) throw new TypeError("A promise cannot be resolved with itself.");
+                if (b && ("object" == typeof b || "function" == typeof b)) {
+                    var e = b.then;
+                    if (b instanceof d) return (a._state = 3), (a._value = b), void h(a);
+                    if ("function" == typeof e) return void j(c(e, b), a);
+                }
+                (a._state = 1), (a._value = b), h(a);
+            } catch (f) {
+                g(a, f);
+            }
+        }
+        function g(a, b) {
+            (a._state = 2), (a._value = b), h(a);
+        }
+        function h(a) {
+            2 === a._state &&
+                0 === a._deferreds.length &&
+                setTimeout(function () {
+                    a._handled || m(a._value);
+                }, 1);
+            for (var b = 0, c = a._deferreds.length; c > b; b++) e(a, a._deferreds[b]);
+            a._deferreds = null;
+        }
+        function i(a, b, c) {
+            (this.onFulfilled = "function" == typeof a ? a : null), (this.onRejected = "function" == typeof b ? b : null), (this.promise = c);
+        }
+        function j(a, b) {
+            var c = !1;
+            try {
+                a(
+                    function (a) {
+                        c || ((c = !0), f(b, a));
+                    },
+                    function (a) {
+                        c || ((c = !0), g(b, a));
+                    }
+                );
+            } catch (d) {
+                if (c) return;
+                (c = !0), g(b, d);
+            }
+        }
+        var k = setTimeout,
+            l =
+                ("function" == typeof setImmediate && setImmediate) ||
+                function (a) {
+                    k(a, 1);
+                },
+            m = function (a) {
+                "undefined" != typeof console && console && console.warn("Possible Unhandled Promise Rejection:", a);
+            };
+        (d.prototype["catch"] = function (a) {
+            return this.then(null, a);
+        }),
+            (d.prototype.then = function (a, c) {
+                var f = new d(b);
+                return e(this, new i(a, c, f)), f;
+            }),
+            (d.all = function (a) {
+                var b = Array.prototype.slice.call(a);
+                return new d(function (a, c) {
+                    function d(f, g) {
+                        try {
+                            if (g && ("object" == typeof g || "function" == typeof g)) {
+                                var h = g.then;
+                                if ("function" == typeof h)
+                                    return void h.call(
+                                        g,
+                                        function (a) {
+                                            d(f, a);
+                                        },
+                                        c
+                                    );
+                            }
+                            (b[f] = g), 0 === --e && a(b);
+                        } catch (i) {
+                            c(i);
+                        }
+                    }
+                    if (0 === b.length) return a([]);
+                    for (var e = b.length, f = 0; f < b.length; f++) d(f, b[f]);
+                });
+            }),
+            (d.resolve = function (a) {
+                return a && "object" == typeof a && a.constructor === d
+                    ? a
+                    : new d(function (b) {
+                          b(a);
+                      });
+            }),
+            (d.reject = function (a) {
+                return new d(function (b, c) {
+                    c(a);
+                });
+            }),
+            (d.race = function (a) {
+                return new d(function (b, c) {
+                    for (var d = 0, e = a.length; e > d; d++) a[d].then(b, c);
+                });
+            }),
+            (d._setImmediateFn = function (a) {
+                l = a;
+            }),
+            (d._setUnhandledRejectionFn = function (a) {
+                m = a;
+            }),
+            "undefined" != typeof module && module.exports ? (module.exports = d) : a.Promise || (a.Promise = d);
+    })("undefined" == typeof window ? this : window),
+    (function (a, b, c) {
+        var d,
+            e = 0,
+            f = "" + Math.random(),
+            g = "__symbol:",
+            h = g.length,
+            i = "__symbol@@" + f,
+            j = "defineProperty",
+            k = "defineProperties",
+            l = "getOwnPropertyNames",
+            m = "getOwnPropertyDescriptor",
+            n = "propertyIsEnumerable",
+            o = a.prototype,
+            p = o.hasOwnProperty,
+            q = o[n],
+            r = o.toString,
+            s = Array.prototype.concat,
+            t = "object" == typeof window ? a.getOwnPropertyNames(window) : [],
+            u = a[l],
+            v = function (a) {
+                if ("[object Window]" === r.call(a))
+                    try {
+                        return u(a);
+                    } catch (b) {
+                        return s.call([], t);
+                    }
+                return u(a);
+            },
+            w = a[m],
+            x = a.create,
+            y = a.keys,
+            z = a.freeze || a,
+            A = a[j],
+            B = a[k],
+            C = w(a, l),
+            D = function (a, b, c) {
+                if (!p.call(a, i))
+                    try {
+                        A(a, i, { enumerable: !1, configurable: !1, writable: !1, value: {} });
+                    } catch (d) {
+                        a[i] = {};
+                    }
+                a[i]["@@" + b] = c;
+            },
+            E = function (a, b) {
+                var c = x(a);
+                return (
+                    v(b).forEach(function (a) {
+                        J.call(b, a) && P(c, a, b[a]);
+                    }),
+                    c
+                );
+            },
+            F = function (a) {
+                var b = x(a);
+                return (b.enumerable = !1), b;
+            },
+            G = function () {},
+            H = function (a) {
+                return a != i && !p.call(M, a);
+            },
+            I = function (a) {
+                return a != i && p.call(M, a);
+            },
+            J = function (a) {
+                var b = "" + a;
+                return I(b) ? p.call(this, b) && this[i]["@@" + b] : q.call(this, a);
+            },
+            K = function (b) {
+                var c = {
+                    enumerable: !1,
+                    configurable: !0,
+                    get: G,
+                    set: function (a) {
+                        d(this, b, { enumerable: !1, configurable: !0, writable: !0, value: a }), D(this, b, !0);
+                    },
+                };
+                try {
+                    A(o, b, c);
+                } catch (e) {
+                    o[b] = c.value;
+                }
+                return z((M[b] = A(a(b), "constructor", N)));
+            },
+            L = function S(a) {
+                if (this instanceof S) throw new TypeError("Symbol is not a constructor");
+                return K(g.concat(a || "", f, ++e));
+            },
+            M = x(null),
+            N = { value: L },
+            O = function (a) {
+                return M[a];
+            },
+            P = function (a, b, c) {
+                var e = "" + b;
+                return I(e) ? (d(a, e, c.enumerable ? F(c) : c), D(a, e, !!c.enumerable)) : A(a, b, c), a;
+            },
+            Q = function (a) {
+                return function (b) {
+                    return p.call(a, i) && p.call(a[i], "@@" + b);
+                };
+            },
+            R = function (a) {
+                return v(a)
+                    .filter(a === o ? Q(a) : I)
+                    .map(O);
+            };
+        (C.value = P),
+            A(a, j, C),
+            (C.value = R),
+            A(a, b, C),
+            (C.value = function (a) {
+                return v(a).filter(H);
+            }),
+            A(a, l, C),
+            (C.value = function (a, b) {
+                var c = R(b);
+                return (
+                    c.length
+                        ? y(b)
+                              .concat(c)
+                              .forEach(function (c) {
+                                  J.call(b, c) && P(a, c, b[c]);
+                              })
+                        : B(a, b),
+                    a
+                );
+            }),
+            A(a, k, C),
+            (C.value = J),
+            A(o, n, C),
+            (C.value = L),
+            A(c, "Symbol", C),
+            (C.value = function (a) {
+                var b = g.concat(g, a, f);
+                return b in o ? M[b] : K(b);
+            }),
+            A(L, "for", C),
+            (C.value = function (a) {
+                if (H(a)) throw new TypeError(a + " is not a symbol");
+                return p.call(M, a) ? a.slice(2 * h, -f.length) : void 0;
+            }),
+            A(L, "keyFor", C),
+            (C.value = function (a, b) {
+                var c = w(a, b);
+                return c && I(b) && (c.enumerable = J.call(a, b)), c;
+            }),
+            A(a, m, C),
+            (C.value = function (a, b) {
+                return 1 === arguments.length || "undefined" == typeof b ? x(a) : E(a, b);
+            }),
+            A(a, "create", C),
+            (C.value = function () {
+                var a = r.call(this);
+                return "[object String]" === a && I(this) ? "[object Symbol]" : a;
+            }),
+            A(o, "toString", C),
+            (d = function (a, b, c) {
+                var d = w(o, b);
+                delete o[b], A(a, b, c), a !== o && A(o, b, d);
+            });
+    })(Object, "getOwnPropertySymbols", this),
+    Array.prototype.find ||
+        Object.defineProperty(Array.prototype, "find", {
+            value: function (a) {
+                if (null == this) throw new TypeError('"this" is null or not defined');
+                var b = Object(this),
+                    c = b.length >>> 0;
+                if ("function" != typeof a) throw new TypeError("predicate must be a function");
+                for (var d = arguments[1], e = 0; c > e; ) {
+                    var f = b[e];
+                    if (a.call(d, f, e, b)) return f;
+                    e++;
+                }
+                return void 0;
+            },
+            configurable: !0,
+            writable: !0,
+        }),
+    Array.prototype.every ||
+        (Array.prototype.every = function (a, b) {
+            "use strict";
+            var c, d;
+            if (null == this) throw new TypeError("this vaut null ou n est pas défini");
+            var e = Object(this),
+                f = e.length >>> 0;
+            if ("function" != typeof a) throw new TypeError();
+            for (arguments.length > 1 && (c = b), d = 0; f > d; ) {
+                var g;
+                if (d in e) {
+                    g = e[d];
+                    var h = a.call(c, g, d, e);
+                    if (!h) return !1;
+                }
+                d++;
+            }
+            return !0;
+        }),
+    Array.prototype.filter ||
+        (Array.prototype.filter = function (a, b) {
+            "use strict";
+            if (("Function" != typeof a && "function" != typeof a) || !this) throw new TypeError();
+            var c = this.length >>> 0,
+                d = new Array(c),
+                e = this,
+                f = 0,
+                g = -1;
+            if (void 0 === b) for (; ++g !== c; ) g in this && a(e[g], g, e) && (d[f++] = e[g]);
+            else for (; ++g !== c; ) g in this && a.call(b, e[g], g, e) && (d[f++] = e[g]);
+            return (d.length = f), d;
+        }),
+    Array.prototype.some ||
+        (Array.prototype.some = function (a, b) {
+            "use strict";
+            if (null == this) throw new TypeError("Array.prototype.some called on null or undefined");
+            if ("function" != typeof a) throw new TypeError();
+            for (var c = Object(this), d = c.length >>> 0, e = 0; d > e; e++) if (e in c && a.call(b, c[e], e, c)) return !0;
+            return !1;
+        }),
+    Array.prototype.map ||
+        (Array.prototype.map = function (a) {
+            var b, c, d;
+            if (null == this) throw new TypeError(" this est null ou non défini");
+            var e = Object(this),
+                f = e.length >>> 0;
+            if ("function" != typeof a) throw new TypeError(a + " n est pas une fonction");
+            for (arguments.length > 1 && (b = arguments[1]), c = new Array(f), d = 0; f > d; ) {
+                var g, h;
+                d in e && ((g = e[d]), (h = a.call(b, g, d, e)), (c[d] = h)), d++;
+            }
+            return c;
+        }),
+    Array.prototype.reduce ||
+        Object.defineProperty(Array.prototype, "reduce", {
+            value: function (a) {
+                if (null === this) throw new TypeError("Array.prototype.reduce called on null or undefined");
+                if ("function" != typeof a) throw new TypeError(a + " is not a function");
+                var b,
+                    c = Object(this),
+                    d = c.length >>> 0,
+                    e = 0;
+                if (2 == arguments.length) b = arguments[1];
+                else {
+                    for (; d > e && !(e in c); ) e++;
+                    if (e >= d) throw new TypeError("Reduce of empty array with no initial value");
+                    b = c[e++];
+                }
+                for (; d > e; ) e in c && (b = a(b, c[e], e, c)), e++;
+                return b;
+            },
+        }),
+    Array.prototype.fill ||
+        Object.defineProperty(Array.prototype, "fill", {
+            value: function (a) {
+                if (null == this) throw new TypeError("this is null or not defined");
+                for (
+                    var b = Object(this), c = b.length >>> 0, d = arguments[1], e = d >> 0, f = 0 > e ? Math.max(c + e, 0) : Math.min(e, c), g = arguments[2], h = void 0 === g ? c : g >> 0, i = 0 > h ? Math.max(c + h, 0) : Math.min(h, c);
+                    i > f;
+
+                )
+                    (b[f] = a), f++;
+                return b;
+            },
+        }),
+    "document" in window.self &&
+        (("classList" in document.createElement("_") && (!document.createElementNS || "classList" in document.createElementNS("http://www.w3.org/2000/svg", "g"))) ||
+            !(function (a) {
+                "use strict";
+                if ("Element" in a) {
+                    var b = "classList",
+                        c = "prototype",
+                        d = a.Element[c],
+                        e = Object,
+                        f =
+                            String[c].trim ||
+                            function () {
+                                return this.replace(/^\s+|\s+$/g, "");
+                            },
+                        g =
+                            Array[c].indexOf ||
+                            function (a) {
+                                for (var b = 0, c = this.length; c > b; b++) if (b in this && this[b] === a) return b;
+                                return -1;
+                            },
+                        h = function (a, b) {
+                            (this.name = a), (this.code = DOMException[a]), (this.message = b);
+                        },
+                        i = function (a, b) {
+                            if ("" === b) throw new h("SYNTAX_ERR", "An invalid or illegal string was specified");
+                            if (/\s/.test(b)) throw new h("INVALID_CHARACTER_ERR", "String contains an invalid character");
+                            return g.call(a, b);
+                        },
+                        j = function (a) {
+                            for (var b = f.call(a.getAttribute("class") || ""), c = b ? b.split(/\s+/) : [], d = 0, e = c.length; e > d; d++) this.push(c[d]);
+                            this._updateClassName = function () {
+                                a.setAttribute("class", this.toString());
+                            };
+                        },
+                        k = (j[c] = []),
+                        l = function () {
+                            return new j(this);
+                        };
+                    if (
+                        ((h[c] = Error[c]),
+                        (k.item = function (a) {
+                            return this[a] || null;
+                        }),
+                        (k.contains = function (a) {
+                            return (a += ""), -1 !== i(this, a);
+                        }),
+                        (k.add = function () {
+                            var a,
+                                b = arguments,
+                                c = 0,
+                                d = b.length,
+                                e = !1;
+                            do (a = b[c] + ""), -1 === i(this, a) && (this.push(a), (e = !0));
+                            while (++c < d);
+                            e && this._updateClassName();
+                        }),
+                        (k.remove = function () {
+                            var a,
+                                b,
+                                c = arguments,
+                                d = 0,
+                                e = c.length,
+                                f = !1;
+                            do for (a = c[d] + "", b = i(this, a); -1 !== b; ) this.splice(b, 1), (f = !0), (b = i(this, a));
+                            while (++d < e);
+                            f && this._updateClassName();
+                        }),
+                        (k.toggle = function (a, b) {
+                            a += "";
+                            var c = this.contains(a),
+                                d = c ? b !== !0 && "remove" : b !== !1 && "add";
+                            return d && this[d](a), b === !0 || b === !1 ? b : !c;
+                        }),
+                        (k.toString = function () {
+                            return this.join(" ");
+                        }),
+                        e.defineProperty)
+                    ) {
+                        var m = { get: l, enumerable: !0, configurable: !0 };
+                        try {
+                            e.defineProperty(d, b, m);
+                        } catch (n) {
+                            (void 0 === n.number || -2146823252 === n.number) && ((m.enumerable = !1), e.defineProperty(d, b, m));
+                        }
+                    } else e[c].__defineGetter__ && d.__defineGetter__(b, l);
+                }
+            })(window.self),
+        (function () {
+            "use strict";
+            var a = document.createElement("_");
+            if ((a.classList.add("c1", "c2"), !a.classList.contains("c2"))) {
+                var b = function (a) {
+                    var b = DOMTokenList.prototype[a];
+                    DOMTokenList.prototype[a] = function (a) {
+                        var c,
+                            d = arguments.length;
+                        for (c = 0; d > c; c++) (a = arguments[c]), b.call(this, a);
+                    };
+                };
+                b("add"), b("remove");
+            }
+            if ((a.classList.toggle("c3", !1), a.classList.contains("c3"))) {
+                var c = DOMTokenList.prototype.toggle;
+                DOMTokenList.prototype.toggle = function (a, b) {
+                    return 1 in arguments && !this.contains(a) == !b ? b : c.call(this, a);
+                };
+            }
+            a = null;
+        })()),
+    "function" != typeof Object.assign &&
+        Object.defineProperty(Object, "assign", {
+            value: function (a, b) {
+                "use strict";
+                if (null == a) throw new TypeError("Cannot convert undefined or null to object");
+                for (var c = Object(a), d = 1; d < arguments.length; d++) {
+                    var e = arguments[d];
+                    if (null != e) for (var f in e) Object.prototype.hasOwnProperty.call(e, f) && (c[f] = e[f]);
+                }
+                return c;
+            },
+            writable: !0,
+            configurable: !0,
+        }),
+    void 0 === Number.parseFloat && (Number.parseFloat = window.parseFloat),
+    void 0 === Number.parseInt && (Number.parseInt = window.parseInt),
+    void 0 === Number.isNaN && (Number.isNaN = window.isNaN);
+var Utility = (function () {
+    return {
+        mix: function (a) {
+            var b = Array.prototype.slice.call(arguments).slice(1);
+            b.forEach(function (b) {
+                Object.getOwnPropertyNames(b)
+                    .concat(Object.getOwnPropertySymbols(b))
+                    .forEach(function (c) {
+                        if (!(c in a.prototype)) {
+                            var d = Object.getOwnPropertyDescriptor(b, c);
+                            (d.enumerable = !1), Object.defineProperty(a.prototype, c, d);
+                        }
+                    });
+            });
+        },
+        isNullOrUndefined: function (a) {
+            return null === a || "undefined" == typeof a;
+        },
+        isDefined: function (a) {
+            return null !== a && "undefined" != typeof a;
+        },
+        isNumeric: function (a) {
+            return !Number.isNaN(Number(a));
+        },
+        isArray: function (a) {
+            return "[object Array]" === Object.prototype.toString.call(a);
+        },
+        isPlainObject: function (a) {
+            return !!a && "object" == typeof a && "[object Object]" === Object.prototype.toString.call(a);
+        },
+        extend: function () {
+            var a,
+                b,
+                c,
+                d,
+                e,
+                f = Array.prototype.slice.call(arguments),
+                g = f[0] || {},
+                h = 1,
+                i = f.length,
+                j = !1;
+            "boolean" == typeof g && ((j = g), (g = f[1] || {}), (h = 2)), "object" != typeof g && "function" != typeof g && (g = {}), i === h && ((g = this), (h -= 1));
+            for (
+                var k = function (f) {
+                    (b = g[f]),
+                        (c = a[f]),
+                        g !== c &&
+                            ((d = Utility.isArray(c)),
+                            j && c && (Utility.isPlainObject(c) || d) ? (d ? ((d = !1), (e = b && Utility.isArray(b) ? b : [])) : (e = b && Utility.isPlainObject(b) ? b : {}), (g[f] = Utility.extend(j, e, c))) : void 0 !== c && (g[f] = c));
+                };
+                i > h;
+                h += 1
+            )
+                (a = f[h]), null != a && Object.keys(a).forEach(k);
+            return g;
+        },
+        uuidv4: function (a) {
+            return a ? (a ^ ((16 * Math.random()) >> (a / 4))).toString(16) : ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018 ]/g, Utility.uuidv4);
+        },
+        toBoolean: function (a) {
+            var b = typeof a;
+            switch (b) {
+                case "object":
+                case "string":
+                    return /(true|1)/i.test(a);
+                case "number":
+                    return !!a;
+                case "boolean":
+                    return a;
+                case "undefined":
+                    return null;
+                default:
+                    return !1;
+            }
+        },
+        toArray: function (a) {
+            return Array.prototype.slice.call(a);
+        },
+        getObjectById: function (a, b) {
+            var c;
+            return (
+                a.forEach(function (a) {
+                    return a.id && a.id === b ? ((c = a), !1) : !0;
+                }),
+                c
+            );
+        },
+        loadJS: function (a) {
+            return new Promise(function (b, c) {
+                var d = window.document,
+                    e = d.createElement("script");
+                (e.onload = b), (e.onerror = c), (e.async = !0), (e.src = a), d.getElementsByTagName("head")[0].appendChild(e);
+            });
+        },
+        loadCSS: function (a, b, c, d, e) {
+            var f,
+                g = (b || window.document).createElement("link");
+            if (d) f = d;
+            else {
+                var h = (b.body || b.getElementsByTagName("head")[0]).childNodes;
+                f = h[h.length - 1];
+            }
+            var i = b.styleSheets;
+            (g.rel = "stylesheet"), (g.href = a), (g.media = "only x"), f.parentNode.insertBefore(g, d ? f : f.nextSibling);
+            var j = function (a) {
+                for (var b = g.href, c = i.length; c--; ) if (i[c].href === b) return a();
+                setTimeout(function () {
+                    j(a);
+                });
+            };
+            return (
+                (g.onloadcssdefined = j),
+                j(function () {
+                    g.media = e || "all";
+                }),
+                (g.onload = function () {
+                    (g.onload = null), c && c.call(g);
+                }),
+                "isApplicationInstalled" in navigator && "onloadcssdefined" in g && g.onloadcssdefined(c),
+                g
+            );
+        },
+        round: function (a, b) {
+            var c = Math.pow(10, b || 2);
+            return Math.round(a * c) / c;
+        },
+        isTouchEvent: function (a) {
+            return a.type.toLowerCase().indexOf("touch") > -1;
+        },
+        getMouseOrTouchEvent: function (a) {
+            return this.isTouchEvent(a) ? a.originalEvent.touches[0] : a;
+        },
+        noDraggable: function (a) {
+            return (
+                [a, a.find("*")].forEach(function (a) {
+                    $(a).attr("draggable", !1).attr("ondragstart", "return false;");
+                }),
+                this
+            );
+        },
+        isPortrait: function () {
+            return window.innerHeight / window.innerWidth > 1;
+        },
+        isLandscape: function () {
+            return window.innerHeight / window.innerWidth < 1;
+        },
+        isIosDevice: function () {
+            return null !== navigator.userAgent.match(/(iPod|iPhone|iPad)/i);
+        },
+        isMobileSafari: function () {
+            var a = null !== navigator.userAgent.match(/Safari/i),
+                b = null !== navigator.userAgent.match(/Chrome/i);
+            return this.isIosDevice() && a && !b;
+        },
+        isChrome: function () {
+            var a = window.chrome,
+                b = window.navigator,
+                c = b.vendor,
+                d = "undefined" != typeof window.opr,
+                e = b.userAgent.indexOf("Edge") > -1,
+                f = b.userAgent.match("CriOS");
+            return f || (null !== a && "undefined" != typeof a && "Google Inc." === c && d === !1 && e === !1);
+        },
+        getMatrix: function (a) {
+            return a.css("-webkit-transform") || a.css("-moz-transform") || a.css("-ms-transform") || a.css("-o-transform") || a.css("transform");
+        },
+        getScale: function (a) {
+            var b = { scaleX: 1, scaleY: 1 },
+                c = this.getMatrix(a);
+            if (c) {
+                var d = /matrix\((-?\d*\.?\d+),\s*0,\s*0,\s*(-?\d*\.?\d+),\s*0,\s*0\)/,
+                    e = c.match(d);
+                e && (isNaN(parseFloat(e[1])) || (b.scaleX = parseFloat(e[1])), isNaN(parseFloat(e[2])) || (b.scaleY = parseFloat(e[2])));
+            }
+            return b;
+        },
+        setScale: function (a, b) {
+            var c = "scale( " + b + " )";
+            a.css({ "-webkit-transform": c, "-moz-transform": c, "-ms-transform": c, "-o-transform": c, transform: c });
+        },
+        strip_tags: function (a, b) {
+            b = (((b || "") + "").toLowerCase().match(/<[ a-z][a-z0-9]*>/g) || []).join("");
+            var c = /<\/?( [ a-z][a-z0-9]* )\b[^> ]*>/gi,
+                d = /<!--[ \s\S]*?-->|<\?( ?:php )?[\s\S ]*?\?>/gi;
+            return a.replace(d, "").replace(c, function (a, c) {
+                return b.indexOf("<" + c.toLowerCase() + ">") > -1 ? a : "";
+            });
+        },
+        isSSL: function (a) {
+            return 0 === a.location.href.toLowerCase().indexOf("https://");
+        },
+        arrayBufferToBlob: function (a, b) {
+            return new Blob([new window.Uint8Array(a)], { type: b || "image/png" });
+        },
+        toQueryString: function (a) {
+            return Object.keys(a).reduce(function (b, c) {
+                return b + ("" === b ? "?" : "&") + c + "=" + ("object" == typeof a[c] ? JSON.stringify(a[c]) : a[c]);
+            }, "");
+        },
+        toObject: function (a) {
+            var b,
+                c = {};
+            return (
+                window
+                    .decodeURIComponent(a)
+                    .replace(/^.*\?/g, "")
+                    .split("&")
+                    .forEach(function (a) {
+                        if (a.indexOf("=") > -1) {
+                            if (((b = a.split("=")), b[1].indexOf("{") > -1))
+                                try {
+                                    b[1] = JSON.parse(b[1]);
+                                } catch (d) {}
+                            c[b[0]] = b[1];
+                        }
+                    }),
+                c
+            );
+        },
+        getHiddenProperty: function () {
+            if ("hidden" in window.document) return "hidden";
+            for (var a, b = ["webkit", "moz", "ms", "o"], c = 0; c < b.length; c++) if (((a = b[c] + "Hidden"), a in window.document)) return a;
+            return null;
+        },
+        windowInactive: function () {
+            var a = this.getHiddenProperty();
+            return a ? window.document[a] : !1;
+        },
+        isMobile: function () {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        },
+        getRandomIntInclusive: function (a, b) {
+            return (a = Math.ceil(a)), (b = Math.floor(b)), Math.floor(Math.random() * (b - a + 1)) + a;
+        },
+        globalToLocal: function (a, b, c) {
+            var d = a.offset();
+            return { left: Math.floor(b - d.left), top: Math.floor(c - d.top) };
+        },
+        sortOn: function (a, b) {
+            var c = function (a) {
+                return "string" == typeof a ? a.toLowerCase() : a;
+            };
+            return b.slice().sort(function (b, d) {
+                return c(b[a]) > c(d[a]) ? 1 : c(b[a]) < c(d[a]) ? -1 : 0;
+            });
+        },
+        shuffle: function (a) {
+            for (var b, c = [], d = a.slice(); d.length > 0; ) (b = this.getRandomIntInclusive(0, d.length - 1)), c.push(d[b]), d.splice(b, 1);
+            return c;
+        },
+        isLocalWindow: function () {
+            return window.location.protocol.toLowerCase().indexOf("file") > -1;
+        },
+        getWindowOrigin: function () {
+            return this.isLocalWindow() ? "*" : window.location.protocol + "//" + window.document.domain + ("" !== window.location.port ? ":" + window.location.port : "");
+        },
+        getIframeDocument: function (a) {
+            var b = "string" == typeof a ? document.querySelector(a) : a;
+            return b ? b.contentDocument || b.contentWindow.document : null;
+        },
+        getScriptElement: function (a) {
+            var b = document.createElement("script");
+            return (b.src = a), (b.charset = "UTF-8"), b;
+        },
+        findOpenerWindow: function (a) {
+            for (var b = a || window; !b.opener && b.parent && b.parent !== b; ) b = b.parent;
+            return b.opener ? b : null;
+        },
+        findWindowOwnerOf: function (a, b) {
+            for (var c = b || window, d = this.isDefined(c[a]) ? c : null; !d && c.parent && c.parent !== c; ) (c = c.parent), this.isDefined(c[a]) && (d = c);
+            return d;
+        },
+        findUpperWindowOwnerOf: function (a, b) {
+            for (var c = b || window, d = this.isDefined(c[a]) ? c : null; c.parent && c.parent !== c; ) (c = c.parent), this.isDefined(c[a]) && (d = c);
+            return d;
+        },
+        path: (function () {
+            var a = function (a, b) {
+                    for (var c = [], d = 0; d < a.length; d += 1) {
+                        var e = a[d];
+                        e && "." !== e && (".." === e ? (c.length && ".." !== c[c.length - 1] ? c.pop() : b && c.push("..")) : c.push(e));
+                    }
+                    return c;
+                },
+                b = {};
+            return (
+                (b.normalize = function (c) {
+                    var d = b.isAbsolute(c),
+                        e = c && "/" === c[c.length - 1],
+                        f = a(c.split("/"), !d).join("/");
+                    return f || d || (f = "."), f && e && (f += "/"), (d ? "/" : "") + f;
+                }),
+                (b.isAbsolute = function (a) {
+                    "/" === a.charAt(0);
+                }),
+                (b.join = function () {
+                    for (var a = Array.prototype.slice.call(arguments), c = "", d = 0; d < a.length; d += 1) {
+                        var e = a[d];
+                        if ("[object String]" !== Object.prototype.toString.call(e)) throw new TypeError("Arguments to path.join must be strings");
+                        e && (c += c ? "/" + e : e);
+                    }
+                    return b.normalize(c);
+                }),
+                (b.dirname = function (a) {
+                    if ("string" != typeof a) throw new TypeError("Path must be a string. Received " + typeof a);
+                    if (0 === a.length) return ".";
+                    for (var b = a.charCodeAt(0), c = 47 === b, d = -1, e = !0, f = a.length - 1; f >= 1; --f)
+                        if (((b = a.charCodeAt(f)), 47 === b)) {
+                            if (!e) {
+                                d = f;
+                                break;
+                            }
+                        } else e = !1;
+                    return -1 === d ? (c ? "/" : ".") : c && 1 === d ? "//" : a.slice(0, d);
+                }),
+                b
+            );
+        })(),
+    };
+})();
+(VideoPlayer.prototype.init = function () {
+    if ("string" == typeof this.options.container) {
+        var a = document.querySelector(this.options.container);
+        this.options.container = a;
+    }
+    if (!this.options.container) throw new Error("Le conteneur doit être défini !");
+    return Utility.isNullOrUndefined(this.options.src)
+        ? (this.appendErrorMessage(4), !1)
+        : (this.options.noRightClick && this.options.container.addEventListener("contextmenu", this.handleContextMenu),
+          this.options.container.appendChild(this.build()),
+          (this.video = this.options.container.querySelector("video")),
+          this.addListeners(),
+          this.video && this.video.addEventListener("loadstart", this.boundHandleLoadStart),
+          "string" == typeof this.options.src && this.options.src.length > 0 && this.load(),
+          this);
+}),
+    (VideoPlayer.prototype.handleContextMenu = function (a) {
+        return a.preventDefault(), !1;
+    }),
+    (VideoPlayer.prototype.addListeners = function () {
+        return (
+            this.video &&
+                (this.video.addEventListener("canplay", this.boundHandleCanPlay),
+                this.video.addEventListener("canplaythrough", this.boundHandleCanPlayThrough),
+                this.video.addEventListener("play", this.boundHandlePlay),
+                this.video.addEventListener("playing", this.boundHandlePlaying),
+                this.video.addEventListener("pause", this.boundHandlePause),
+                this.video.addEventListener("seeking", this.boundHandleSeeking),
+                this.video.addEventListener("timeupdate", this.boundHandleTimeUpdate),
+                this.video.addEventListener("ended", this.boundHandleEnded),
+                this.video.addEventListener("error", this.boundHandleError)),
+            this
+        );
+    }),
+    (VideoPlayer.prototype.removeListeners = function () {
+        return (
+            this.video &&
+                (this.video.removeEventListener("canplay", this.boundHandleCanPlay),
+                this.video.removeEventListener("canplaythrough", this.boundHandleCanPlayThrough),
+                this.video.removeEventListener("play", this.boundHandlePlay),
+                this.video.removeEventListener("playing", this.boundHandlePlaying),
+                this.video.removeEventListener("pause", this.boundHandlePause),
+                this.video.removeEventListener("seeking", this.boundHandleSeeking),
+                this.video.removeEventListener("timeupdate", this.boundHandleTimeUpdate),
+                this.video.removeEventListener("ended", this.boundHandleEnded),
+                this.video.removeEventListener("error", this.boundHandleError)),
+            this
+        );
+    }),
+    (VideoPlayer.prototype.handleLoadStart = function (a) {
+        this.video.removeEventListener("loadstart", this.boundHandleLoadStart), this.removeListeners(), this.video.addEventListener("loadedmetadata", this.boundHandleLoadedMetaData);
+    }),
+    (VideoPlayer.prototype.handleLoadedMetaData = function (a) {
+        this.video.removeEventListener("loadedmetadata", this.boundHandleLoadedMetaData), this.addListeners();
+        var b = this;
+        return (
+            ["duration", "videoWidth", "videoHeight"].forEach(function (c, d, e) {
+                a.target[c] && (b.data[c] = a.target[c]);
+            }),
+            this.options.handlers.onLoadedMetaData.call(this, this.data),
+            this
+        );
+    }),
+    (VideoPlayer.prototype.handleCanPlay = function (a) {
+        //console.log(this.video.id);
+        return this.video.removeEventListener("canplay", this.boundHandleCanPlay), this.options.currentTime > -1 && this.setCurrentTime(this.options.currentTime), this;
+    }),
+    (VideoPlayer.prototype.handleCanPlayThrough = function (a) {
+        return this.video.removeEventListener("canplaythrough", this.boundHandleCanPlayThrough), this;
+    }),
+    (VideoPlayer.prototype.handlePlay = function (a) {
+        return this.options.handlers.onPlay.call(this), this;
+    }),
+    (VideoPlayer.prototype.handlePause = function (a) {
+        return this.options.handlers.onPause.call(this), this;
+    }),
+    (VideoPlayer.prototype.handleEnded = function (a) {
+        return (this.currentTime = 0), this.options.handlers.onEnded.call(this), this;
+    }),
+    (VideoPlayer.prototype.handleTimeUpdate = function (a) {
+        return (
+            this.video && !this.video.seeking && ((this.currentTime = this.video.currentTime), this.currentTime > this.playedTime && (this.playedTime = this.currentTime), this.options.handlers.onPlaying.call(this, this.currentTime)), this
+        );
+    }),
+    (VideoPlayer.prototype.handleSeeking = function (a) {
+        return this.allowSeekingForward || (this.video && this.video.currentTime > this.playedTime && (this.video.currentTime = this.playedTime)), this;
+    }),
+    (VideoPlayer.prototype.handlePlaying = function (a) {
+        return this;
+    }),
+    (VideoPlayer.prototype.handleError = function (a) {
+        if (this.video) {
+            var b = this.video.error ? this.video.error.code : null;
+            this.options.handlers.onError.call(this, { code: b, label: VideoPlayer.getErrorConstantName(b) }), this.appendErrorMessage(b);
+        }
+        return this;
+    }),
+    (VideoPlayer.prototype.appendErrorMessage = function (a) {
+        if (this.options.container) {
+            Utility.toArray(this.options.container.querySelectorAll("*")).forEach(function (a) {
+                a.remove();
+            }),
+                this.options.container.classList.remove(),
+                (this.options.container.style.width = "auto"),
+                (this.options.container.style.height = "auto");
+            var b = document.createElement("div"),
+                c = document.createElement("p");
+            b.appendChild(c), (c.textContent = VideoPlayer.getErrorMessage(a)), this.options.container.appendChild(b);
+        }
+    }),
+    (VideoPlayer.prototype.build = function () {
+        var a = document.createElement("video");
+        return (
+            (a.id = this.id),
+            (a.preload = !0),
+            a.classList.add(VideoPlayer.CLASS_IDENTIFIER),
+            this.getVTTSource().forEach(function (b) {
+                a.appendChild(b);
+            }),
+            this.getSources().forEach(function (b) {
+                a.appendChild(b);
+            }),
+            a
+        );
+    }),
+    (VideoPlayer.prototype.getVTTSource = function () {
+        var a = this.options.vttSource;
+        return a
+            ? "object" == typeof a
+                ? Object.keys(a).map(function (b) {
+                      return VideoPlayer.createTrack(a[b], b);
+                  })
+                : [VideoPlayer.createTrack(a, "fr")]
+            : [];
+    }),
+    (VideoPlayer.prototype.getSources = function () {
+        var a = this.preferWEBM() ? "webm" : "mp4",
+            b = this.options.multiformat ? a : this.options.src.split(".").pop(),
+            c = VideoPlayer.basename(this.options.src) + "." + b,
+            d = [VideoPlayer.createSource(b, c, "")];
+        return this.options.has480p
+            ? ((d = "basse haute".split(" ").map(
+                  function (a) {
+                      var c = VideoPlayer.basename(this.options.src) + ("basse" === a ? VideoPlayer.FILENAME_480P_SUFFIX : "") + "." + b;
+                      return VideoPlayer.createSource(b, c, "Qualité " + a);
+                  }.bind(this)
+              )),
+              "low" === this.options.defaultQuality ? d : d.reverse())
+            : d;
+    }),
+    (VideoPlayer.prototype.setSource = function (a) {
+        return (
+            "string" == typeof a &&
+                a.length > 0 &&
+                this.options.src !== a &&
+                ((this.options.src = a),
+                this.video &&
+                    (Utility.toArray(this.video.querySelectorAll("source")).forEach(function (a) {
+                        a.remove();
+                    }),
+                    this.getSources().forEach(
+                        function (a) {
+                            this.video.appendChild(a);
+                        }.bind(this)
+                    ))),
+            this
+        );
+    }),
+    (VideoPlayer.prototype.preferWEBM = function () {
+        return "" !== document.createElement("video").canPlayType("video/webm");
+    }),
+    (VideoPlayer.prototype.load = function (a) {
+        if ((this.setSource(a), this.video)) {
+            this.video.load();
+            var b = {
+                clickToPlayPause: !0,
+                defaultVideoWidth: "100%",
+                defaultVideoHeight: "100%",
+                features: VideoPlayer.MEDIAELEMENT_DEFAULT_FEATURES.replace(/tracks/, "tracks sourcechooser").split(" "),
+                sourcechooserText: "Qualité",
+                tracksText: "Sous titres",
+                success: function () {
+                    var a = /\((webm|mp4)\)/;
+                    Utility.toArray(document.querySelectorAll(".mejs__sourcechooser-selector li label")).forEach(function (b) {
+                        var c = b.textContent;
+                        a.test(c) && (b.textContent = c.replace(a, ""));
+                        var d = b.parentNode;
+                        d &&
+                            d.addEventListener("click", function (a) {
+                                try {
+                                    b.click();
+                                } catch (c) {}
+                            });
+                    });
+                },
+            };
+            "function" == typeof window.MediaElementPlayer && (new MediaElementPlayer(this.video.id, Utility.extend(!0, b, this.options.mediaElementOptions)), (this.video = this.options.container.querySelector("video")));
+        }
+        return this;
+    }),
+    (VideoPlayer.prototype.play = function () {
+        return this.video && this.video.play(), this;
+    }),
+    (VideoPlayer.prototype.stop = function () {
+        return this.video && (this.video.pause(), (this.video.currentTime = 0)), this;
+    }),
+    (VideoPlayer.prototype.pause = function () {
+        return this.video && this.video.pause(), this;
+    }),
+    (VideoPlayer.prototype.setCurrentTime = function (a) {
+        return this.video && ((this.video.currentTime = a), a > this.playedTime && (this.playedTime = a)), this;
+    }),
+    (VideoPlayer.prototype.setOptions = function (a) {
+        return (this.options = Utility.extend(!0, this.options, a || {})), this;
+    }),
+    (VideoPlayer.prototype.getHMSDuration = function () {
+        return Utility.timestampToHMS(1e3 * Math.round(this.data.duration || 0));
+    }),
+    (VideoPlayer.CLASS_IDENTIFIER = "ofp-video-player"),
+    (VideoPlayer.FILENAME_480P_SUFFIX = "_480p"),
+    (VideoPlayer.MEDIAELEMENT_DEFAULT_FEATURES = "playpause current progress duration tracks volume fullscreen"),
+    (VideoPlayer.basename = function (a) {
+        var b = a.split(".");
+        return b.pop(), b.join(".");
+    }),
+    (VideoPlayer.createSource = function (a, b, c) {
+        var d = document.createElement("source");
+        return (d.src = b), (d.type = "video/" + a), (d.title = c), d;
+    }),
+    (VideoPlayer.createTrack = function (a, b) {
+        var c = document.createElement("track");
+        return (c.type = "text/vtt"), (c.kind = "subtitles"), (c.src = a), (c.srclang = b), (c.label = VideoPlayer.getLangageLabel(b)), c;
+    }),
+    (VideoPlayer.getErrorMessage = function (a) {
+        var b = "Une erreur est survenue !" + (a ? '(Code "' + a + '")' : "");
+        if (window.MediaError)
+            switch (a) {
+                case MediaError.MEDIA_ERR_ABORTED:
+                    return "Le navigateur a abandonné la récupération de la vidéo à la demande de l'utilisateur.";
+                case MediaError.MEDIA_ERR_NETWORK:
+                    return "Une erreur de réseau est survenue.";
+                case MediaError.MEDIA_ERR_DECODE:
+                    return "Une erreur est survenue lors du décodage de la vidéo.";
+                case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                    return "La vidéo est introuvable ou son format n'est pas supporté.";
+                default:
+                    return b;
+            }
+        return b;
+    }),
+    (VideoPlayer.getErrorConstantName = function (a) {
+        return window.MediaError
+            ? Object.keys(window.MediaError).find(function (b) {
+                  return window.MediaError[b] === a;
+              }) || ""
+            : "";
+    }),
+    (VideoPlayer.getLangageLabel = function (a) {
+        switch (a) {
+            case "fr":
+                return "Français";
+            case "en":
+                return "Anglais";
+            case "es":
+                return "Espagnol";
+            default:
+                return "";
+        }
+    }),
+    (function (a) {
+        "use strict";
+        function b(a) {
+            var b = { testFileUrl: "./1mo.jpg", testFileSize: 1070583 };
+            this.options = Object.assign(b, a || {});
+        }
+        function c(a, b) {
+            var c = Math.pow(10, b || 2);
+            return Math.round(a * c) / c;
+        }
+        (b.prototype.download = function () {
+            var a = this;
+            return new Promise(function (b, d) {
+                var e,
+                    f,
+                    g = new Image();
+                (g.onload = function () {
+                    f = new Date().getTime();
+                    var d = (f - e) / 1e3,
+                        g = 8 * a.options.testFileSize,
+                        h = c(g / d),
+                        i = c(h / 1024),
+                        j = c(i / 1024),
+                        k = c(i / 8),
+                        l = c(j / 8);
+                    b({ duration: d, bitsLoaded: g, bps: h, kbps: i, mbps: j, Ko: k, Mo: l });
+                }),
+                    (g.onerror = d),
+                    (e = new Date().getTime()),
+                    (g.src = a.options.testFileUrl + "?t=" + e);
+            });
+        }),
+            (a.Bandwidth = b);
+    })(window);

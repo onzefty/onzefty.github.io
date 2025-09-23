@@ -1,0 +1,141 @@
+/* Menu interne */
+
+.inner-menu-group.unseen .picture-seen, .inner-menu-group.current .picture-unseen, .inner-menu-group.seen .picture-unseen {
+  opacity: 0 !important;
+}
+
+.inner-menu-group.seen .picture-seen, .inner-menu-group.current .picture-seen, .inner-menu-group.unseen .picture-unseen {
+  opacity: 1 !important;
+}
+
+.inner-menu-group.unseen .bg {
+  background-color: rgba(23,23,23,0.5) !important;
+}
+
+.inner-menu-group.unseen p {
+  color: #b58c6a !important;
+}
+
+.inner-menu-group.unseen .button {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.inner-menu-group.current .button, .inner-menu-group.seen .button {
+  opacity: 1 !important;
+}
+
+.inner-menu-group.seen .button {
+  background-color: #288771 !important;
+}
+
+.inner-menu-group.current .currentEl {
+   display: block !important;
+}
+
+.inner-menu-group.unseen .currentEl, .inner-menu-group.seen .currentEl {
+  display: none !important;
+}
+
+/* Slider écran 2 */
+
+.btSlider.inactive {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.sliderCurrent.current {
+  background-color: #171717 !important;
+}
+
+/* Écran 3 vidéos */
+
+.exo-el.locked .lock {
+  opacity: 1 !important;
+}
+
+.exo-el.locked .button-play {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.exo-el.unlocked .lock, .exo-el.seen .lock {
+  opacity: 0 !important;
+}
+
+.exo-el.unlocked .txt, .exo-el.seen .txt {
+  color: #FFF !important;
+}
+
+.button-play[type="play"] .play, .button-play[type="pause"] .pause, .button-play[type="replay"] .replay {
+  opacity: 1 !important;
+}
+
+.button-play[type="replay"] {
+  background-color: #288771 !important;
+}
+
+.button-play[type="pause"] .play, .button-play[type="replay"] .play, .button-play[type="play"] .pause, .button-play[type="replay"] .pause, .button-play[type="play"] .replay, .button-play[type="pause"] .replay {
+  opacity: 0 !important;
+}
+
+/* Écran 5 */
+
+.button.seen {
+  background-color: #288771 !important;
+}
+
+.button.inactive {
+  opacity: 0.4 !important;
+  pointer-events: none;
+}
+
+/* Slider écran 6 */
+
+.btSlider2.inactive {
+  background-color: #e4e4e4 !important;
+  pointer-events: none;
+}
+
+/* Écran 20 */
+
+.toClick.clicked .clickedEl {
+  opacity: 1 !important;
+}
+
+.toClick.clicked .normalEl, .toClick .clickedEl {
+  opacity: 0 !important;
+}
+
+/* Écran 21 et next */
+
+.btWhite.clicked {
+  pointer-events: none;
+  background-color: transparent !important;
+}
+
+.btWhite.clicked p {
+  color: #FFF !important;
+}
+
+.btWhite.inactive {
+  pointer-events: none;
+  background-color: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+.btWhite.inactive p {
+  color: rgba(255,255,255,0.3) !important;
+}
+
+
+/* Écran 27 Slider fake */
+
+.btSlider3.inactive {
+  background-color: #7e7e7e !important;
+  pointer-events: none;
+}
+
+.sliderCurrent2.current {
+  background-color: #FFF !important;
+}

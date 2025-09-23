@@ -1,0 +1,406 @@
+/* --------------------- Fonts --------------------- */
+
+/*
+@font-face {
+    font-family: 'Teko-bold';
+    src: url('../../content/assets/fonts/Teko_bold/Teko_bold.eot?#iefix') format('embedded-opentype'), url('../../content/assets/fonts/Teko_bold/Teko_bold.woff') format('woff'), url('../../content/assets/fonts/Teko_bold/Teko_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+
+/* --------------------- Global --------------------- */
+html,
+body {
+    background-color: #0f151d;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    overflow: hidden;
+    border: none;
+}
+
+
+/* --------------------- Helpers --------------------- */
+.noselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*-------------------------- Divs intro, menu, fin, content --------------------------*/
+#home,
+#end,
+#menu {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-------------------------- Preloader de chargement de file --------------------------*/
+#transition-loader {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    text-align: center;
+}
+
+#transition-loader .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#transition-loader .top,
+#transition-loader .bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(15,21,29,1);
+    /*background-image: linear-gradient(90deg, rgba(4.7059%, 52.9412%, 68.6275%, 1) 0%, rgba(58.0392%, 78.0392%, 34.5098%, 1) 100%);*/
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#transition-loader .top {
+    top: -100%;
+    transition: top 0.3s ease;
+}
+
+#transition-loader .bottom {
+    bottom: -100%;
+    transition: bottom 0.3s ease;
+}
+
+
+/*-------------------------- Div : passez en paysage... --------------------------*/
+#rotate {
+    background-color: rgba(15,21,29,1);
+    background-size: 100% 100%;
+    pointer-events: none;
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rotateContentImg {
+    display: inline-block;
+    width: 145px;
+    height: 126px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#rotateTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 126px;
+    line-height: initial !important;
+    text-align: left !important;
+    padding-left: 15px;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+#rotate .blanc .rotateContentImg {
+    background-image: url("../img/pivoter_tablette_blanc.png");
+}
+
+#rotate .noir .rotateContentImg {
+    background-image: url("../img/pivoter_tablette_noir.png");
+}
+
+#rotate .blanc #rotateTextWrapper {
+    color: #FFF;
+}
+
+#rotate .noir #rotateTextWrapper {
+    color: #FFF;
+}
+
+.rotateTextImportant {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.rotateTextWarn {
+    font-family: Arial;
+    color: #ff00d2;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 500px) {
+    .rotateContentImg {
+        width: 100px;
+        height: 92px;
+    }
+    #rotateTextWrapper {
+        font-size: 12px;
+        height: 92px;
+    }
+    .rotateTextImportant {
+        font-size: 14px;
+    }
+    .rotateTextWarn {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .rotateContentImg {
+        width: 80px;
+        height: 72px;
+    }
+    #rotateTextWrapper {
+        font-size: 11px;
+        height: 72px;
+    }
+    .rotateTextImportant {
+        font-size: 12px;
+    }
+    .rotateTextWarn {
+        font-size: 20px;
+    }
+}
+
+#mustRotateFlexWrapper {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#rotate .blanc #mustRotateFlexWrapper {
+  background-color: #19194b;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+#rotate .noir #mustRotateFlexWrapper {
+  background-color: #19194b;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+/*-------------------------- Classes/id du loader principal interface --------------------------*/
+#loader {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(15,21,29,1);
+    text-align: center;
+    line-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*---- Loader transformé en point d'exclamation pour indiquer qu'une erreur est survenue ----*/
+#loader.error {
+    background: rgba(34, 35, 43, 1) url(../img/alert-circle.svg) no-repeat 50% 50%;
+}
+
+/*---- Animation CSS du loader principal ----*/
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  /* transform: translateY(50%); */
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*--------------------------------------- Toasts ---------------------------------------*/
+#toast-container {
+  display: block;
+  position: fixed;
+  z-index: 10000;
+
+  top: 0%;
+  left: 0px;
+  width: 100%;
+}
+
+.toast {
+  border-radius: 2px;
+  /* top: 35px; */
+  width: auto;
+  /* margin-top: 10px; */
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  min-height: 48px;
+  line-height: 1.5em;
+  background-color: #fff;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #323232;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.toast .toast-action {
+  color: #eeff41;
+  font-weight: 500;
+  margin-right: -25px;
+  margin-left: 3rem;
+}
+.toast.rounded {
+  border-radius: 24px;
+}
+
+
+@media only screen and (min-width : 993px) {
+  .ofp-toast {
+      padding: 5px 10px;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .toast {
+    border-radius: 0;
+  }
+}
+
+.toast i {
+    width: 2rem;
+    height: 2rem;
+}
+
+.ofp-toast {
+    width: 100%;
+    padding: 5px 25px;
+    margin-top: 0;
+    justify-content: center;
+}

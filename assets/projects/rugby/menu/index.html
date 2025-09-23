@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Onlineformapro">
+    <title></title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../common/content/css/style.css" media="all" />
+    <link rel="stylesheet" href="../common/content/css/fonts.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <!-- build:js ../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="../common/content/js/battle/api-client.js" charset="utf-8"></script>
+
+    <!-- build:js ../common/content/js/lib/menu-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/menu.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+    <!-- /build -->
+</head>
+
+<body>
+    <div id="menu-wrapper" class="heightAll widthAll relative">
+        <div id="menu-backgrounds" class="widthAll heightAll absolute lt0">
+            <img id="menu-bg" class="absolute" src="img/menu-bg.png">
+            <img id="menu-line-1" class="absolute" src="img/line.svg">
+            <img id="menu-line-2" class="absolute" src="img/line.svg">
+            <img id="menu-grass" class="absolute" src="img/menu-grass.png">
+        </div>
+        <div id="menu" class="absolute">
+            <div id="menu-case-1" class="flexCenter col">
+                <img id="logo" src="img/logo.svg">
+                <p id="logo-txt" class="WebbEllisCup">Explorez vos <span>modules</span>, relevez le défi<br>de la <span>battle</span> et élevez-vous au rang<br>de véritable champion de la compétition !</p>
+            </div>
+            <div id="menu-case-2" file="1" class="menu-part relative">
+                <img id="menu-battle" src="img/menu-battle.png">
+                <img id="menu-characters" class="absolute" src="img/menu-characters.png">
+                <div id="menu-avatar" class="avatar absolute hidden">
+                    <div class="avatar-chest-wrap">
+                        <img class="avatar-chest">
+                    </div>
+                    <div class="avatar-shoes-wrap absolute flexYEnd">
+                        <img class="avatar-shoes">
+                    </div>
+                    <div class="avatar-pants-wrap absolute flexYStart">
+                        <img class="avatar-pants">
+                    </div>
+                    <div class="avatar-tee-shirt-wrap absolute flexYStart">
+                        <img class="avatar-tee-shirt">
+                    </div>
+                    <div class="avatar-mouth-wrap absolute flexCenter">
+                        <img class="avatar-mouth">
+                    </div>
+                    <div class="avatar-hair-wrap absolute">
+                        <img class="avatar-hair">
+                    </div>
+                    <div class="avatar-eyes-wrap absolute flexYStart">
+                        <img class="avatar-eyes">
+                    </div>
+                </div>
+                <p class="battle-txt WebbEllisCup-Heavy upper-case absolute">La grande Battle<br>de la team 2023</p>
+                <p class="battle-date-end WebbEllisCup absolute"></p>
+                <div id="menu-battle-button" class="absolute">
+                    <img class="widthAll" src="img/battle-button-bg.svg">
+                    <p class="WebbEllisCup-Heavy upper-case absolute">GO</p>
+                    <img class="arrow absolute" src="img/icon-arrow-right-white.svg">
+                </div>
+            </div>
+            <!-- <div id="menu-case-3" file="1" class="menu-part part relative">
+                <img id="menu-part-1" src="img/menu-part-1.png">
+                <div class="widthAll absolute flexXEnd absolute">
+                    <p class="WebbEllisCup upper-case">Acculturation<br>Rugby</p>
+                    <p class="WebbEllisCup-Heavy go upper-case absolute">GO</p><img class="arrow" src="img/icon-arrow-pink.svg"><div class="lock flexXEnd"><p class="WebbEllisCup"></p><img src="img/icon-lock.svg"></div>
+                    <div class="absolute gauge widthAll"><div class="heightAll"></div></div>
+                </div>
+            </div>
+            <div id="menu-case-4" file="2" class="menu-part part relative">
+                <img id="menu-part-2" src="img/menu-part-2.png">
+                <div class="widthAll absolute flexXEnd absolute">
+                    <p class="WebbEllisCup upper-case">Le rugby dans le monde<br>et les règles RWC 2023</p>
+                    <p class="WebbEllisCup-Heavy go upper-case absolute">GO</p><img class="arrow" src="img/icon-arrow-pink.svg"><div class="lock flexXEnd"><p class="WebbEllisCup"></p><img src="img/icon-lock.svg"></div>
+                    <div class="absolute gauge widthAll"><div class="heightAll"></div></div>
+                </div>
+            </div>
+            <div id="menu-case-5" file="3" class="menu-part part relative">
+                <img id="menu-part-3" src="img/menu-part-3.png">
+                <div class="widthAll absolute flexXEnd absolute">
+                    <p class="WebbEllisCup upper-case">La coupe du monde<br>de Rugby 2023</p>
+                    <p class="WebbEllisCup-Heavy go upper-case absolute">GO</p><img class="arrow" src="img/icon-arrow-pink.svg"><div class="lock flexXEnd"><p class="WebbEllisCup"></p><img src="img/icon-lock.svg"></div>
+                    <div class="absolute gauge widthAll"><div class="heightAll"></div></div>
+                </div>
+            </div>
+            <div id="menu-case-6" file="4" class="menu-part part relative">
+                <img id="menu-part-5" src="img/menu-part-6.png">
+                <div class="widthAll absolute flexXEnd absolute">
+                    <p class="WebbEllisCup upper-case">Les sites<br>de compétition</p>
+                    <p class="WebbEllisCup-Heavy go upper-case absolute">GO</p><img class="arrow" src="img/icon-arrow-pink.svg"><div class="lock flexXEnd"><p class="WebbEllisCup"></p><img src="img/icon-lock.svg"></div>
+                    <div class="absolute gauge widthAll"><div class="heightAll"></div></div>
+                </div>
+            </div>
+            <div id="menu-case-7" file="5" class="menu-part part relative">
+                <img id="menu-part-6" src="img/menu-part-7.png">
+                <div class="widthAll absolute flexXEnd absolute">
+                    <p class="WebbEllisCup upper-case">La vie<br>de la team 2023</p>
+                    <p class="WebbEllisCup-Heavy go upper-case absolute">GO</p><img class="arrow" src="img/icon-arrow-pink.svg"><div class="lock flexXEnd"><p class="WebbEllisCup"></p><img src="img/icon-lock.svg"></div>
+                    <div class="absolute gauge widthAll"><div class="heightAll"></div></div>
+                </div>
+            </div>
+            <div id="menu-case-8" file="6" class="menu-part part relative">
+                <img id="menu-part-7" src="img/menu-part-5.png">
+                <div class="widthAll absolute flexXEnd absolute">
+                    <p class="WebbEllisCup upper-case">Les départements<br>fonctionnels</p>
+                    <p class="WebbEllisCup-Heavy go upper-case absolute">GO</p><img class="arrow" src="img/icon-arrow-pink.svg"><div class="lock flexXEnd"><p class="WebbEllisCup"></p><img src="img/icon-lock.svg"></div>
+                    <div class="absolute gauge widthAll"><div class="heightAll"></div></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+</html>

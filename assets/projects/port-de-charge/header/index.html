@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Onlineformapro">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../common/content/css/helpers.css" />
+    <link rel="stylesheet" href="../common/content/css/fonts.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
+    <!-- build:js ../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="../common/content/js/components/movable.js" charset="utf-8"></script>
+
+    <!-- build:js ../common/content/js/lib/header-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/anime.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/header.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+    <!-- /build -->
+</head>
+
+<body>
+    <div class="header widthAll flex">
+        <div id="header-part-1" class="heightAll">
+            <div id="button-menu" class="btMenu widthAll heightAll flexCenter button">
+                <img class="burger" src="img/burger.svg">
+                <img class="cross" src="img/cross.svg">
+                <p>Menu</p>
+            </div>
+        </div>
+        <div id="header-part-2" class="heightAll flexCenter">
+            <div id="button-tutorat" class="btTutorat heightAll flexCenter button relative">
+                <img class="tutorat" src="img/tutorat.svg">
+                <p>Tutorat</p>
+                <div id="tutorat-wrap" class="absolute widthAll heightAll flexCenter">
+                    <div id="tutorat-chat" class="heightAll flexCenter">
+                        <img class="chat" src="img/chat.svg">
+                        <p>Tchat</p>
+                    </div>
+                    <div class="header-sep"></div>
+                    <div id="tutorat-mail" class="heightAll flexCenter">
+                        <img class="mail" src="img/mail.svg">
+                        <p>Mail</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-sep"></div>
+            <div id="volume-bar" class="heightAll flexCenter">
+                <img id="sound-off" src="img/sound-off.svg">
+                <div id="volume-gauge" class="relative">
+                    <div id="volume-level" class="heightAll"></div>
+                    <div id="button-volume" class='absolute'></div>
+                </div>
+                <img id="sound-on" src="img/sound-on.svg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Onlineformapro">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../common/content/css/helpers.css" />
+    <link rel="stylesheet" href="../common/content/css/fonts.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- build:js ../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/lib/footer-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/footer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+    <!-- /build -->
+</head>
+
+<body>
+    <div class="footer heightAll widthAll flex">
+        <div class="width15 heightAll flexCenter">
+            <div id="button-menu" class="btMenu flex col button">
+                <div class="origin0-50"></div>
+                <div></div>
+                <div class="origin0-50"></div>
+            </div>
+        </div>
+        <div class="width25 heightAll flexCenter">
+            <p id='footer-module-title'></p>   
+        </div>
+        <div class="width10 heightAll flexCenter">
+            <img id="footer-logo" src="img/logo.svg">
+        </div>
+        <div class="width30 heightAll flexCenter">
+            <p id='footer-part-title'></p>   
+        </div>
+        <div class="width20 heightAll flexCenter">
+            <div id="button-chat" class="btChat flexCenter relative button">
+                <img src="img/chat.svg">
+                <div class="frames absolute widthAll heightAll lt0">
+                    <div class="animated absolute"></div>
+                    <div class="animated absolute"></div>
+                    <div class="animated absolute"></div>
+                    <div class="animated absolute"></div>    
+                </div>
+                <div class="status flexCenter absolute">
+                    <img status="hide" src="img/chat-hidden.svg">
+                    <p status="messages" class="WebbEllisCup">2</p>
+                </div>
+            </div>
+            <div id="footer-navigation" class="flexXStart">
+                <div id="button-previous" class="btPrev button-nav flexCenter button">
+                    <img class="active-el" src="img/arrow-left-red.svg">
+                    <img class="inactive-el" src="img/arrow-left-grey.svg">
+                </div>
+                <div id="footer-navigation-wrapper" class="heightAll flexCenter">
+                    <p id='footer-progress' class="Roboto-Regular"></p> 
+                </div>
+                <div id="button-next" class="btNext button-nav flexCenter button inactive">
+                    <img class="active-el" src="img/arrow-right-red.svg">
+                    <img class="inactive-el" src="img/arrow-right-grey.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

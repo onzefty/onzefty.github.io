@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Onlineformapro" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+
+    <!-- Viewport -->
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- End Viewport -->
+
+    <!-- Hide chrome when your app is added to the homescreen -->
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black" />
+    <meta name="apple-mobile-web-app-title" content="My App" />
+    <!-- End Hide chrome when your app is added to the homescreen -->
+
+    <!-- ClearType font on IE -->
+    <meta http-equiv="cleartype" content="on" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/helpers.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/toast.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/content/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
+    <!-- build:js ../../common/content/js/lib/velocity-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/animate.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/message-constants.js"
+        charset="utf-8"></script>
+    <!-- /build -->
+
+    <script data-src="../../common/content/js/components/video-manager.js" charset=''></script>
+
+    <!-- build:js ../../common/content/js/battle/battle-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/battle/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/interface/js/utility.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/battle/app.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/battle/api-client.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/battle/pie-timer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/battle/custom_code.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../../common/content/js/components/lesson-bundle.js -->
+    <script type="text/javascript" src="../../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/device.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/scrollable.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/clickables.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/timeline.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/scorm-manager.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/navigation-manager.js"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/language-manager.js"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/toast.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/components/debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../common/content/js/commons.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="js/screens.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="main" class="widthAll heightAll relative">
+        <!-- Section 1 -->
+        <div id='section-1' bgColor="blue" class='section absolute'
+            anims='{"translateX":"0px","translateY":"0px","scaleX":1,"scaleY":1,"opacity":1}'>
+            <img id="s1-bg" data-src="imgs/s1-bg.png">
+            <div id="s1-france" class="absolute" anims='{"clip-polygon":"0% 0%, 0% 0%, 0% 100%, 0% 100%"}'>
+                <img data-src="imgs/s1-france.svg" class="widthAll">
+            </div>
+            <div id="s1-img-3" class="absolute" anims='{"translateX":"0%","translateY":"50%","opacity":0}'>
+                <img data-src="imgs/s1-img-3.png" class="widthAll">
+            </div>
+            <div id="s1-img-2" class="absolute" anims='{"translateX":"-20%","translateY":"50%","opacity":0}'>
+                <img data-src="imgs/s1-img-2.png" class="widthAll">
+            </div>
+            <div id="s1-img-1" class="absolute" anims='{"translateX":"20%","translateY":"50%","opacity":0}'>
+                <img data-src="imgs/s1-img-1.png" class="widthAll">
+            </div>
+            <div id="s1-group" class="absolute flexYStartCol col">
+                <p id='s1-txt-1' class='s1-txt-1 WebbEllisCup-BoldItalic' anims='{"translateX":"-200px","opacity":0}'></p>
+                <p id='s1-txt-2' color="pink" class='s1-txt-2 WebbEllisCup-HeavyItalic upper-case' anims='{"translateX":"200px","opacity":0}'></p>
+            </div>
+            <div id="s1-group-rules" class="absolute" anims='{"translateX":"80px","opacity":0}'>
+                <a href="https://team2023.france2023.rugby/reglement" target="_blank" id='s1-txt-3' class='s1-txt-3 WebbEllisCup-Light'></a>
+            </div>
+            <div id="s1-button-rewards" class="button absolute" anims='{"scaleX":1.3,"scaleY":1.3,"translateX":"0px","translateY":"0px","opacity":0}'>
+                <img class="widthAll" data-src="imgs/button-rewards-bg.svg">
+                <div class="widthAll heightAll absolute lt0 flexCenter">
+                    <img data-src="imgs/icon-tickets.svg" class="icon">
+                    <p id="s1-txt-9" class="s1-txt-9 WebbEllisCup-Light"></p>
+                </div>
+            </div>
+            <div id="s1-button-customize" class="button button-blue absolute" anims='{"scaleX":1.3,"scaleY":1.3,"translateX":"0px","translateY":"0px","opacity":0}'>
+                <img class="widthAll" data-src="imgs/button-blue-bg.svg">
+                <div class="widthAll heightAll absolute lt0 flexCenter">
+                    <img data-src="imgs/icon-cloakroom.svg" class="icon">
+                    <p id="s1-txt-4" class="s1-txt-4 WebbEllisCup-Light"></p>
+                </div>
+            </div>
+            <div id="s1-button-sort" class="button button-blue absolute" anims='{"scaleX":1.3,"scaleY":1.3,"translateX":"0px","translateY":"0px","opacity":0}'>
+                <img class="widthAll" data-src="imgs/button-blue-bg.svg">
+                <div class="widthAll heightAll absolute lt0 flexCenter">
+                    <img data-src="imgs/icon-cup.svg" class="icon">
+                    <p id="s1-txt-5" class="s1-txt-5 WebbEllisCup-Light"></p>
+                </div>
+            </div>
+            <div id="s1-button-play-solo" class="button button-pink absolute" anims='{"scaleX":1.3,"scaleY":1.3,"translateX":"0px","translateY":"0px","opacity":0}'>
+                <img class="widthAll" data-src="imgs/button-pink-bg.svg">
+                <div class="widthAll heightAll absolute lt0 flexCenter">
+                    <img data-src="imgs/icon-player.svg" class="icon">
+                    <p id="s1-txt-6" class="s1-txt-6 WebbEllisCup-Heavy"></p>
+                </div>
+            </div>
+            <div id="s1-button-play-vs" class="button button-pink absolute" anims='{"scaleX":1.3,"scaleY":1.3,"translateX":"0px","translateY":"0px","opacity":0}'>
+                <img class="widthAll" data-src="imgs/button-pink-bg.svg">
+                <div class="widthAll heightAll absolute lt0 flexCenter col">
+                    <div class="searchEl flex">
+                        <img data-src="imgs/icon-player.svg" class="icon">
+                        <img data-src="imgs/icon-player.svg" class="icon delay02">
+                        <p id="s1-txt-7" class="s1-txt-7 WebbEllisCup-Heavy"></p>
+                    </div>
+                    <div class="searchingEl flexXEnd">
+                        <p id="s1-txt-8" class="s1-txt-8 WebbEllisCup-Heavy"></p><div class="dots-jumping flex"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                    </div>
+                    <div class="noneEl">
+                        <p id="s1-txt-9" class="battle-challenger-none WebbEllisCup-Heavy"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="s1-popup-rewards-wrap" class="absolute widthAll heightAll lt0 hidden" anims='{"opacity":0}'>
+                <div id="s1-popup-rewards" class="absolute" anims='{"translateY":"40%","opacity":0}'>
+                    <div id="s1-popup-rewards-img-8" class="absolute">
+                        <img src="imgs/popup-rewards-img-8.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-7" class="absolute">
+                        <img class="floatingY delay12" src="imgs/popup-rewards-img-7.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-6" class="absolute">
+                        <img class="floatingY delay1" src="imgs/popup-rewards-img-6.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-5" class="absolute">
+                        <img class="floatingY delay08" src="imgs/popup-rewards-img-5.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-4" class="absolute">
+                        <img class="floatingY delay06" src="imgs/popup-rewards-img-4.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-3" class="absolute">
+                        <img class="floatingY delay04" src="imgs/popup-rewards-img-3.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-2-2" class="absolute">
+                        <img class="floatingY delay02" src="imgs/popup-rewards-img-2.png">
+                    </div>
+                    <div id="s1-popup-rewards-line" class="absolute">
+                        <svg class="witdhAll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 645.22 1121.82">
+                            <path anims='{"stroke-dashoffset":"0px","stroke-dasharray": "2697.07px"}' id="s1-popup-rewards-path" d="M-15.1,1031.8c372.1-43.1,573.9-246.9,512-323c-61.9-76.1,95.9-97.9,105-203c9.1-105.1-165.1-3.9-302,129
+                            c-136.9,132.9-190.1-137.9-91-246c99.1-108.1-173.8-73.5-178-279c-6.1-300.5,350.6-80.2,350.8,16.5" style="fill:none; fill-rule:evenodd; stroke:#f0f; stroke-miterlimit:10; stroke-width:50px;"/>
+                        </svg>
+                    </div>
+                    <div id="s1-popup-rewards-img-2" class="absolute">
+                        <img class="floatingY delay02" src="imgs/popup-rewards-img-2.png">
+                    </div>
+                    <div id="s1-popup-rewards-img-1" class="absolute">
+                        <img class="floatingY" src="imgs/popup-rewards-img-1.png">
+                    </div>
+                    <div id="s1-popup-rewards-content" class="absolute flex col">
+                        <p id="s1-popup-rewards-title" class="WebbEllisCup-Heavy upper-case rewards-title"></p>
+                        <div id="s1-popup-rewards-bloc-1" class="bloc relative">
+                            <p class="WebbEllisCup-Bold upper-case rewards-txt-1"></p>
+                            <div class="dash"></div>
+                            <p class="WebbEllisCup rewards-txt-2"></p>
+                            <p class="WebbEllisCup rewards-txt-3"></p>
+                            <div class="absolute circle flexCenter">
+                                <img src="imgs/icon-crown.svg">
+                            </div>
+                        </div>
+                        <div id="s1-popup-rewards-bloc-2" class="bloc relative">
+                            <p class="WebbEllisCup-Bold upper-case rewards-txt-4"></p>
+                            <div class="dash"></div>
+                            <p class="WebbEllisCup rewards-txt-5"></p>
+                            <p class="WebbEllisCup rewards-txt-6"></p>
+                            <p class="WebbEllisCup rewards-txt-7"></p>
+                            <p class="WebbEllisCup rewards-txt-8"></p>
+                            <div class="absolute circle flexCenter">
+                                <img src="imgs/icon-crown.svg">
+                            </div>
+                        </div>
+                        <div id="s1-popup-rewards-bloc-3" class="bloc relative">
+                            <p class="WebbEllisCup-Bold upper-case rewards-txt-9"></p>
+                            <div class="dash"></div>
+                            <p class="WebbEllisCup rewards-txt-10"></p>
+                            <p class="WebbEllisCup rewards-txt-11"></p>
+                            <div class="absolute circle flexCenter">
+                                <img src="imgs/icon-crown.svg">
+                            </div>
+                        </div>
+                        <div id="s1-popup-rewards-bloc-4" class="bloc relative">
+                            <p class="WebbEllisCup-Bold upper-case rewards-txt-12"></p>
+                            <div class="dash"></div>
+                            <p class="WebbEllisCup rewards-txt-13"></p>
+                            <div class="absolute circle flexCenter">
+                                <img src="imgs/icon-crown.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="s1-popup-rewards-button-close" bgColor="pink" class="absolute button flexCenter">
+                        <img src="imgs/cross-white.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sort panel -->
+        <div id="sort" class="absolute lt0 widthAll heightAll hidden" bgColor="blue" anims='{"translateX":"0px","translateY":"0px","scaleX":1,"scaleY":1,"opacity":0}'>
+            <img id="sort-bg" class="absolute widthAll lt0" src="imgs/s1-bg.png">
+            <div id="sort-france" class="absolute">
+                <img src="imgs/s1-france.svg" class="widthAll">
+            </div>
+            <div id="sort-content" class="absolute lt0 widthAll flex">
+                <div id="sort-left" class="heightAll flexYEndCol col" anims='{"translateX":"-50%","opacity":0}'>
+                    <div id="sort-user" class="flexXStart">
+                        <div id="sort-level" class="relative">
+                            <img class="widthAll" src="imgs/customize-level.png">
+                            <div class="absolute lt0 widthAll flexCenter">
+                                <p class="WebbEllisCup-Heavy"></p>
+                            </div>
+                        </div>
+                        <p id='sort-name' class='WebbEllisCup-Light'></p>    
+                    </div>
+                    
+                    <div id="sort-avatar" class="avatar relative">
+                        <div class="avatar-chest-wrap">
+                            <img class="avatar-chest">
+                        </div>
+                        <div class="avatar-shoes-wrap absolute flexYEnd">
+                            <img class="avatar-shoes">
+                        </div>
+                        <div class="avatar-pants-wrap absolute flexYStart">
+                            <img class="avatar-pants">
+                        </div>
+                        <div class="avatar-tee-shirt-wrap absolute flexYStart">
+                            <img class="avatar-tee-shirt">
+                        </div>
+                        <div class="avatar-mouth-wrap absolute flexCenter">
+                            <img class="avatar-mouth">
+                        </div>
+                        <div class="avatar-hair-wrap absolute">
+                            <img class="avatar-hair">
+                        </div>
+                        <div class="avatar-eyes-wrap absolute flexYStart">
+                            <img class="avatar-eyes">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="sort-right" class="heightAll relative flexYStartCol col" anims='{"translateX":"50%","opacity":0}'>
+                    <div id="sort-button-switch" class="relative">
+                        <img class="widthAll" src="imgs/sort-type-bg.svg">
+                        <div class="widthAll heightAll absolute lt0 flexCenter">
+                            <div class="icon" side="left"><img class="widthAll" src="imgs/icon-arrow-left-white.svg"></div>
+                            <p id="sort-button-switch-txt" class="WebbEllisCup-Light align-center">National</p>
+                            <div class="icon" side="right"><img class="widthAll" src="imgs/icon-arrow-right-white.svg"></div>
+                            
+                        </div>
+                    </div>
+                    <div id="sort-list-wrap" class="flex widthAll flexGrow">
+                        <div id="sort-list-left" class="flex col">
+                            <div id="sort-list-header" type="blue" class="sort-list-item widthAll relative">
+                                <img class="widthAll" src="imgs/sort-list-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flex">
+                                    <div class="width20 heightAll flexXStart">
+                                        <p class="sort-rank WebbEllisCup"></p>
+                                    </div>
+                                    <div class="width30 heightAll flexXStart">
+                                    </div>
+                                    <div class="width30 heightAll flexXStart">
+                                        <p class="sort-site WebbEllisCup"></p>
+                                    </div>
+                                    <div class="width20 heightAll flexXEnd">
+                                        <p class="sort-score WebbEllisCup"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sort-list-you" type="blue" class="sort-list-item widthAll relative hidden">
+                                <img class="widthAll" src="imgs/sort-list-you-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flex">
+                                    <div class="width20 heightAll flexXEnd">
+                                        <p class="rank WebbEllisCup">45</p>
+                                        <img class="arrow" src="imgs/sort-arrow-white.svg">
+                                        <div class="photo flexGrow flexXEnd">
+                                            <img>
+                                        </div>
+                                    </div>
+                                    <div class="width30 heightAll flexXStart">
+                                        <p class="sort-you WebbEllisCup-Bold"></p>
+                                    </div>
+                                    <div class="width30 heightAll flexXStart">
+                                        <p class="site WebbEllisCup">Lille</p>
+                                    </div>
+                                    <div class="width20 heightAll flexXEnd">
+                                        <p class="score WebbEllisCup">4025 pts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sort-list-sep" class="widthAll"></div>
+                            <div id="sort-list-content" class="widthAll flexGrow">
+                                <div id="sort-list" class="widthAll">
+                                    <div id="sort-list-1" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">1</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-2" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">2</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-3" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">3</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-4" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">4</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-5" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">5</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-6" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">6</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-7" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">7</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-8" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">8</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-9" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">9</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-10" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">10</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-11" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">11</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-12" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">12</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-13" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">13</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-14" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">14</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="sort-list-15" class="sort-list-item widthAll relative">
+                                        <img class="widthAll absolute lt0 white" src="imgs/sort-list-bg.svg">
+                                        <img class="widthAll absolute lt0 blue" src="imgs/sort-list-you-bg.svg">
+                                        <div class="widthAll heightAll absolute lt0 flex">
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="rank WebbEllisCup">15</p>
+                                                <img class="arrow" src="imgs/sort-arrow-blue.svg"><img class="arrow-white" src="imgs/sort-arrow-white.svg"><div class="same"></div>
+                                                <div class="photo flexGrow flexXEnd">
+                                                    <img>
+                                                </div>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="name WebbEllisCup-Bold">Pierre</p>
+                                            </div>
+                                            <div class="width30 heightAll flexXStart">
+                                                <p class="site WebbEllisCup">Paris</p>
+                                            </div>
+                                            <div class="width20 heightAll flexXEnd">
+                                                <p class="score WebbEllisCup">70025 pts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div id="sort-list-right" class="flexGrow flexYStart">
+                            <div id="sort-list-cursor-wrap">
+                                <div id="sort-list-cursor"></div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sort-button-out" class="button absolute" anims='{"translateX":"-100%","opacity":0}'>
+                <img class="widthAll" src="imgs/sort-button-bg.svg">
+                <div class="widthAll heightAll absolute lt0 flexCenter">
+                    <img src="imgs/icon-back.svg" class="icon">
+                    <p id="sort-button-out-txt" class="back WebbEllisCup-Light"></p>
+                </div>
+            </div>
+        </div>
+        <!-- Customize panel -->
+        <div id="customize" class="absolute lt0 widthAll heightAll hidden" anims='{"translateX":"0px","translateY":"0px","scaleX":1.3,"scaleY":1.3,"opacity":0}'>
+            <img id="customize-bg" src="imgs/customize-bg.jpg" class="absolute" anims='{"translateX":"0px","translateY":"100px"}'>
+            <div id="customize-content" class="absolute lt0 widthAll flex">
+                <div id="customize-left" class="heightAll">
+                    <div id="customize-left-up" class="flexXStart" anims='{"translateX":"30%","opacity":0}'>
+                        <div id="customize-button-out" class="button relative">
+                            <img class="widthAll" src="imgs/sort-button-bg.svg">
+                            <div class="widthAll heightAll absolute lt0 flexCenter">
+                                <img src="imgs/icon-back.svg" class="icon">
+                                <p id="customize-button-out-txt" class="back WebbEllisCup-Light"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <p id='customize-txt-1' color="pink" class='customize-txt-1 WebbEllisCup-Heavy upper-case'></p>
+                            <p id='customize-txt-2' class='customize-txt-2 WebbEllisCup-Light'></p>   
+                        </div>
+                    </div>                  
+                    <div id="customize-items-groups">
+                        <div id="customize-item-group-1" class="customize-item-group relative" anims='{"translateX":"100px","opacity":0}'>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll middle flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="swipables absolute widthAll heightAll" type="hairs">
+                                <div class="swipable-el widthAll absolute flexCenter" level="-3">
+                                    <img class="customize-item-el-hair" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-2">
+                                    <img class="customize-item-el-hair" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-1">
+                                    <img class="customize-item-el-hair-2" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="0">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="1">
+                                    <img class="customize-item-el-hair-4" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="2">
+                                    <img class="customize-item-el-hair" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute middle flexCenter" level="3">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="customize-item-group-2" class="customize-item-group relative" anims='{"translateX":"100px","opacity":0}'>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll middle flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="swipables absolute widthAll heightAll" type="eyes">
+                                <div class="swipable-el widthAll absolute flexCenter" level="-3">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-1">
+                                    <img class="customize-item-el-hair-2" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="0">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="1">
+                                    <img class="customize-item-el-hair-4" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute middle flexCenter" level="3">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="customize-item-group-3" class="customize-item-group relative" anims='{"translateX":"100px","opacity":0}'>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll middle flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="swipables absolute widthAll heightAll" type="mouths">
+                                <div class="swipable-el widthAll absolute flexCenter" level="-3">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-1">
+                                    <img class="customize-item-el-hair-2" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="0">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="1">
+                                    <img class="customize-item-el-hair-4" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute middle flexCenter" level="3">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="customize-item-group-4" class="customize-item-group relative" anims='{"translateX":"100px","opacity":0}'>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll middle flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="swipables absolute widthAll heightAll" type="tee-shirts">
+                                <div class="swipable-el widthAll absolute flexCenter" level="-3">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-1">
+                                    <img class="customize-item-el-hair-2" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="0">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="1">
+                                    <img class="customize-item-el-hair-4" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute middle flexCenter" level="3">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="customize-item-group-5" class="customize-item-group relative" anims='{"translateX":"100px","opacity":0}'>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll middle flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="customize-item-group-el widthAll flexCenter">
+                            </div>
+                            <div class="swipables absolute widthAll heightAll" type="pants">
+                                <div class="swipable-el widthAll absolute flexCenter" level="-3">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="-1">
+                                    <img class="customize-item-el-hair-2" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="0">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="1">
+                                    <img class="customize-item-el-hair-4" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute flexCenter" level="2">
+                                    <img class="customize-item-el-hair-1" src="">
+                                </div>
+                                <div class="swipable-el widthAll absolute middle flexCenter" level="3">
+                                    <img class="customize-item-el-hair-3" src="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="customize-right" class="heightAll relative flexYStartCol col">
+                    <div id="customize-user" class="flexXStart" anims='{"translateY":"100%","opacity":0}'>
+                        <div id="customize-user-level" class="relative">
+                            <img class="widthAll" src="imgs/customize-level.png">
+                            <div class="absolute lt0 widthAll flexCenter">
+                                <p class="WebbEllisCup-Heavy"></p>
+                            </div>
+                        </div>
+                        <p id="customize-user-id" class="WebbEllisCup-Light"></p>
+                    </div>
+                    <div class="widthAll flexGrow relative">
+                        <div id="customize-shoes-circle" class="absolute" anims='{"opacity":0}'></div>
+                        <div id="customize-avatar" class="avatar absolute" anims='{"translateX":"-50%","translateY":"-100px","opacity":0}'>
+                            <img class="avatar-shadow absolute" src="imgs/avatar/avatar-shadow.png">
+                            <div class="avatar-chest-wrap">
+                                <img class="avatar-chest">
+                            </div>
+                            <div class="avatar-shoes-wrap absolute flexYEnd">
+                                <img class="avatar-shoes">
+                            </div>
+                            <div class="avatar-pants-wrap absolute flexYStart">
+                                <img class="avatar-pants">
+                            </div>
+                            <div class="avatar-tee-shirt-wrap absolute flexYStart">
+                                <img class="avatar-tee-shirt">
+                            </div>
+                            <div class="avatar-mouth-wrap absolute flexCenter">
+                                <img class="avatar-mouth">
+                            </div>
+                            <div class="avatar-hair-wrap absolute">
+                                <img class="avatar-hair">
+                            </div>
+                            <div class="avatar-eyes-wrap absolute flexYStart">
+                                <img class="avatar-eyes">
+                            </div>
+                            
+                        </div>
+                        <div id="customize-shoes-palette" class="absolute widthAll">
+                            <div id="customize-shoes-palette-color-1" class="palette-color absolute" type="shoes" index="0" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-shoes-palette-color-2" class="palette-color absolute" type="shoes" index="1" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-shoes-palette-color-3" class="palette-color absolute" type="shoes" index="2" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-shoes-palette-color-4" class="palette-color absolute" type="shoes" index="3" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-shoes-palette-color-5" class="palette-color absolute" type="shoes" index="4" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-shoes-palette-color-6" class="palette-color absolute" type="shoes" index="5" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                        </div>
+                        <div id="customize-skin-palette" class="absolute widthAll">
+                            <div id="customize-skin-palette-color-1" class="palette-color absolute" type="chests" index="0" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-skin-palette-color-2" class="palette-color absolute" type="chests" index="1" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-skin-palette-color-3" class="palette-color absolute" type="chests" index="2" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-skin-palette-color-4" class="palette-color absolute" type="chests" index="3" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                            <div id="customize-skin-palette-color-5" class="palette-color absolute" type="chests" index="4" anims='{"scaleX":0,"scaleY":0,"rotate":0}'></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="customize-button-validate" class="button absolute" anims='{"translateX":"100%"}'>
+                    <img class="bg" src="imgs/battle-button-bg.svg">
+                    <div class="widthAll heightAll absolute lt0 flexCenter">
+                        <p class="validate WebbEllisCup-Bold upper-case" color="red"></p><img class="arrow" src="imgs/icon-arrow-red.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Battle panel -->
+        <div id="battle" class="absolute lt0 widthAll heightAll hidden" anims='{"translateX":"0px","translateY":"0px","scaleX":1.3,"scaleY":1.3,"opacity":0}'>
+            <img id="battle-bg" src="imgs/battle-bg.jpg" class="widthAll lt0 absolute">
+            <div id="battle-content" class="absolute lt0 widthAll flex">
+                <div id="battle-animations" class="absolute hidden">
+                    <img id="battle-base" src="imgs/battle-base.png" class="absolute">
+                    <div id="battle-ball" class="absolute" style="transform:translateX(-50%)translateY(-50%)">
+                        <img src="imgs/battle-ball.png" class="widthAll">
+                        <div id="battle-scoring-veil" class="absolute">
+                            <img src="imgs/battle-scoring-veil.png" class="widthAll rotating360">
+                        </div>
+                    </div>
+                    <div id="battle-scoring-wrap" class="absolute" anims='{"rotate":360,"scaleX":0,"scaleY":0,"translateX":"-50%","opacity":1}'>
+                        <div class="rect absolute lt0 widthAll heightAll"></div>
+                        <div class="lt0 absolute widthAll heightAll flexCenter">
+                            <p class="shoot WebbEllisCup-HeavyItalic">Tir raté !</p>
+                        </div>
+                        <div mode="vs" class="absolute widthAll flexCenter">
+                            <p class="WebbEllisCup-HeavyItalic">En attente de la réponse de l'adversaire</p><div class="dots-jumping flex"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="battle-player" class="battle-side flexYStartCol col absolute" anims='{"translateX":"-200px","opacity":0}'>
+                    <div id="battle-player-gauge" class="battle-gauge relative">
+                        <div class="battle-gauge-id-wrap relative">
+                            <div class="rect absolute lt0 widthAll heightAll"></div>
+                            <div class="lt0 absolute widthAll heightAll flexXStart">
+                                <p id="battle-player-name" class="WebbEllisCup-Light" color="blue">Jean Naymar</p>
+                            </div>
+                        </div>
+                        <div class="battle-gauge-corrects-wrap absolute">
+                            <div class="rect lt0 absolute widthAll heightAll"></div>
+                            <div class="corrects lt0 absolute widthAll heightAll flexCenter">
+                                <div id="battle-player-correct-1" class="battle-correct relative"></div>
+                                <div id="battle-player-correct-2" class="battle-correct relative"></div>
+                                <div id="battle-player-correct-3" class="battle-correct relative"></div>
+                                <div id="battle-player-correct-4" class="battle-correct relative"></div>
+                                <div id="battle-player-correct-5" class="battle-correct relative"></div>
+                            </div>
+                        </div>
+                        <div class="battle-gauge-level absolute" class="absolute">
+                            <img class="widthAll" src="imgs/customize-level.png">
+                            <div class="absolute lt0 widthAll flexCenter">
+                                <p class="WebbEllisCup-Heavy"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="battle-player-avatar" class="avatar relative">
+                        <img class="avatar-shadow absolute" src="imgs/avatar/avatar-shadow.png">
+                        <div class="avatar-chest-wrap">
+                            <img class="avatar-chest">
+                        </div>
+                        <div class="avatar-shoes-wrap absolute flexYEnd">
+                            <img class="avatar-shoes">
+                        </div>
+                        <div class="avatar-pants-wrap absolute flexYStart">
+                            <img class="avatar-pants">
+                        </div>
+                        <div class="avatar-tee-shirt-wrap absolute flexYStart">
+                            <img class="avatar-tee-shirt">
+                        </div>
+                        <div class="avatar-mouth-wrap absolute flexCenter">
+                            <img class="avatar-mouth">
+                        </div>
+                        <div class="avatar-hair-wrap absolute">
+                            <img class="avatar-hair">
+                        </div>
+                        <div class="avatar-eyes-wrap absolute flexYStart">
+                            <img class="avatar-eyes">
+                        </div>
+                    </div>
+                </div>
+                <div id="battle-interactions" class="absolute flexYStartCol col" anims='{"translateY":"200px","opacity":0}'>
+                    <div id="battle-interactions-question-wrap" class="relative" bgColor="blue">
+                        <div class="battle-question-img-wrap widthAll">
+                            <img id="battle-question-img" src="imgs/battle-question-example.jpg">
+                        </div>
+                        <div class="battle-question-txt-wrap widthAll flexCenter">
+                            <p id="battle-question-txt" class="WebbEllisCup align-center">gfhdfgdfgdfgdfgdfgdfgdfgdfg</p>
+                        </div>
+                    </div>
+                    <div id="battle-interactions-clickables">
+                        <div id="battle-clickable-1" class="clickable relative">
+                            <img class="widthAll normalEl" src="imgs/battle-button-bg.svg">
+                            <img class="widthAll selectedEl" src="imgs/battle-button-selected-bg.svg">
+                            <div class="widthAll heightAll absolute lt0 flexCenter">
+                                <p class="WebbEllisCup align-center">0</p>
+                            </div>
+                            <div class="indicator"></div>
+                        </div>
+                        <div id="battle-clickable-2" class="clickable relative">
+                            <img class="widthAll normalEl" src="imgs/battle-button-bg.svg">
+                            <img class="widthAll selectedEl" src="imgs/battle-button-selected-bg.svg">
+                            <div class="widthAll heightAll absolute lt0 flexCenter">
+                                <p class="WebbEllisCup align-center">3</p>
+                            </div>
+                            <div class="indicator"></div>
+                        </div>
+                        <div id="battle-clickable-3" class="clickable relative">
+                            <img class="widthAll normalEl" src="imgs/battle-button-bg.svg">
+                            <img class="widthAll selectedEl" src="imgs/battle-button-selected-bg.svg">
+                            <div class="widthAll heightAll absolute lt0 flexCenter">
+                                <p class="WebbEllisCup align-center">7</p>
+                            </div>
+                            <div class="indicator"></div>
+                        </div>
+                        <div id="battle-clickable-4" class="clickable relative">
+                            <img class="widthAll normalEl" src="imgs/battle-button-bg.svg">
+                            <img class="widthAll selectedEl" src="imgs/battle-button-selected-bg.svg">
+                            <div class="widthAll heightAll absolute lt0 flexCenter">
+                                <p class="WebbEllisCup align-center">7</p>
+                            </div>
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+                    <div id="battle-timer-wrap" class="absolute">
+                        <div id="battle-timer-wrap-content" class="relative widthAll heightAll">
+                            <div class="absolute lt0 widthAll heightAll flexCenter"><img src="imgs/icon-clock.svg"></div>
+                            <div class="absolute lt0 widthAll heightAll flexCenter">
+                                <div id="battle-timer-container"></div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div id="battle-foe" class="battle-side flexYStartCol col absolute" anims='{"translateX":"200px","opacity":0}'>
+                    <div id="battle-foe-gauge" class="battle-gauge relative">
+                        <div class="battle-gauge-id-wrap relative">
+                            <div class="rect absolute lt0 widthAll heightAll"></div>
+                            <div class="lt0 absolute widthAll heightAll flexXStart">
+                                <p id="battle-foe-name" class="WebbEllisCup-Light" color="blue">Jean Naymar</p>
+                            </div>
+                        </div>
+                        <div class="battle-gauge-corrects-wrap absolute">
+                            <div class="rect lt0 absolute widthAll heightAll"></div>
+                            <div class="corrects lt0 absolute widthAll heightAll flexCenter">
+                                <div id="battle-foe-correct-1" class="battle-correct relative"></div>
+                                <div id="battle-foe-correct-2" class="battle-correct relative"></div>
+                                <div id="battle-foe-correct-3" class="battle-correct relative"></div>
+                                <div id="battle-foe-correct-4" class="battle-correct relative"></div>
+                                <div id="battle-foe-correct-5" class="battle-correct relative"></div>
+                            </div>
+                        </div>
+                        <div class="battle-gauge-level absolute" class="absolute">
+                            <img class="widthAll" src="imgs/customize-level.png">
+                            <div class="absolute lt0 widthAll flexCenter">
+                                <p class="WebbEllisCup-Heavy"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="battle-foe-avatar" class="avatar relative">
+                        <img class="avatar-shadow absolute" src="imgs/avatar/avatar-shadow.png">
+                        <div class="avatar-chest-wrap">
+                            <img class="avatar-chest">
+                        </div>
+                        <div class="avatar-shoes-wrap absolute flexYEnd">
+                            <img class="avatar-shoes">
+                        </div>
+                        <div class="avatar-pants-wrap absolute flexYStart">
+                            <img class="avatar-pants">
+                        </div>
+                        <div class="avatar-tee-shirt-wrap absolute flexYStart">
+                            <img class="avatar-tee-shirt">
+                        </div>
+                        <div class="avatar-mouth-wrap absolute flexCenter">
+                            <img class="avatar-mouth">
+                        </div>
+                        <div class="avatar-hair-wrap absolute">
+                            <img class="avatar-hair">
+                        </div>
+                        <div class="avatar-eyes-wrap absolute flexYStart">
+                            <img class="avatar-eyes">
+                        </div>
+                    </div>
+                </div>
+                <div id="battle-button-out" class="button absolute" anims='{"translateX":"-100%","opacity":0}'>
+                    <img class="widthAll" src="imgs/sort-button-bg.svg">
+                    <div class="widthAll heightAll absolute lt0 flexCenter">
+                        <img src="imgs/icon-back.svg" class="icon">
+                        <p id="sort-button-out-txt" class="back WebbEllisCup-Light"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="battle-popup-wrap" class="absolute widthAll heightAll flexCenter lt0 hidden" anims='{"opacity":0}'>
+                <div id="battle-popup" anims='{"translateY":"70%","opacity":0}'>
+                    <div id="battle-popup-content" class="widthAll heightAll relative">
+                        <div id="battle-popup-points-wrap" class="widthAll heightAll absolute lt0 flexCenter col" anims='{"translateX":"0%","opacity":1}'>
+                            <p id="battle-popup-result-txt" class="rotated-txt WebbEllisCup-HeavyItalic">Gagné !</p>
+                            <div id="battle-popup-result-wrap" class="flex">
+                                <div id="battle-popup-circle-1" class="battle-popup-circle flexCenter">
+                                    <p class="Mobius-Bold">+</p>
+                                </div>
+                                <p id="battle-popup-points-txt" class="Mobius-Bold">20 points</p>
+                            </div>
+                        </div>
+                        <div id="battle-popup-ready-wrap" class="widthAll heightAll absolute lt0">
+                            <div class="container absolute" bgColor="pink">
+                                <p class="battle-ready absolute align-center WebbEllisCup-Heavy"></p>
+                                <div class="line absolute"></div>
+                                <div class="line absolute"></div>
+                                <div class="line absolute"></div>
+                                <div class="line absolute"></div>
+                                <div class="line absolute"></div>
+                                <div class="ball absolute"><img src="imgs/battle-ball.png"></div>
+                            </div>
+                        </div>
+                        <div id="battle-popup-get-ready-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-get-ready-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-get-ready"></p>
+                        </div>
+                        <div id="battle-popup-logout-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-logout-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-disconnect"></p>
+                        </div>
+                        <div id="battle-popup-time-out-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-logout-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-time-out"></p>
+                        </div>
+                        <div id="battle-popup-waiting-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-waiting-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-waiting-answer"></p>
+                        </div>
+                        <div id="battle-popup-rematch-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-rematch-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-rematch"></p>
+                        </div>
+                        <div id="battle-popup-rematch-no-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-rematch-no-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-rematch-no"></p>
+                        </div>
+                        <div id="battle-popup-rematch-unanswered-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-rematch-unanswered-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-rematch-unanswered"></p>
+                        </div>
+                        <div id="battle-popup-none-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-none-txt" class="rotated-txt WebbEllisCup-HeavyItalic align-center battle-challenger-none"></p>
+                        </div>
+                        <div id="battle-popup-searching-wrap" class="widthAll heightAll absolute lt0 flexCenter">
+                            <p id="battle-popup-searching-txt" class="rotated-txt WebbEllisCup-HeavyItalic battle-challenger-searching"></p>
+                        </div>
+                        <div id="battle-popup-level-ball" class="ball absolute" anims='{"translateX":"-50%","translateY":"-50%","left":"13px","top":"92px"}'><img class="widthAll" id="battle-popup-level-ball-img" anims='{"rotate":45}' src="imgs/battle-ball.png"></div>
+                        <div id="battle-popup-level-wrap" class="absolute" anims='{"scaleX":0,"scaleY":0}'>
+                            <img class="widthAll" src="imgs/battle-popup-circle.png">
+                            <div class="absolute lt0 widthAll heightAll flexCenter col">
+                                <p id="battle-popup-level-txt" class="WebbEllisCup-Bold battle-level-up"></p>
+                                <div class="flexXStart">
+                                    <div id="battle-popup-level-previous" class="battle-level relative">
+                                        <img class="widthAll" src="imgs/customize-level.png">
+                                        <div class="absolute lt0 widthAll flexCenter">
+                                            <p class="WebbEllisCup-Heavy"></p>
+                                        </div>
+                                    </div>
+                                    <img class="arrow-1" src="imgs/battle-level-arrow.svg">
+                                    <img class="arrow-2" src="imgs/battle-level-arrow.svg">
+                                    <div id="battle-popup-level-new" class="battle-level relative">
+                                        <img class="widthAll" src="imgs/customize-level.png">
+                                        <div class="absolute lt0 widthAll flexCenter">
+                                            <p class="WebbEllisCup-Heavy"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="battle-popup-unlock-wrap" class="absolute" anims='{"scaleX":0,"scaleY":0}'>
+                            <img class="widthAll" src="imgs/battle-popup-circle.png">
+                            <div class="absolute lt0 widthAll heightAll flexCenter col">
+                                <p id="battle-popup-unlock-txt" class="WebbEllisCup-Bold battle-unlock"></p>
+                                <img class="unlocked" src="">                                
+                            </div>
+                        </div>
+                        <div id="battle-popup-buttons-wrap" class="widthAll absolute flexCenter">
+                            <div id="battle-popup-button-redo" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-challenge-redo WebbEllisCup-Light"></p>
+                                </div>
+                            </div>
+                            <div id="battle-popup-button-challenge-again" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-challenge-again WebbEllisCup-Light"></p>
+                                </div>
+                            </div>
+                            <div id="battle-popup-button-challenge-other" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-challenge-other WebbEllisCup-Light"></p>
+                                </div>
+                            </div>
+                            <div id="battle-popup-button-go" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-go WebbEllisCup-Heavy upper-case"></p>
+                                </div>
+                            </div>
+                            <div id="battle-popup-button-accept" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-accept WebbEllisCup-Heavy upper-case"></p>
+                                </div>
+                            </div>
+                            <div id="battle-popup-button-refuse" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-refuse WebbEllisCup-Heavy upper-case"></p>
+                                </div>
+                            </div>
+                            <div id="battle-popup-button-quit" class="button relative hidden">
+                                <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                                <div class="widthAll heightAll absolute lt0 flexCenter">
+                                    <p class="battle-quit WebbEllisCup-Light"></p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chat -->
+        <div id="chat-wrap" class="widthAll heightAll flexXEnd absolute lt0 unavailable">
+            <div id="chat" class="origin50-100">
+                <div id="chat-list-wrap">
+                    <div id="chat-list-header">
+                        <p class="users-connected WebbEllisCup flexGrow">Utilisateurs connectés : 50</p>
+                        <div class="flex">
+                            <img class="chat" src="../../common/content/img/chat-blue.svg">  
+                            <p class="WebbEllisCup">Chat</p>
+                        </div>
+                        <div class="flex">
+                            <img class="battle" src="../../common/content/img/battle-blue.svg">  
+                            <p class="WebbEllisCup">Battle</p>
+                        </div>
+                    </div> 
+                    <div id="chat-list-content">
+                        <div id="chat-list-container-wrap">
+                            <div id="chat-list-container">
+                                <div id="chat-list-scrollable" class="widthAll">  
+                                </div>    
+                            </div>
+                        </div>
+                        <div id="chat-list-scroll-wrap" class="flexYStart">
+                            <div id="chat-list-cursor-wrap" class="chat-cursor-wrap">
+                                <div id="chat-list-cursor" class="chat-cursor"></div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div id="chat-conversation-wrap" class="hidden">
+                    <div id="chat-conversation-header">
+                        <div class="flexXStart flexGrow relative">
+                            <p class="user WebbEllisCup">Conversation avec</p>
+                            <p class="user-id WebbEllisCup-Bold"></p>
+                            <img class='user-photo absolute'>
+                        </div>
+                        <div id="chat-conversation-button-battle" class="flex">
+                            <img class="battle" src="../../common/content/img/battle-red.svg">  
+                            <p class="WebbEllisCup" color="red">Battle</p>
+                        </div>
+                    </div>
+                    <div id="chat-conversation-content">
+                        <div id="chat-conversation-container">
+                            <div id="chat-conversation-scrollable">
+                                
+                            </div>
+                        </div>
+                        <div id="chat-conversation-scroll-wrap" class="flexYStart">
+                            <div id="chat-conversation-cursor-wrap" class="chat-cursor-wrap">
+                                <div id="chat-conversation-cursor" class="chat-cursor"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chat-conversation-message">
+                        <div id="chat-conversation-message-wrap" class="relative">
+                            <textarea class="WebbEllisCup" name="message" id="chat-conversation-message-txt" placeholder="Votre message..." maxlength="500"></textarea>
+                            <div id="chat-conversation-message-button-send" bgColor="red" class="absolute flexCenter">
+                                <img src="../../common/content/img/chat-send.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="chat-buttons">
+                    <div id="chat-button-hide" class="flexYStartCol col">
+                        <img src="../../common/content/img/eye-red.svg">
+                        <p class="WebbEllisCup" color="red">Cacher chat</p>
+                    </div>
+                    <div class="relative">
+                        <img class="absolute chat-fake" src="../../common/content/img/chat-grey.svg">
+                    </div>
+                    <div id="chat-button-quit" class="flexYStartCol col">
+                        <img src="../../common/content/img/cross-red.svg">
+                        <p class="WebbEllisCup" color="red">Quitter chat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup tchat -->
+        <div id="popup-chat-wrap" class="absolute lt0 widthAll heightAll popup-wrap-update hidden">
+            <div id="popup-chat" class="absolute popup-update">
+                <img class="widthAll" src="imgs/popup-challenge-bg.png">
+                <div class="lt0 absolute widthAll heightAll flexYStartCol col">
+                    <p id="popup-chat-txt" class="WebbEllisCup-Bold align-center"></p>
+                    <div id="popup-chat-button-accept" class="button button-accept relative">
+                        <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                        <div class="widthAll heightAll absolute lt0 flexCenter">
+                            <p class="battle-accept WebbEllisCup-Light"></p>
+                        </div>
+                    </div>
+                    <div id="popup-chat-button-refuse" class="button button-refuse relative">
+                        <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                        <div class="widthAll heightAll absolute lt0 flexCenter">
+                            <p class="battle-refuse WebbEllisCup-Light"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup challenge -->
+        <div id="popup-challenge-wrap" class="absolute lt0 widthAll popup-wrap-update heightAll hidden">
+            <div id="popup-challenge" class="absolute popup-update">
+                <img class="widthAll" src="imgs/popup-challenge-bg.png">
+                <div class="lt0 absolute widthAll heightAll flexYStartCol col">
+                    <p id="popup-challenge-txt" class="battle-challenged WebbEllisCup-Bold align-center"></p>
+                    <div id="popup-challenge-button-accept" class="button button-accept relative">
+                        <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                        <div class="widthAll heightAll absolute lt0 flexCenter">
+                            <p class="battle-accept WebbEllisCup-Light"></p>
+                        </div>
+                    </div>
+                    <div id="popup-challenge-button-refuse" class="button button-refuse relative">
+                        <img class="widthAll" src="imgs/battle-popup-button-bg.svg">
+                        <div class="widthAll heightAll absolute lt0 flexCenter">
+                            <p class="battle-refuse WebbEllisCup-Light"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

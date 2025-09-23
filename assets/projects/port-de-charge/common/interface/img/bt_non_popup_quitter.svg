@@ -1,0 +1,26 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="66px" height="66px" viewBox="0 0 66 66">
+<defs>
+<g id="icone_no_0_Layer0_0_FILL">
+<path fill="#2B579A" stroke="none" d="
+M 33.35 0
+L 0 33.45 33.4 66.85 66.8 33.5 33.35 0
+M 23.7 23.7
+L 33.4 33.45 43.1 23.7 33.4 33.45 43.05 43.1 33.4 33.45 23.75 43.1 33.4 33.45 23.7 23.7 Z"/>
+</g>
+
+<path id="icone_no_0_Layer0_0_1_STROKES" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="3" fill="none" d="
+M 23.7 23.7
+L 33.4 33.45 43.1 23.7
+M 43.05 43.1
+L 33.4 33.45 23.75 43.1"/>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#icone_no_0_Layer0_0_FILL"/>
+
+<use xlink:href="#icone_no_0_Layer0_0_1_STROKES"/>
+</g>
+</g>
+</svg>

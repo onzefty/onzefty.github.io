@@ -1,0 +1,293 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+p {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+  margin: 0;
+}
+
+.footer {
+  color: #19194b;
+  background-color: #fff;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.footer .button {
+  cursor: pointer;
+}
+
+#button-menu {
+  margin-left: 50px;
+  margin-right: 35px;
+}
+
+#button-menu div {
+  width: 37px;
+  height: 2px;
+  background-color: #ff3000;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateY(0px) rotate(0deg);
+}
+
+#button-menu div:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+#button-menu.close div:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+
+#button-menu.close div:nth-of-type(2) {
+  opacity: 0;
+}
+
+#button-menu.close div:nth-of-type(3) {
+  transform: translateY(2px) rotate(-45deg);
+}
+
+#footer-module-title {
+  font-size: 18px;
+  font-family: "WebbEllisCup-Heavy";
+  text-transform: uppercase;
+}
+
+#footer-part-title {
+  font-size: 16px;
+  font-family: "WebbEllisCup";
+}
+
+#footer-logo {
+  width: 99px;
+}
+
+#button-chat {
+  width: 40px;
+  height: 40px;;
+  margin-right: 37px;
+}
+
+#button-chat img {
+  width: 35px;
+}
+
+#button-chat .frames {
+  overflow: hidden;
+}
+
+#button-chat .animated {
+  background-color: #ff3000;
+  animation-duration: .3s;
+}
+
+#button-chat .animated:nth-child(1) {
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  transform: translateX(-100%);
+}
+
+#button-chat:hover .animated:nth-child(1) {
+  animation-name: chatAnimatedlb;
+}
+
+@keyframes chatAnimatedlb {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#button-chat .animated:nth-child(2) {
+  right: 0px;
+  bottom: 0px;
+  width: 2px;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+#button-chat:hover .animated:nth-child(2) {
+  animation-name: chatAnimatedrb;
+  animation-delay: .1s;
+}
+
+@keyframes chatAnimatedrb {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#button-chat .animated:nth-child(3) {
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 2px;
+  transform: translateX(100%);
+}
+
+#button-chat:hover .animated:nth-child(3) {
+  animation-name: chatAnimatedrt;
+  animation-delay: .2s;
+}
+
+@keyframes chatAnimatedrt {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#button-chat .animated:nth-child(4) {
+  left: 0px;
+  top: 0px;
+  width: 2px;
+  height: 100%;
+  transform: translateY(-100%);
+}
+
+#button-chat:hover div:nth-child(4) {
+  animation-name: chatAnimatedlt;
+  animation-delay: .3s;
+}
+
+@keyframes chatAnimatedlt {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+#button-chat .status {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ff3000;
+  right: -12.5px;
+  top: -12.5px;
+  opacity: 0;
+}
+
+#button-chat[status="invisible"] {
+  display: none;
+}
+
+#button-chat[status="hide"] .status,
+#button-chat[status="messages"] .status {
+  opacity: 1;
+}
+
+#button-chat .status img {
+  width: 18px;
+  display: none;
+}
+
+#button-chat .status p {
+  font-size: 16px;
+  color: #FFF;
+  display: none;
+}
+
+#button-chat[status="hide"] *[status="hide"],
+#button-chat[status="messages"] *[status="messages"] {
+  display: block;
+}
+
+.button-nav {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #19194b;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 2px #19194b;
+}
+
+.button-nav img {
+  width: 21px;
+}
+
+.button-nav.inactive .active-el,
+.button-nav:not(.inactive) .inactive-el {
+  display: none;
+}
+
+#button-next.active .active-el {
+  -webkit-animation: fadingX 0.8s ease-out infinite;
+  animation: fadingX 0.8s ease-out infinite;
+}
+
+.button-nav.inactive {
+  pointer-events: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #bababa;
+}
+
+#footer-navigation-wrapper {
+  width: 73px;
+}
+
+#footer-navigation-wrapper p {
+  font-size: 18px;
+  font-family: "WebbEllisCup-Heavy";
+}
+
+@-webkit-keyframes fadingX {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(60%);
+  }
+  75% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadingX {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(60%);
+  }
+  75% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

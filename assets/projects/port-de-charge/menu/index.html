@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Onlineformapro">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../common/content/css/helpers.css" />
+    <link rel="stylesheet" href="../common/content/css/fonts.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <!-- build:js ../common/content/js/lib/class-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/polyfill.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/class-utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/emitter-mixin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/components/messages-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/components/message.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/components/message-constants.js" charset="utf-8"></script>
+    <!-- /build -->
+
+    <!-- build:js ../common/content/js/lib/menu-bundle.js -->
+    <script type="text/javascript" src="../common/content/js/lib/anime.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../common/content/js/lib/interface-finder.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/menu.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+    <!-- /build -->
+</head>
+
+<body>
+    <div class="menu heightAll widthAll relative">
+        <div id="menu-wrap" class="absolute flexCenter">
+            <div id="menu-content" class="heightAll">
+                <div id="menu-top" class="widthAll flexCenter">
+                    <p id="menu-helper-txt" class="poppins-light-italic"><span class="poppins-bold-italic">Cliquez</span> sur les cases pour accéder<br>aux différents chapitres.</p>
+                </div>
+                <div id="menu-middle" class="widthAll">
+                    <div id="menu-part-1" class="menu-part widthAll flex">
+                        <div class="menu-part-number-wrap heightAll flexCenter">
+                           <p class="menu-part-number poppins-light">1</p> 
+                        </div>
+                        <div class="menu-part-sep-wrap heightAll flexCenter">
+                           <div class="menu-part-sep widthAll"></div> 
+                        </div>
+                        <div class="menu-part-title-wrap heightAll flexXStart">
+                           <p class="menu-part-title poppins-light"></p> 
+                        </div>
+                        <div class="menu-part-progress-wrap heightAll flexYEndCol col">
+                           <div class="arrow"></div>
+                           <p class="menu-part-progress poppins-light"></p>
+                        </div>
+                    </div>
+                    <div id="menu-part-2" class="menu-part widthAll flex">
+                        <div class="menu-part-number-wrap heightAll flexCenter">
+                           <p class="menu-part-number poppins-light">2</p> 
+                        </div>
+                        <div class="menu-part-sep-wrap heightAll flexCenter">
+                           <div class="menu-part-sep widthAll"></div> 
+                        </div>
+                        <div class="menu-part-title-wrap heightAll flexXStart">
+                           <p class="menu-part-title poppins-light"></p> 
+                        </div>
+                        <div class="menu-part-progress-wrap heightAll flexYEndCol col">
+                           <div class="arrow"></div>
+                           <p class="menu-part-progress poppins-light"></p>
+                        </div>
+                    </div>
+                    <div id="menu-part-3" class="menu-part widthAll flex">
+                        <div class="menu-part-number-wrap heightAll flexCenter">
+                           <p class="menu-part-number poppins-light">3</p> 
+                        </div>
+                        <div class="menu-part-sep-wrap heightAll flexCenter">
+                           <div class="menu-part-sep widthAll"></div> 
+                        </div>
+                        <div class="menu-part-title-wrap heightAll flexXStart">
+                           <p class="menu-part-title poppins-light"></p> 
+                        </div>
+                        <div class="menu-part-progress-wrap heightAll flexYEndCol col">
+                           <div class="arrow"></div>
+                           <p class="menu-part-progress poppins-light"></p>
+                        </div>
+                    </div>
+                    <div id="menu-part-4" class="menu-part widthAll flex">
+                        <div class="menu-part-number-wrap heightAll flexCenter">
+                           <p class="menu-part-number poppins-light">4</p> 
+                        </div>
+                        <div class="menu-part-sep-wrap heightAll flexCenter">
+                           <div class="menu-part-sep widthAll"></div> 
+                        </div>
+                        <div class="menu-part-title-wrap heightAll flexXStart">
+                           <p class="menu-part-title poppins-light"></p> 
+                        </div>
+                        <div class="menu-part-progress-wrap heightAll flexYEndCol col">
+                           <div class="arrow"></div>
+                           <p class="menu-part-progress poppins-light"></p>
+                        </div>
+                    </div>
+                    <div id="menu-part-5" class="menu-part widthAll flex">
+                        <div class="menu-part-number-wrap heightAll flexCenter">
+                           <p class="menu-part-number poppins-light">5</p> 
+                        </div>
+                        <div class="menu-part-sep-wrap heightAll flexCenter">
+                           <div class="menu-part-sep widthAll"></div> 
+                        </div>
+                        <div class="menu-part-title-wrap heightAll flexXStart">
+                           <p class="menu-part-title poppins-light"></p> 
+                        </div>
+                        <div class="menu-part-progress-wrap heightAll flexYEndCol col">
+                           <div class="arrow"></div>
+                           <p class="menu-part-progress poppins-light"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-bottom" class="widthAll flexXEnd">
+                    <div id="button-quit" class="btPopupQuit flexCenter">
+                        <p>Quitter la formation</p>
+                        <img src="img/quit.svg">
+                </div>
+            </div>
+            <div id="button-close" class="absolute flexCenter">
+                <img src="img/cross.svg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

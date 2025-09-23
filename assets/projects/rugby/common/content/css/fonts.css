@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "WebbEllisCup";
+  src: url("fonts/webbelliscup/WebbEllisCup.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-Bold";
+  src: url("fonts/webbelliscup/WebbEllisCup-Bold.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-BoldItalic";
+  src: url("fonts/webbelliscup/WebbEllisCup-BoldItalic.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-Bolditalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-Heavy";
+  src: url("fonts/webbelliscup/WebbEllisCup-Heavy.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-Heavy.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-HeavyItalic";
+  src: url("fonts/webbelliscup/WebbEllisCup-HeavyItalic.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-HeavyItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-Italic";
+  src: url("fonts/webbelliscup/WebbEllisCup-Italic.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-Light";
+  src: url("fonts/webbelliscup/WebbEllisCup-Light.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WebbEllisCup-LightItalic";
+  src: url("fonts/webbelliscup/WebbEllisCup-LightItalic.woff") format("woff"),
+    url("fonts/webbelliscup/WebbEllisCup-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Mobius-Bold";
+  src: url("fonts/mobius/Mobius-Bold.woff") format("woff"),
+    url("fonts/mobius/Mobius-Bold.woff2") format("woff2");
+}
+
+.WebbEllisCup {
+  font-family: "WebbEllisCup";
+}
+
+.WebbEllisCup-Bold {
+  font-family: "WebbEllisCup-Bold";
+}
+
+.WebbEllisCup-BoldItalic {
+  font-family: "WebbEllisCup-BoldItalic";
+}
+
+.WebbEllisCup-Heavy {
+  font-family: "WebbEllisCup-Heavy";
+}
+
+.WebbEllisCup-HeavyItalic {
+  font-family: "WebbEllisCup-HeavyItalic";
+}
+
+.WebbEllisCup-Italic {
+  font-family: "WebbEllisCup-Italic";
+}
+
+.WebbEllisCup-Light {
+  font-family: "WebbEllisCup-Light";
+}
+
+.WebbEllisCup-LightItalic {
+  font-family: "WebbEllisCup-LightItalic";
+}
+
+.Mobius-Bold {
+  font-family: "Mobius-Bold";
+}
