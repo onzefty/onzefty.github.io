@@ -195,7 +195,9 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-
+    header #home-link h1 {
+      font-size: var(--font-size-30);
+    }
 
     *[mobile-hidden] {
         display: none;

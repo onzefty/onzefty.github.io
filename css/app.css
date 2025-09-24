@@ -17,8 +17,9 @@ header {
   justify-content: space-between;
   background-color: var(--color-main-1);
   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
-  padding: 1rem 1rem;
+  padding: .7rem 1rem;
   z-index: 1000;
+  gap: 1rem;
 }
 
 header.fixed {
@@ -46,7 +47,7 @@ header ul {
 
 header .social-links li a {
   display: flex;
-  width: var(--font-size-60);
+  width: var(--font-size-40);
   aspect-ratio: 1/1;
   place-content: center;
   flex-wrap: wrap;
@@ -55,7 +56,7 @@ header .social-links li a {
   border-radius: 50%;
   transition: background-color 0.2s;
   cursor: pointer;
-  font-size: var(--font-size-30);
+  font-size: var(--font-size-20);
 }
 
 .header-right {
@@ -350,8 +351,9 @@ section .title::after {
 #main:has(#project-iframe.loaded) #projects-container {
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 }
 
 #main:has(#project-iframe.loaded) #projects-container .project {
-  width: min(100%, 30rem);
+  width: min(100vw, 27rem);
 }
