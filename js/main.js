@@ -38,7 +38,6 @@ elements.buttonMenu.addEventListener(EVENTS.CLICK_TOUCH,handleMenuToggle);
 observer.observe(elements.header);
 
 function appReady() {
-    console.log("App is ready");
 }
 
 app.on(App.READY, appReady);

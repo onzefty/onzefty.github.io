@@ -37,15 +37,22 @@ function handleProjectClick(event) {
     const project = projectsMap.get(event.currentTarget);
     if (!project) return;
 
+    const activeEl = elements.projectsContainer.querySelector('.project.active');
+    if(activeEl) {
+        activeEl.classList.remove('active');
+    }
+    
     if(elements.iframe.getAttribute("url") === project.url) {
         elements.iframe.innerHTML = "";
         elements.iframe.classList.remove('loaded');
+        event.currentTarget.classList.remove('active');
         return;
     }
 
     if (project && project.url) {
+        event.currentTarget.classList.add('active');
         elements.iframe.setAttribute("url",project.url);
-        elements.iframe.classList.add('loaded')
+        elements.iframe.classList.add('loaded');
         loadIframe(project.url)
             .then(() => {
                 

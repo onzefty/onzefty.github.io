@@ -12,7 +12,7 @@ export default {
             title: "Rugby World Cup 2023",
             description: "Module de formation pour les Volontaires, dans le cadre de la Coupe du Monde de Rugby 2023.",
             tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs"],
-            url: "./assets/projects/ifcam/rugby/index.html",
+            url: "./assets/projects/rugby/module/index.html",
             image: "./assets/imgs/projects/rugby.webp"
         },
         {
@@ -20,21 +20,21 @@ export default {
             description: "Module de formation sur les 5 règles d'Hermès pour la disposition des articles sur étagère.",
             tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Sounds"],
             url: "./assets/projects/hermes-maison/module/index.html",
-            image: "./assets/imgs/projects/rugby.webp"
+            image: "./assets/imgs/projects/hermes-maison.webp"
         },
         {
             title: "Renault",
             description: "Module de formation pour le Groupe Renault.",
             tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Videos","IA"],
             url: "./assets/projects/renault/M3/index.html",
-            image: "./assets/imgs/projects/rugby.webp"
+            image: "./assets/imgs/projects/renault.webp"
         },
         {
             title: "Port de Charges",
             description: "Module de formation sur les bonnes pratiques de Port de Charges dans les entreprises.",
             tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Videos"],
-            url: "./assets/projects/renault/M3/index.html",
-            image: "./assets/imgs/projects/rugby.webp"
+            url: "./assets/projects/port-de-charge/module/index.html",
+            image: "./assets/imgs/projects/port-de-charges.webp"
         },
         {
             title: "IFCAM - Quiz Éthiques",

@@ -31,6 +31,11 @@ header.fixed {
   gap: 1rem;    
 }
 
+.header-left #home-link {
+  cursor: pointer;
+  color: inherit;
+}
+
 header ul {
   margin: 0;
   padding: 0;
@@ -89,7 +94,7 @@ header:has(.header-right[state="close"]) #button-menu .fa-times {
 
 section {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 2rem;
 }
 
 section .title {
@@ -107,13 +112,14 @@ section .title::after {
 
 #introduction {
   display: flex;
-  gap: 1.5rem;
   justify-content: space-evenly;
   align-items: center;
 }
 
 #introduction h1 {
   font-size: var(--font-size-50);
+  flex-grow: 1;
+  text-align: center;
 }
 
 #introduction #introduction-image {
@@ -278,6 +284,7 @@ section .title::after {
     transition: all .5s .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border-radius: var(--font-size-20);
+    position: relative;
 }
 
 #projects-container .project.visible .project-left,
@@ -313,54 +320,38 @@ section .title::after {
     transition: opacity 0.5s ease;
 } 
 
-#projects-container .project::before {
-    -moz-transition: opacity 0.5s ease;
-    -webkit-transition: opacity 0.5s ease;
-    -ms-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
-    bottom: 0;
+#projects-container .project.active .project-right::after {
+    content: "";
+    top: 0;
     display: block;
     height: 100%;
     left: 0;
-    opacity: 0.95;
     position: absolute;
     width: 100%;
     z-index: 2;
+    border-radius: var(--font-size-20);
+    outline: solid .2rem var(--color-main-1);
 }
-#projects-container .project:nth-child(6n-5)::before {
-  background-color: var(--header-color-1);
-}
-#projects-container .project:nth-child(6n-4)::before {
-  background-color: var(--header-color-2);
-}
-#projects-container .project:nth-child(6n-3)::before {
-  background-color: var(--header-color-3);
-}
-#projects-container .project:nth-child(6n-2)::before {
-  background-color: var(--header-color-4);
-}
-#projects-container .project:nth-child(6n-1)::before {
-  background-color: var(--header-color-5);
-}
-#projects-container .project:nth-child(6n)::before {
-  background-color: var(--header-color-6);
-}
+
 /* #projects-container .project:hover::before,
 #projects-container .project:hover h2,
 #projects-container .project:hover p {
   opacity: 0;
 } */
 
-#project-iframe:not(.loaded) {
+#project-iframe:not(.loaded),
+#main:has(#project-iframe.loaded) #presentation,
+#main:has(#project-iframe.loaded) #projects-container .project .project-left,
+#main:has(#project-iframe.loaded) #projects-container .project .project-right > div,
+#main:has(#project-iframe.loaded) #projects-container .project .project-right > p {
     display: none;
 }
 
-#main:has(#project-iframe.loaded) #presentation,
-#main:has(#project-iframe.loaded) #projects-container .project p {
-    display: none;
+#main:has(#project-iframe.loaded) #projects-container {
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #main:has(#project-iframe.loaded) #projects-container .project {
-  height: 10rem;
-  padding: 2em 4em 2em 2em;
+  width: min(100%, 30rem);
 }
