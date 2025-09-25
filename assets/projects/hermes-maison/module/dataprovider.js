@@ -51,7 +51,8 @@ ofp.player.dataprovider = {
         progress: true,
         success:true,
         //Chaîne par défaut [Écran max vu, total des écrans, écran actuel] | 
-        defaultBuildValues: [[5,5,1],[6,6,1],[58,58,1],[1,1,1,[-1,"na","na","na"]]],
+        defaultBuildValues: [[1,5,1],[1,6,1],[1,58,1],[1,1,1,[-1,"na","na","na"]]],
+        // defaultBuildValues: [[5,5,1],[6,6,1],[58,58,1],[1,1,1,[-1,"na","na","na"]]],
         // TEST PROGRESS
         // defaultBuildValues: [[1,1,1,[-1,"na","na","na"]]],
         // defaultBuildValues: [[1,1,1,[-1,-1,-1,-1]]],
