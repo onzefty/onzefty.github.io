@@ -3,20 +3,13 @@
 /*---------------------------- Globals ----------------------------*/
 
 :root {
-    --color-background: #F7F9FA;
-    --color-main-1: #1abc9c;
-    --color-main-1-hover: #16A085;
-    --color-main-2: #0E4E5A;
-    --color-main-3: #dcf9f5;
-    --color-txt-main-1: #2C3E50;
-    --color-txt-main-2: #7F8C8D;
-    --header-color-1: #6fc3df;
-    --header-color-2: #8d82c4;
-    --header-color-3: #ec8d81;
-    --header-color-4: #e7b788;
-    --header-color-5: #8ea9e8;
-    --header-color-6: #87c5a4;
-    --interaction: rgb(225, 115, 23);
+    --color-background: #FFF;
+    --color-shadow: rgba(0, 0, 0, .15);
+    --color-main-1: #CCC;
+    --color-main-1-hover: #999;
+    --color-txt-main-1: #000;
+    --interaction: #22e39f;
+    --interaction-hover: rgba(34, 227, 159, .75);
     --right: #5cb563;
     --wrong: #c74b32;
     --correction: #3579cd;
@@ -40,6 +33,16 @@
     --font-size-18: 0.88rem; /* 18px */
     --padding-bottom-content: var(--font-size-70);
     --padding-top-content: 0px;
+}
+
+[data-theme="dark"] {
+    --color-background: #000;
+    --color-shadow: rgba(255, 255, 255, .15);
+    --color-main-1: #333;
+    --color-main-1-hover: #999;
+    --color-txt-main-1: #FFF;
+    --interaction: #16bbf2;
+    --interaction-hover: rgba(22, 187, 242, .75);
 }
 
 html,
