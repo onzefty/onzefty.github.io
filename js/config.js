@@ -37,11 +37,11 @@ export default {
             image: "./assets/imgs/projects/port-de-charges.webp"
         },
         {
-            title: "IFCAM - Quiz Éthiques",
-            description: "Module d'évaluation sur les questions éthiques.",
-            tools: ["HTML5","CSS3","JavaScript","Adobe Photoshop","Animations Customs","Sounds"],
-            url: "./assets/projects/ifcam/risques-n2/risques-n2/index.html",
-            image: "./assets/imgs/projects/ifcam.webp"
+            title: "TRE",
+            description: "Module d'évaluation sur les Ateliers Techniques Recherche d'Emploi.",
+            tools: ["HTML5","CSS3","JavaScript","Figma","Sounds"],
+            url: "./assets/projects/tre/reseaux-sociaux/index.html",
+            image: "./assets/imgs/projects/tre.webp"
         },
     ]
 };

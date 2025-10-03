@@ -1,0 +1,404 @@
+:root {
+    --font-size-100: 4.91rem; /* 100px */
+    --font-size-70: 3.44rem; /* 70px */
+    --font-size-60: 2.94rem; /* 60px */
+    --font-size-40: 1.96rem; /* 40px */
+    --font-size-37: 1.81rem; /* 37px */
+    --font-size-32: 1.57rem; /* 32px */
+    --font-size-30: 1.47rem; /* 30px */
+    --font-size-24: 1.17rem; /* 24px */
+    --font-size-22: 1.08rem; /* 22px */
+    --font-size-20: 0.98rem; /* 20px */
+    --font-size-18: 0.88rem; /* 18px */
+  }
+  /* ********************* Global ********************* */
+html,
+body {
+    background-color: #0f151d;
+    overflow: hidden;
+    font-family: "Arial", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: max(1.06vw, 12px);
+}
+
+@media (pointer: coarse) and (min-width: 720px) and (max-width: 1368px) and (min-height: 541px) {
+    html,
+    body {
+        font-size: max(1.06vw, 16px);
+    }
+}
+
+
+iframe {
+    overflow: hidden;
+    border: none;
+}
+
+/*************************** Divs intro, menu, fin, content ***************************/
+
+#content {
+    /* FIX SAFARI white screen (content not visible)*/
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+}
+
+#mainWrapper {
+    position: absolute;
+    width: 1660px;
+    height: 800px;
+}
+
+/***************** Scale Loader ********************/
+
+#scaleLoader {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: #0f151d;
+    text-align: center;
+    line-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#scaleLoader.hide {
+    display: none;
+}
+
+/************************* Popups *************************/
+
+.popup {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    width: calc(100% - 6rem);
+    height: calc(100% - 6rem);
+    z-index: 3;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: visibility 0s 0.36s;
+}
+
+.popup.show {
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.popup-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1a1d27;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.125s;
+}
+
+.popup.show .popup-overlay {
+    opacity: 0.5;
+    transition-delay: 0s;
+}
+
+.popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 3rem;
+    transform: scale(0);
+    transition: transform 0.5s 0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    transition-delay: 0.3s;
+}
+
+.popup-message {
+    position: relative;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.popup-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.popup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px #dedede solid;
+    border-radius: 999999px;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.popup-button:not(:last-child) {
+    margin: 0 1.5rem 0 0;
+}
+
+.popup-button:hover {
+    color: #ffffff;
+    background-color: #019ca1;
+    border-color: #019ca1;
+}
+
+.popup-button > *:not(:last-child) {
+    margin: 0 auto 0 0;
+}
+
+.popup-button i {
+    display: block;
+    font-size: 24px;
+    background-repeat: no-repeat;
+    margin: 0 0 0 0.5rem;
+    font-family: "ofp-font";
+    font-style: normal;
+    font-weight: normal;
+    color: #f48029;
+}
+
+.popup-button:hover i {
+    color: #ffffff;
+}
+
+/************************** Div : passez en paysage... ***************************/
+
+#rotate {
+    display: none;
+    background-color: rgba(15, 21, 29, 1);
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 0 20px;
+}
+
+#rotate.show {
+    display: flex;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.incompatibleImg,
+.rotateContentImg {
+    display: inline-block;
+    width: 145px;
+    height: 126px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    flex-shrink: 0;
+    transition-property: width, height, font-size;
+    transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#rotate:not(.no-support) .incompatibleImg {
+    display: none;
+}
+
+#rotate.no-support .rotateContentImg {
+    display: none;
+}
+
+#noSupportTexts,
+#rotateTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    line-height: initial !important;
+    text-align: left !important;
+    padding-left: 15px;
+    font-family: Arial;
+    font-size: 16px;
+    max-width: 220px;
+    transition-property: width, height, font-size;
+    transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#rotate:not(.no-support) #noSupportTexts {
+    display: none;
+}
+
+#rotate.no-support #rotateTextWrapper {
+    display: none;
+}
+
+#rotateTextWrapper .rotateText {
+    transition-property: width, height, font-size;
+    transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#rotateTextWrapper > .rotateTextImportant:nth-child(2),
+#rotateTextWrapper > .rotateText:nth-child(2) {
+    margin-top: 15px;
+}
+
+#rotate .rotate-help {
+    padding: 0 6vw;
+    margin-top: 15px;
+    pointer-events: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#rotate.no-support .rotate-help {
+    display: none;
+}
+
+#rotate .rotate-help.blanc {
+    color: #0f151d;
+}
+
+#rotate .rotate-help.noir {
+    color: #ebebeb;
+}
+
+#rotate .rotate-help a {
+    color: #2a40b1;
+}
+
+#rotate .rotate-help.noir a {
+    color: #4aa6e9;
+}
+
+#rotate .rotate-help-grid {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 8px;
+    row-gap: 5px;
+}
+
+#rotate .blanc .rotateContentImg {
+    background-image: url("../img/pivoter_tablette_blanc.png");
+}
+
+#rotate .noir .rotateContentImg {
+    background-image: url("../img/pivoter_tablette_noir.png");
+}
+
+#rotate .blanc .incompatibleImg {
+    background-image: url("../img/incompatible-device-white.webp");
+}
+
+#rotate .noir .incompatibleImg {
+    background-image: url("../img/incompatible-device-black.webp");
+}
+
+#rotate .blanc #noSupportTexts,
+#rotate .blanc #rotateTextWrapper {
+    color: #eeeeee;
+}
+
+#rotate .noir #noSupportTexts,
+#rotate .noir #rotateTextWrapper {
+    color: #494949;
+}
+
+.rotateTextImportant {
+    font-weight: 700;
+    font-size: 18px;
+    transition-property: width, height, font-size;
+    transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.rotateText .rotateTextImportant {
+    font-size: 16px;
+}
+
+.rotateTextWarn {
+    font-family: Arial;
+    color: #f94a89;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 500px) {
+    .incompatibleImg,
+    .rotateContentImg {
+        width: 100px;
+        height: 92px;
+    }
+
+    #noSupportTexts,
+    #rotateTextWrapper {
+        font-size: 12px;
+    }
+
+    .rotateText .rotateTextImportant {
+        font-size: 12px;
+    }
+
+    .rotateTextImportant {
+        font-size: 14px;
+    }
+
+    .rotateTextWarn {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .incompatibleImg,
+    .rotateContentImg {
+        width: 80px;
+        height: 72px;
+    }
+    
+    #noSupportTexts,
+    #rotateTextWrapper {
+        font-size: 11px;
+    }
+    .rotateText .rotateTextImportant {
+        font-size: 11px;
+    }
+    .rotateTextImportant {
+        font-size: 12px;
+    }
+    .rotateTextWarn {
+        font-size: 20px;
+    }
+}
+
+#mustRotateFlexWrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#rotate .blanc #mustRotateFlexWrapper {
+    background-color: #171e28;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+#rotate .noir #mustRotateFlexWrapper {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}

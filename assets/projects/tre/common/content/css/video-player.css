@@ -1,0 +1,4 @@
+.video-player.hide-controls .plyr .plyr__controls {
+    opacity: 0;
+    pointer-events: none;
+}

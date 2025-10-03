@@ -1,0 +1,230 @@
+body {
+    padding: 0;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-txt-main-1);
+    color: #FFF;
+    font-size: var(--font-size-20);
+    position: relative;
+    padding: 0 2vw;
+    --data-progress: 0%;
+}
+
+#footer-quit {
+    gap: .8rem;
+    cursor: pointer;
+}
+
+ #footer-quit::after {
+    content: "";
+    width: 1rem;
+    aspect-ratio: 1/1;
+    background-image: url(../../common/content/img/quit.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#footer-logo {
+    width: 4.76rem;
+}
+
+#footer-progress {
+    gap: .5rem;
+}
+
+#footer-level {
+    width: 32.77rem;
+    height: 0.44rem;
+    border-radius: 999rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#footer-level::before {
+    content: "";
+    display: block;
+    width: var(--data-progress);
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    transition: width 0.3s ease-in-out;
+}
+
+#footer-navigation {
+    display: flex;
+    gap: .7rem;
+}
+
+#footer .button {
+    color: #FFF;
+    border-radius: 999rem;
+    box-shadow: 0px 0px 0px .1rem #FFF;
+    gap: 2rem;
+    padding: 0.49rem 1rem;
+}
+
+#footer .button > div {
+    width: var(--font-size-24);
+    aspect-ratio: 19/15;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/arrow-white.svg);
+}
+
+#footer-previous > div {
+    scale: -1 1;
+}
+
+#footer .button.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+#footer-next:not(.disabled).active > div  {
+    animation: fadingX .5s ease-out alternate infinite;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #footer .button:hover {
+        background-color: #FFF;
+        color: var(--color-txt-main-1);
+    }
+
+    #footer .button:hover > div {
+        background-image: url(../img/arrow-blue.svg);
+    }
+}
+
+@keyframes fadingX {
+    0% {
+      transform: scale(1) translateX(0%);
+    }
+    100% {
+      transform: scale(1.2) translateX(20%);
+    }
+}
+
+#footer #footer-title:has(.module-content:empty) span:nth-of-type(2) {
+    display: none;
+}
+
+/* Sound and volume controls */
+
+#footer-sound-wrapper {
+    gap: 1rem;
+}
+
+#footer-sound {
+    cursor: pointer;
+    width: 1.5rem;
+    aspect-ratio: 69 / 50;
+    background-image: url(../img/sound-on.svg);
+    background-size: cover;
+}
+
+#footer-sound.muted {
+    background-image: url(../img/sound-off.svg);
+}
+
+.volume.wrapper {
+    display: flex;
+    width: 6rem;
+    padding: 0 6px;
+    height: 0.44rem;
+    align-items: center;
+    border-radius: 999rem;
+}
+
+.volume.wrapper .volume-bar {
+    position: relative;
+    display: flex;
+    width: 6rem;
+    height: 0.44rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border-radius: 999rem;
+}
+
+.volume.wrapper .volume-bar-progress {
+    background-color: #FFF;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+}
+
+.volume.wrapper .volume-bar-thumb {
+    width: .9rem;
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    right: 0px;
+    top: calc( ((.9rem - 0.44rem) / 2) * -1);
+    border: solid 2px #ffffff;
+    background-color: var(--color-txt-main-1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume.wrapper.hide {
+    width: 0.00000000001px;
+    padding: 0;
+}
+
+.volume.wrapper.hide .volume-bar-thumb {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 
+
+#footer[data-menu="false"] {
+    grid-template-columns: 3fr 1.2fr;
+}
+
+#footer[data-menu="false"] #footer-burger {
+    display: none;
+}
+
+#footer-burger {
+    background-color: var(--color-txt-main-3);
+    cursor: pointer;
+}
+
+#footer-burger .burger {
+    width: 30%;
+    height: 40%;
+    justify-content: space-around;
+    position: relative;
+}
+
+#footer-burger .burger > div {
+    background-color: var(--color-txt-main-2);
+    width: 100%;
+    height: 12%;
+    border-radius: 999rem;
+}
+
+#footer-burger[data-state="opened"] .burger {
+    aspect-ratio: 1 / 1;
+    height: auto;
+} 
+
+#footer-burger[data-state="opened"] .burger > div:nth-of-type(1) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
+} 
+
+#footer-burger[data-state="opened"] .burger > div:nth-of-type(2) {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: -45deg;
+}  */

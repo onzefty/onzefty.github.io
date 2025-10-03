@@ -1,0 +1,122 @@
+@media (pointer: coarse) and (min-width: 768px) and (max-width: 2000px) and (orientation: portrait) {
+
+
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+
+  #screen_18 .screen-right {
+    align-items: center;
+  }
+
+  #screen_2 .screen-right,
+  #screen_10 .screen-right,
+  #screen_21 .screen-right {
+    justify-content: center;
+  }
+}
+
+@media  (orientation: portrait) {
+
+  #screen_18 .screen-right {
+    align-items: center;
+  }
+
+  #screen_2 .screen-right,
+  #screen_10 .screen-right,
+  #screen_21 .screen-right {
+    justify-content: center;
+  }
+
+  .s16-slider .slide > div {
+    max-width: 100%;
+  }
+}
+
+/* 
+    ##Device = Resized desktops in
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) {
+    #screen_18 .screen-right {
+    align-items: center;
+  }
+
+  #screen_2 .screen-right,
+  #screen_10 .screen-right,
+  #screen_21 .screen-right {
+    justify-content: center;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (pointer: coarse) and (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) {
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+  
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (pointer: coarse) and (min-width: 685px) and (max-width: 980px) and (orientation: landscape) {
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #screen_2 .screen-right {
+      justify-content: center;
+  }
+
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+
+  .s16-slider {
+    min-height: 34.52rem;
+  }
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Landscape) */
+@media (min-width: 480px) and (max-width: 844px) and (orientation: landscape) {
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+  #screen_2 .screen-right {
+      justify-content: center;
+  }
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+
+  .s16-slider {
+    min-height: 34.52rem;
+  }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+
+  #screen_3 .screen-left::before {
+      display: none;
+  }
+
+}
