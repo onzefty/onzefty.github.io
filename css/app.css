@@ -114,8 +114,8 @@ header #button-menu {
   display: none;
 }
 
-header:has(.header-right[state="open"]) #button-menu .fa-bars,
-header:has(.header-right[state="close"]) #button-menu .fa-times {
+header #button-menu[data-state="open"] .fa-bars,
+header #button-menu[data-state="close"] .fa-times {
   display: none;
 }
 

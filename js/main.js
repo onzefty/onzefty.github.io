@@ -8,7 +8,7 @@ const projectsMap = new Map();
 const elements = {};
 elements.main = document.querySelector("#main");
 elements.header = elements.main.querySelector('header');
-elements.nav = elements.header.querySelector("nav");
+elements.headerRight = elements.header.querySelector(".header-right");
 elements.buttonMenu = elements.header.querySelector("#button-menu");
 elements.breadcrumb = elements.header.querySelector("#breadcrumb");
 elements.breadcrumbItems = elements.breadcrumb.querySelectorAll("li");
@@ -34,9 +34,8 @@ const handleIntersection = (entries,observer) => {
 };
 
 const handleMenuToggle = () => {
-    return;
-    const state = elements.nav.getAttribute("state");
-    elements.nav.setAttribute("state",state==="close"?"open":"close");
+    const state = elements.buttonMenu.getAttribute("data-state");
+    elements.buttonMenu.setAttribute("data-state",state==="close"?"open":"close");
 };
 
 const updateBreadcrumb = () => {
@@ -76,7 +75,7 @@ elements.main.addEventListener(EVENTS.SCROLL, () => {
     updateBreadcrumb();
 });
 
-//elements.buttonMenu.addEventListener(EVENTS.CLICK_TOUCH,handleMenuToggle);
+elements.buttonMenu.addEventListener(EVENTS.CLICK_TOUCH,handleMenuToggle);
 
 // Smooth scroll pour les liens du breadcrumb
 elements.breadcrumbItems.forEach((item) => {

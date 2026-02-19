@@ -96,9 +96,13 @@
       background-color: inherit;
     }
 
-    .header-right[state="close"] {
+    header:has(#button-menu[data-state="close"]) .header-right {
       display: none;
     }
+
+    /* .header-right[state="close"] {
+      display: none;
+    } */
 
     .header-right ul {
       width: 100%;
