@@ -242,9 +242,10 @@ export function translationRender(obj,wrap){
 }
 
 function translationGetElements(key,wrap){
-    const byClass = Array.from(wrap.querySelectorAll("."+key))
-    const byAttr = Array.from(wrap.querySelectorAll('[json='+key+']'))
-    return byClass.concat(byAttr)
+    //const byClass = Array.from(wrap.querySelectorAll("."+key))
+    const byAttr = Array.from(wrap.querySelectorAll('[json='+key+']'));
+    return byAttr;
+    //return byClass.concat(byAttr);
 }
 
 function injectContent(el,prop,content){

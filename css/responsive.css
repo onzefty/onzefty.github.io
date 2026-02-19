@@ -64,13 +64,17 @@
 
 @media (max-width: 980px) {
     #introduction {
-      flex-direction: column;
-      align-items: center;
+      grid-template-rows: repeat(3,auto);
+      grid-template-columns: unset;
       gap: 1.5rem;
     }
 
     #presentation {
       flex-direction: column;
+    }
+
+    #presentation > article {
+      order: 3;
     }
 }
 
