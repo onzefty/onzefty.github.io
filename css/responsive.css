@@ -83,7 +83,7 @@
     ##Screen = under 720px
   */
 
-@media (max-width: 720px) {
+@media (max-width: 864px) {
     header #button-menu {
       display: block;
     }
