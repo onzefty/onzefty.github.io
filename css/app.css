@@ -372,6 +372,7 @@ section .section-header {
   display: flex;
   flex-direction: column;
   gap: .7rem;
+  align-items: flex-start;
 }
 
 .bloc-info .right i {
@@ -399,11 +400,15 @@ section .section-header {
   background-color: rgba(30,41,59,.5);
 }
 
-.bloc-info .right a:hover {
+.bloc-info .right a:not([href]) {
+  cursor: default;
+}
+
+.bloc-info .right a[href]:hover {
   color: var(--interaction-hover);
 }
 
-.bloc-info .right a:hover i {
+.bloc-info .right a[href]:hover i {
   scale: 1.2 1.2;
 }
 
