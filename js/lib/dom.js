@@ -243,7 +243,7 @@ export function translationRender(obj,wrap){
 
 function translationGetElements(key,wrap){
     //const byClass = Array.from(wrap.querySelectorAll("."+key))
-    const byAttr = Array.from(wrap.querySelectorAll('[json='+key+']'));
+    const byAttr = Array.from(wrap.querySelectorAll('[data-json='+key+']'));
     return byAttr;
     //return byClass.concat(byAttr);
 }
